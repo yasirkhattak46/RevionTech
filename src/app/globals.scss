@@ -1,0 +1,17 @@
+/* Tailwind Directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Variables and Mixins */
+@import '../app/assets/sass/variables';
+
+/* Global Styles */
+@import '../app/assets/sass/main';
+
+/* Sections */
+@import '../app/assets/sass/header';
+
+
+/* Pages */
+@import '../app/assets/sass/home';
