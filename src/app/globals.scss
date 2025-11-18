@@ -1,12 +1,17 @@
-@import "tailwindcss/preflight";
-@import "tailwindcss";
-@import "assets/sass/header.scss";
-@import "assets/sass/home.scss";
+/* Tailwind Directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* Your custom styles */
-html, body {
-    background: #ffffff;
-    color: #0f0f0f;
-    min-height: 100%;
-    font-family: system-ui, sans-serif;
-}
+/* Variables and Mixins */
+@import '../app/assets/sass/variables';
+
+/* Global Styles */
+@import '../app/assets/sass/main';
+
+/* Sections */
+@import '../app/assets/sass/header';
+
+
+/* Pages */
+@import '../app/assets/sass/home';
