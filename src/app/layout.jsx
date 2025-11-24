@@ -1,22 +1,38 @@
 "use client";
-import { useEffect } from "react";
-import AOS from "aos";
 import "aos/dist/aos.css";
 import "./globals.scss"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from "../component/layout/Header";
+import Footer from "../component/layout/Footer";
+import { Space_Grotesk, Manrope } from "next/font/google";
 
-export default function RootLayout({ children }) {
-    useEffect(() => {
-        AOS.init({
-            duration: 800,
-            once: true,
-            mirror: false,
-        });
-        AOS.refresh(); // <-- refresh ensures all elements are registered
-    }, []);
+const spaceGrotesk = Space_Grotesk({
+    subsets: ["latin"],
+    variable: "--font-space",
+    weight: ["300", "400", "500", "600", "700"],
+});
+
+const manrope = Manrope({
+    subsets: ["latin"],
+    variable: "--font-manrope",
+    weight: ["400", "500", "600", "700"],
+});
+
+// export const metadata = {
+//     title: "RevionTech",
+//     description: "Grow your digital business",
+// };
+
+export default function RootLayout({children}) {
+
 
     return (
         <html lang="en">
-        <body>{children}</body>
+        <body className={`${spaceGrotesk.variable} ${manrope.variable}`}>
+        <Header/>
+        <main>{children}</main>
+        <Footer/>
+        </body>
         </html>
     );
 }

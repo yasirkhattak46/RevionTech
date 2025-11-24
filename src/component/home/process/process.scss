@@ -1,0 +1,136 @@
+@use '../../../app/assets/sass/variables';
+.process-section {
+  background-color: variables.$background;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+
+  .section-title {
+    font-family: var(--font-heading), serif;
+    font-size: clamp(2.5rem, 4vw + 1rem, 4rem);
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+
+    .highlight {
+      color: variables.$primary;
+    }
+  }
+
+  .section-desc {
+    color: variables.$text-light;
+    font-family: var(--font-body), serif;
+    font-size: clamp(1rem, 4vw + 0.5rem, 1.1rem);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  // The Glass Card
+  .process-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    height: 100%;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    z-index: 1;
+    backdrop-filter: blur(10px);
+
+    // Large Background Number (01, 02...)
+    .card-bg-number {
+      position: absolute;
+      top: -10px;
+      right: 20px;
+      font-size: 6rem;
+      font-weight: 800;
+      color: rgba(255, 255, 255, 0.03);
+      font-family: var(--font-heading), serif;
+      z-index: -1;
+      transition: all 0.4s ease;
+    }
+
+    .icon-wrapper {
+      width: 60px;
+      height: 60px;
+      background: rgba(variables.$primary, 0.1);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: variables.$primary;
+      margin-bottom: 1.5rem;
+      transition: all 0.4s ease;
+
+      svg {
+        stroke-width: 2px;
+      }
+    }
+
+    h3 {
+      font-family: var(--font-heading), serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-family: var(--font-body), serif;
+      color: variables.$text-light;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    // Glow effect element
+    .card-glow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at top right, rgba(variables.$primary, 0.2), transparent 40%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      z-index: -2;
+    }
+
+    // Hover Effects
+    &:hover {
+      transform: translateY(-5px);
+      border-color: rgba(variables.$primary, 0.5);
+      box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+
+      .card-bg-number {
+        color: rgba(variables.$primary, 0.1);
+        transform: scale(1.1);
+      }
+
+      .icon-wrapper {
+        background: variables.$primary;
+        color: variables.$secondary; // Icon turns dark on bright bg
+        transform: scale(1.1) rotate(-5deg);
+      }
+
+      .card-glow {
+        opacity: 1;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 2.25rem;
+    }
+
+    .process-card {
+      padding: 2rem;
+
+      .card-bg-number {
+        font-size: 4rem;
+      }
+    }
+  }
+}

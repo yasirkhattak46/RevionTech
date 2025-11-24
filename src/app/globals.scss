@@ -1,17 +1,29 @@
-/* Tailwind Directives */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 
 /* Variables and Mixins */
-@import '../app/assets/sass/variables';
+@use '../app/assets/sass/variables' as *;
 
 /* Global Styles */
-@import '../app/assets/sass/main';
+@use '../app/assets/sass/main' as *;
 
 /* Sections */
-@import '../app/assets/sass/header';
+@use '../app/assets/sass/header' as *;
 
 
-/* Pages */
-@import '../app/assets/sass/home';
+:root {
+  --font-heading: var(--font-space);
+  --font-body: var(--font-manrope);
+}
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+body {
+  font-family: var(--font-body), sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), sans-serif;
+}
+
