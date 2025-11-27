@@ -1,0 +1,146 @@
+@use "../../../app/assets/sass/variables";
+@use "sass:color";
+
+.heroBanner {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg,
+          variables.$secondary 0%,
+          color.adjust(variables.$primary-bg, $lightness: -10%) 50%,
+          variables.$primary-bg 100%
+  );
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+
+  // Background Elements Container
+  .bgElements {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  // Grid Pattern (like code editor)
+  .gridPattern {
+    position: absolute;
+    inset: 0;
+    background-image: 
+      linear-gradient(color.adjust(variables.$primary, $alpha: -0.95) 1px, transparent 1px),
+      linear-gradient(90deg, color.adjust(variables.$primary, $alpha: -0.95) 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.3;
+  }
+
+  // Floating Tech Icons
+  .floatingIcon {
+    position: absolute;
+    color: variables.$primary;
+    filter: drop-shadow(0 0 10px color.adjust(variables.$primary, $alpha: -0.5));
+    pointer-events: none;
+    z-index: 1;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  // Animated Brackets
+  .bracket {
+    position: absolute;
+    font-size: 80px;
+    font-weight: bold;
+    color: variables.$primary;
+    font-family: 'Courier New', monospace;
+    text-shadow: 0 0 20px color.adjust(variables.$primary, $alpha: -0.5);
+    pointer-events: none;
+
+    @media (max-width: 768px) {
+      font-size: 50px;
+    }
+  }
+
+  // Container
+  .container {
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
+    z-index: 10;
+  }
+
+  // Content
+  .content {
+    text-align: center;
+    color: variables.$text-light;
+  }
+
+  // Tech Badge
+  .techBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: color.adjust(variables.$primary, $alpha: -0.8);
+    border: 1px solid color.adjust(variables.$primary, $alpha: -0.5);
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(10px);
+    color: variables.$text-light;
+    box-shadow: 0 4px 15px color.adjust(variables.$primary, $alpha: -0.7);
+
+    @media (max-width: 768px) {
+      font-size: 0.8rem;
+      padding: 8px 16px;
+    }
+  }
+
+  .title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 20px color.adjust(variables.$secondary, $alpha: -0.5);
+    color: variables.$text-light;
+
+    br {
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+
+  .subtitle {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: color.adjust(variables.$text-light, $lightness: -5%);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 0 1px 10px color.adjust(variables.$secondary, $alpha: -0.7);
+  }
+
+  // Responsive Design
+  @media (max-width: 768px) {
+    padding: 1rem;
+    min-height: 80vh;
+  }
+}
+
+// Subtle overlay
+.heroBanner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+                  circle at center,
+                  transparent 0%,
+                  color.adjust(variables.$secondary, $alpha: -0.8) 100%
+  );
+  pointer-events: none;
+}

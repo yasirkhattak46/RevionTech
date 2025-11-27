@@ -7,12 +7,19 @@ import TestimonialsSection from "../../../component/home/testimonials/Testimonia
 import BrandSlider from "../../../component/shared/BrandSlider";
 import '../ServiceDetail.scss';
 import AiSolutionsBanner from "../../../component/services/banners/AiSolutions/AiSolutionsBanner";
+import { getWhyChooseUsData } from '../../../data/servicesData';
 
 export default function AiSolutionsPage() {
+    const whyChooseUsData = getWhyChooseUsData('ai-solutions');
+    
     return (
         <>
             <AiSolutionsBanner />
-            <WhyChooseUs />
+            <WhyChooseUs 
+                title={whyChooseUsData.title}
+                subtitle={whyChooseUsData.subtitle}
+                features={whyChooseUsData.features}
+            />
             <StatsSection />
             <ServicesSection />
             <ProcessWeFollowSection />

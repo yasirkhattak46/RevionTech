@@ -16,17 +16,17 @@ export default function AboutSection() {
             <div className="bg-grid"></div>
             <div className="container position-relative z-1">
                 {/* Main Heading */}
-                <div className="row justify-content-center mb-5 pb-lg-4">
+                <div className="row justify-content-center mb-3 pb-lg-4">
                     <div className="col-lg-10 text-center">
                         <AnimatedItem type="scaleUp" delay={0.1}>
                             <h2 className="section-title">About <span className="highlight">RevionTech</span></h2>
                         </AnimatedItem>
                         <AnimatedItem type="scaleUp" delay={0.3}>
                             <p className="section-desc">
-                                Lorem ipsum is simply dummy text of the printing and typesetting industry.
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                when an unknown printer took a galley of type and scrambled it to make a type specimen
-                                book.
+                                Revion Tech is a digital solutions company dedicated to building modern websites,
+                                scalable mobile apps, smart AI tools, and creative design experiences. We combine
+                                strategy, innovation, and technology to help businesses grow, improve their digital
+                                presence, and achieve long lasting success across every platform.
                             </p>
                         </AnimatedItem>
                     </div>
@@ -67,13 +67,14 @@ export default function AboutSection() {
                                 <div className="text-block mb-5">
                                     <h3>Our <span className="highlight">Mission</span></h3>
                                     <p>
-                                        To empower brands with next-gen digital solutions combining innovation,
-                                        design, and strategy to help them grow faster and stand out globally.
+                                        Our mission is to deliver innovative digital solutions that empower businesses
+                                        to grow online by providing high quality websites, mobile apps, AI integrations,
+                                        creative design, and strategic digital marketing.
                                     </p>
                                     <ul className="feature-list">
-                                        <li>Innovative Design</li>
-                                        <li>Strategic Marketing</li>
-                                        <li>Smart Technology</li>
+                                        <li>Deliver reliable and scalable digital products</li>
+                                        <li>Bring creativity and technology together for every project</li>
+                                        <li>Help businesses achieve measurable and sustainable digital growth</li>
                                     </ul>
                                 </div>
                             </AnimatedItem>
@@ -83,13 +84,14 @@ export default function AboutSection() {
                                 <div className="text-block">
                                     <h3>Our <span className="highlight">Vision</span></h3>
                                     <p>
-                                        To be a global creative tech agency that redefines how brands engage,
-                                        communicate, and scale through innovation and digital transformation.
+                                        Our vision is to become a leading global technology partner known for building
+                                        future ready digital solutions that inspire innovation, create impact, and help
+                                        brands succeed in a constantly evolving digital world.
                                     </p>
                                     <ul className="feature-list">
-                                        <li>Innovative Experiences</li>
-                                        <li>Future-Ready Solutions</li>
-                                        <li>Growth with Responsibility</li>
+                                        <li>Lead with innovation and long term value</li>
+                                        <li>Build technology that shapes the future of digital brands</li>
+                                        <li>Create meaningful digital experiences for businesses worldwide</li>
                                     </ul>
                                 </div>
                             </AnimatedItem>

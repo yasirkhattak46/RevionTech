@@ -97,6 +97,101 @@
 }
 
 
+// Primary Button
+.primary-btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  background: linear-gradient(
+                  109.42deg,
+                  variables.$secondary 0%,
+                  variables.$primary 95%,
+                  variables.$secondary 100%
+  );
+  font-size: 16px;
+  font-weight: var(--fw-sbold);
+  padding: 5px 5px 5px 25px;
+  text-align: center;
+  border-radius: 50px;
+  border: 1px solid variables.$primary;
+  line-height: 1;
+  z-index: 2;
+  overflow: hidden;
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primary-btn .btn-text {
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.primary-btn .btn-text span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 1;
+  text-shadow: 0 30px 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+.primary-btn .btn-icon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 20px;
+  line-height: 1;
+  width: 42px;
+  height: 42px;
+  overflow: hidden;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+.primary-btn .btn-icon svg {
+  color: variables.$primary;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.primary-btn:hover .btn-text span {
+  -webkit-transform: translateY(-30px);
+  -ms-transform: translateY(-30px);
+  transform: translateY(-30px);
+}
+
+.primary-btn:hover .btn-icon svg {
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+}
+
+
 //Footer
 @keyframes slowBounce {
   0%, 100% {

@@ -9,44 +9,37 @@ import AnimatedItem from "../../wrappers/AnimatedItem";
 const servicesData = [
     {
         id: 1,
-        title: "UI/UX & Graphic Design",
-        desc: "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard.",
+        title: "Graphic Designing",
+        desc: "We design creative branding, logos, and marketing visuals that strengthen your identity and help your business stand out with professional design.",
         link: "/services/ui-ux-design",
         image: "/images/home/services/Ui-UX-&-Graphic-Design.webp"
     },
     {
         id: 2,
         title: "Website Development",
-        desc: "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard.",
+        desc: "We build fast, modern, and responsive websites that deliver great user experience and support your business growth across all devices.",
         link: "/services/web-development",
         image: "/images/home/services/Website-Development-services.webp"
     },
     {
         id: 3,
         title: "App Development",
-        desc: "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard.",
+        desc: "We develop user friendly and scalable mobile apps for Android and iOS that turn your ideas into powerful digital products.",
         link: "/services/app-development",
         image: "/images/home/services/Mobile-App-Development.webp"
     },
     {
         id: 4,
         title: "Saas & AI Solutions",
-        desc: "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard.",
+        desc: "We create custom SaaS platforms and AI tools that automate tasks, improve efficiency, and help businesses make smarter decisions.",
         link: "/services/ai-solutions",
         image: "/images/home/services/Saas-&-Ai-Solution.webp"
     },
     {
         id: 5,
-        title: "Digital Marketing",
-        desc: "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard.",
+        title: "Digital Marketing ",
+        desc: "We create targeted digital marketing strategies including SEO, social media, and paid ads to boost visibility, attract customers, and grow your brand online.",
         link: "/services/digital-marketing",
-        image: "/images/home/services/Digital-Marketing.webp"
-    },
-    {
-        id: 6,
-        title: "E-Commerce Development",
-        desc: "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard.",
-        link: "/services/ecommerce-development",
         image: "/images/home/services/Digital-Marketing.webp"
     }
 ];
@@ -91,7 +84,7 @@ const DigitalServices = () => {
 
                     <div className="col-lg-8">
                         <div className="services-list">
-                            {servicesData.map((service,key) => (
+                            {servicesData.map((service, key) => (
                                 <Link
                                     href={service.link}
                                     key={service.id}
@@ -103,7 +96,7 @@ const DigitalServices = () => {
                                             onMouseEnter={() => setActiveService(service)}
                                         >
                                             <div className="service-header">
-                                                <h3>{service.title}</h3>
+                                                <h2>{service.title}</h2>
                                                 <GoArrowUpRight className="icon-arrow" size={35}/>
                                             </div>
                                             <p className="service-desc">

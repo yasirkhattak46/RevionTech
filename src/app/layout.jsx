@@ -19,10 +19,6 @@ const manrope = Manrope({
     weight: ["400", "500", "600", "700"],
 });
 
-// export const metadata = {
-//     title: "RevionTech",
-//     description: "Grow your digital business",
-// };
 
 export default function RootLayout({children}) {
 

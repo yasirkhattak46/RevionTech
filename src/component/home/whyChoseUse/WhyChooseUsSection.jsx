@@ -1,28 +1,26 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import {AiOutlineTeam} from "react-icons/ai";
-import {MdOutlineDisplaySettings} from "react-icons/md";
-import {BiSupport} from "react-icons/bi";
+import {Cpu, Users, Clock} from "lucide-react"; // Assuming you have lucide-react or use react-icons
 import AnimatedItem from "../../wrappers/AnimatedItem";
 import "./whyChoseUs.scss";
 import StatsSection from "../../shared/statsSection/Stats";
 
 const features = [
     {
-        title: "Dedicated Team",
-        desc: "Our team of experts is committed to delivering excellence in every project we undertake.",
-        icon: <AiOutlineTeam size={25}/>
+        title: "Tailored Digital Strategies",
+        desc: "We create unique digital products designed specifically for your goals.",
+        icon: <Cpu size={25}/>
     },
     {
-        title: "Agile Methodology",
-        desc: "We use agile practices to ensure flexibility, speed, and high-quality delivery.",
-        icon: <MdOutlineDisplaySettings size={25}/>
+        title: "Expert Creative Team",
+        desc: "Skilled developers and designers delivering stunning visuals and clean code.",
+        icon: <Users size={25}/>
     },
     {
         title: "24/7 Support",
         desc: "We are always here to help you with any issues or questions you may have.",
-        icon: <BiSupport size={25}/>
+        icon: <Clock size={25}/>
 
     }
 ];
@@ -56,8 +54,9 @@ export default function WhyChooseUsSection() {
                         <AnimatedItem type="fadeLeft">
                             <h2 className="section-title">Why Choose <span className="highlight">Us?</span></h2>
                             <p className="section-desc">
-                                We don't just build software; we build relationships and success stories.
-                                Here is why leading brands trust us with their digital vision.
+                                Partner with Revion Tech to elevate your brand presence. We blend creative design with
+                                advanced AI and development to deliver robust solutions that guarantee faster business
+                                growth and efficiency.
                             </p>
 
                             <div className="features-list">

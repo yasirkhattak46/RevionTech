@@ -1,0 +1,358 @@
+@use "../../../../app/assets/sass/variables";
+@use "sass:color";
+
+.heroBanner {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg,
+          #{variables.$secondary} 0%,
+          #{color.adjust(variables.$primary, $lightness: -10%)} 25%,
+          #{color.adjust(variables.$primary, $lightness: -5%)} 50%,
+          #{variables.$primary} 75%,
+          #{color.adjust(variables.$primary, $lightness: 5%)} 100%
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+
+  @keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  // Background Elements Container
+  .bgElements {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  // Marketing Analytics Mesh
+  .gradientMesh {
+    position: absolute;
+    inset: 0;
+    background:
+            radial-gradient(circle at 20% 30%, #{color.adjust(variables.$primary, $alpha: -0.85)} 0%, transparent 50%),
+            radial-gradient(circle at 80% 70%, #{color.adjust(variables.$primary, $lightness: -15%, $alpha: -0.85)} 0%, transparent 50%),
+            radial-gradient(circle at 50% 50%, #{color.adjust(variables.$primary, $lightness: -10%, $alpha: -0.9)} 0%, transparent 50%);
+    opacity: 0.7;
+  }
+
+  // Analytics Charts
+  .analyticsCharts {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .chart {
+    position: absolute;
+    opacity: 0.2;
+    
+    &.chart1 {
+      top: 15%;
+      left: 5%;
+      width: 120px;
+      height: 80px;
+    }
+    
+    &.chart2 {
+      top: 25%;
+      right: 10%;
+      width: 100px;
+      height: 70px;
+    }
+    
+    &.chart3 {
+      bottom: 20%;
+      left: 8%;
+      width: 150px;
+      height: 90px;
+    }
+    
+    &.chart4 {
+      bottom: 25%;
+      right: 15%;
+      width: 110px;
+      height: 75px;
+    }
+  }
+
+  // Floating Marketing Icons
+  .floatingIcon {
+    position: absolute;
+    color: #{color.adjust(variables.$primary, $lightness: 20%, $alpha: -0.4)};
+    filter: drop-shadow(0 0 10px #{color.adjust(variables.$primary, $alpha: -0.7)});
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.7;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  // Marketing Dashboard
+  .marketingDashboard {
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    width: 300px;
+    height: 220px;
+    background: #{color.adjust(variables.$secondary, $alpha: -0.85)};
+    border: 1px solid #{color.adjust(variables.$primary, $alpha: -0.7)};
+    border-radius: 12px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px #{color.adjust(variables.$secondary, $alpha: -0.9)};
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .dashboardHeader {
+    height: 35px;
+    background: #{color.adjust(variables.$primary, $alpha: -0.9)};
+    border-bottom: 1px solid #{color.adjust(variables.$primary, $alpha: -0.8)};
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .headerIndicators {
+    display: flex;
+    gap: 10px;
+  }
+
+  .indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    
+    &.red { background: #{color.adjust(#ef4444, $alpha: -0.3)}; }
+    &.yellow { background: #{color.adjust(#f59e0b, $alpha: -0.3)}; }
+    &.green { background: #{color.adjust(#10b981, $alpha: -0.3)}; }
+  }
+
+  .dashboardBody {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .metricCard {
+    height: 30px;
+    background: #{color.adjust(variables.$primary, $alpha: -0.9)};
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    
+    &:nth-child(2) {
+      width: 85%;
+      height: 25px;
+    }
+  }
+
+  // Growth Trajectory Lines
+  .growthLines {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.5;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  // Marketing Metrics
+  .marketingMetric {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0.3;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .seoScore {
+    top: 30%;
+    left: 10%;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: #{color.adjust(#10b981, $alpha: -0.8)};
+    border: 2px solid #{color.adjust(#10b981, $alpha: -0.6)};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #{color.adjust(#10b981, $alpha: -0.2)};
+  }
+
+  .conversionRate {
+    top: 40%;
+    right: 12%;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #{color.adjust(#3b82f6, $alpha: -0.8)};
+    border: 2px solid #{color.adjust(#3b82f6, $alpha: -0.6)};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #{color.adjust(#3b82f6, $alpha: -0.2)};
+  }
+
+  .trafficGrowth {
+    bottom: 30%;
+    left: 15%;
+    width: 100px;
+    height: 40px;
+    background: #{color.adjust(#8b5cf6, $alpha: -0.8)};
+    border: 2px solid #{color.adjust(#8b5cf6, $alpha: -0.6)};
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #{color.adjust(#8b5cf6, $alpha: -0.2)};
+  }
+
+  // Container
+  .container {
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
+    z-index: 10;
+  }
+
+  // Content
+  .content {
+    text-align: center;
+    color: variables.$text-light;
+  }
+
+  // Tech Badge
+  .techBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: #{color.adjust(variables.$primary, $alpha: -0.85)};
+    border: 1px solid #{color.adjust(variables.$primary, $alpha: -0.7)};
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(10px);
+    color: variables.$text-light;
+    box-shadow: 0 4px 15px #{color.adjust(variables.$primary, $alpha: -0.9)};
+
+    @media (max-width: 768px) {
+      font-size: 0.8rem;
+      padding: 8px 16px;
+    }
+  }
+
+  .title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 20px #{color.adjust(variables.$primary, $alpha: -0.7)};
+    color: variables.$text-light;
+
+    br {
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+
+  .subtitle {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #{color.adjust(variables.$text-light, $alpha: -0.15)};
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 0 1px 10px #{color.adjust(variables.$primary, $alpha: -0.8)};
+  }
+
+  // Tech Stack Pills
+  .techStack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+
+    @media (max-width: 768px) {
+      gap: 8px;
+    }
+  }
+
+  .techPill {
+    padding: 8px 18px;
+    background: #{color.adjust(variables.$primary, $alpha: -0.9)};
+    border: 1px solid #{color.adjust(variables.$primary, $alpha: -0.7)};
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #{color.adjust(variables.$text-light, $alpha: -0.15)};
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: #{color.adjust(variables.$primary, $alpha: -0.8)};
+      border-color: #{color.adjust(variables.$primary, $alpha: -0.5)};
+      color: variables.$text-light;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px #{color.adjust(variables.$primary, $alpha: -0.8)};
+    }
+
+    @media (max-width: 768px) {
+      padding: 6px 14px;
+      font-size: 0.75rem;
+    }
+  }
+
+  // Responsive Design
+  @media (max-width: 768px) {
+    padding: 1rem;
+    min-height: 80vh;
+  }
+}
+
+// Darker overlay for better text readability
+.heroBanner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+                  circle at center,
+                  transparent 0%,
+                  rgba(0, 0, 0, 0.4) 100%
+  );
+  pointer-events: none;
+}

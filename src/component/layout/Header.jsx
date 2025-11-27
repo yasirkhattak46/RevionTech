@@ -54,7 +54,9 @@ export default function Header() {
                         <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
                             <li className="nav-item"><Link className="nav-link" href="/">Home</Link></li>
                             <li className="nav-item"><Link className="nav-link" href="/about-us">About</Link></li>
-                            <li className="nav-item dropdown" onClick={() => setServicesOpen(prev => !prev)}>
+                            <li className="nav-item dropdown"
+                                onMouseEnter={() => setServicesOpen(true)}
+                                onMouseLeave={() => setServicesOpen(false)}>
                                 <Link href="#" className="nav-link dropdown-toggle border-0 bg-transparent">
                                     Services
                                     <span className={`dropdown-icon ${servicesOpen ? 'open' : ''}`}>+</span>
@@ -62,22 +64,41 @@ export default function Header() {
 
                                 <ul className={`dropdown-menu ${servicesOpen ? 'open' : ''}`}>
                                     <li>
-                                        <Link href="/services/web-development" className="dropdown-item">Web
-                                            Development</Link>
+                                        <Link href="/services/web-development" className="dropdown-item">
+                                            <span className="service-icon">🌐</span>
+                                            Web Development
+                                        </Link>
                                     </li>
                                     <li>
-                                        <Link href="/services/app-development" className="dropdown-item">App
-                                            Development</Link>
+                                        <Link href="/services/app-development" className="dropdown-item">
+                                            <span className="service-icon">📱</span>
+                                            App Development
+                                        </Link>
+                                    </li>
+
+                                    <li>
+                                        <Link href="/services/ui-ux-design" className="dropdown-item">
+                                            <span className="service-icon">🎨</span>
+                                            UI/UX Design
+                                        </Link>
                                     </li>
                                     <li>
-                                        <Link href="/services/digital-marketing" className="dropdown-item">Digital
-                                            Marketing</Link>
+                                        <Link href="/services/digital-marketing" className="dropdown-item">
+                                            <span className="service-icon">📈</span>
+                                            Digital Marketing
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="/services/ai-solutions" className="dropdown-item">
+                                            <span className="service-icon">🤖</span>
+                                            AI Solutions
+                                        </Link>
                                     </li>
                                 </ul>
                             </li>
 
 
-                            <li className="nav-item"><Link className="nav-link" href="/contact-us">Portfolio</Link></li>
+                            <li className="nav-item"><Link className="nav-link" href="/portfolio">Portfolio</Link></li>
                             <li className="nav-item"><Link className="nav-link" href="/contact-us">Contact</Link></li>
                         </ul>
 
@@ -106,18 +127,31 @@ export default function Header() {
                     {servicesOpen && (
                         <div className={`mobile-dropdown-list ${servicesOpen ? 'open' : ''}`}>
                             <Link href="/services/web-development" onClick={() => setMobileOpen(false)}>
+                                <span className="service-icon">🌐</span>
                                 Web Development
                             </Link>
                             <Link href="/services/app-development" onClick={() => setMobileOpen(false)}>
+                                <span className="service-icon">📱</span>
                                 App Development
                             </Link>
+
+                            <Link href="/services/ui-ux-design" onClick={() => setMobileOpen(false)}>
+                                <span className="service-icon">🎨</span>
+                                UI/UX Design
+                            </Link>
                             <Link href="/services/digital-marketing" onClick={() => setMobileOpen(false)}>
+                                <span className="service-icon">📈</span>
                                 Digital Marketing
+                            </Link>
+                            <Link href="/services/ai-solutions" onClick={() => setMobileOpen(false)}>
+                                <span className="service-icon">🤖</span>
+                                AI Solutions
                             </Link>
                         </div>
                     )}
 
-                    <Link href="/contact-us" onClick={() => setMobileOpen(false)}>Contact</Link>
+                    <Link href="/portfolio" onClick={() => setMobileOpen(false)}>Portfolio</Link>
+                                        <Link href="/contact-us" onClick={() => setMobileOpen(false)}>Contact</Link>
                 </div>
                 <div className="mobile-contact">
                     <a href="tel:+923305858969"><FiPhone/> +92 330 5858969</a>

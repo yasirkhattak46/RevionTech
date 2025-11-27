@@ -6,11 +6,20 @@ import ProcessWeFollowSection from "../../../component/home/process/ProcessWeFol
 import TestimonialsSection from "../../../component/home/testimonials/TestimonialsSection";
 import BrandSlider from "../../../component/shared/BrandSlider";
 import '../ServiceDetail.scss';
+import DigitalMarketingBanner from "../../../component/services/banners/digitaMarketing/DigitalMarketingBanner";
+import { getWhyChooseUsData } from '../../../data/servicesData';
 
 export default function DigitalMarketingPage() {
+    const whyChooseUsData = getWhyChooseUsData('digital-marketing');
+    
     return (
         <>
-            <WhyChooseUs />
+            <DigitalMarketingBanner/>
+            <WhyChooseUs 
+                title={whyChooseUsData.title}
+                subtitle={whyChooseUsData.subtitle}
+                features={whyChooseUsData.features}
+            />
             <StatsSection />
             <ServicesSection />
             <ProcessWeFollowSection />

@@ -1,44 +1,46 @@
 "use client";
 import React from "react";
-import { FileSearch, PenTool, Code, ShieldCheck, Rocket, Activity } from "lucide-react"; // Assuming you have lucide-react or use react-icons
+import {Search, ClipboardPen, Layers, Code, ShieldCheck,Rocket} from "lucide-react"; // Assuming you have lucide-react or use react-icons
 import AnimatedItem from "../../wrappers/AnimatedItem";
+
 import "./process.scss";
+
 const steps = [
     {
         id: "01",
-        title: "Requirement Gathering",
-        desc: "We analyze your goals, target audience, and business needs to create a solid roadmap.",
-        icon: <FileSearch size={32} />
+        title: "Discovery and Requirements",
+        desc: "Project goals, audience, and key features are defined to set a clear direction.",
+        icon: <Search size={32}/>
     },
     {
         id: "02",
-        title: "UI/UX Design",
-        desc: "Creating intuitive, user-centric designs that align with your brand identity.",
-        icon: <PenTool size={32} />
+        title: "Strategy and Planning",
+        desc: "A solid roadmap is prepared, outlining structure, timeline, and technology flow.",
+        icon: <ClipboardPen size={32}/>
     },
     {
         id: "03",
-        title: "Development",
-        desc: "Coding robust, scalable solutions using the latest tech stack (Next.js, Node, etc).",
-        icon: <Code size={32} />
+        title: "Design and Prototyping",
+        desc: "User friendly layouts and prototypes are crafted to match brand style and enhance experience.",
+        icon: <Layers size={32}/>
     },
     {
         id: "04",
-        title: "Testing & Q/A",
-        desc: "Rigorous testing across devices to ensure a bug-free and smooth experience.",
-        icon: <ShieldCheck size={32} />
+        title: "Development Phase",
+        desc: "The approved design is transformed into a fast, secure, and scalable digital product.",
+        icon: <Code size={32}/>
     },
     {
         id: "05",
-        title: "Deployment",
-        desc: "Seamless launch of your product to the live server with optimized performance.",
-        icon: <Rocket size={32} />
+        title: "Testing and Review",
+        desc: "Every element is tested for speed, functionality, security, and smooth performance across all devices.",
+        icon: <ShieldCheck size={32}/>
     },
     {
         id: "06",
-        title: "Monitoring & Support",
-        desc: "Continuous tracking of performance and user behavior to ensure long-term success.",
-        icon: <Activity size={32} />
+        title: "Launch and Support",
+        desc: "The project goes live with full optimization, followed by ongoing improvements and support.",
+        icon: <Rocket size={32}/>
     }
 ];
 
@@ -51,7 +53,7 @@ export default function ProcessWeFollowSection() {
                         <AnimatedItem type="fadeUp">
                             <h2 className="section-title">Process We <span className="highlight">Follow</span></h2>
                             <p className="section-desc">
-                                A streamlined workflow designed to deliver excellence from concept to launch.
+                                A simple and effective process designed to deliver high quality digital products with clarity, speed, and a seamless experience.
                             </p>
                         </AnimatedItem>
                     </div>
@@ -60,7 +62,7 @@ export default function ProcessWeFollowSection() {
                 <div className="row g-4">
                     {steps.map((step, index) => (
                         <div className="col-lg-4 col-md-6" key={step.id}>
-                            <AnimatedItem type="fadeUp" delay={index * 0.1}>
+                            <AnimatedItem type="fadeUp" className="h-100" delay={index * 0.1}>
                                 <div className="process-card">
                                     <div className="card-bg-number">{step.id}</div>
                                     <div className="icon-wrapper">

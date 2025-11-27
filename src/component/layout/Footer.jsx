@@ -19,6 +19,7 @@ export default function Footer() {
                             <div className={'footer-services'}>
                                 <span>Services</span>
                                 <ul className={'m-0'}>
+                                    <li><Link href={'/portfolio'}>Portfolio</Link></li>
                                     <li><Link href={'#'}>Website Design & Development</Link></li>
                                     <li><Link href={'#'}>Ui/Ux & Graphic Design</Link></li>
                                     <li><Link href={'#'}>Saas & Ai Solutions</Link></li>

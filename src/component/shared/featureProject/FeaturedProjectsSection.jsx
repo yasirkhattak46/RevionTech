@@ -164,9 +164,9 @@ export default function FeaturedProjectsSection() {
                             {projectGroups.map((group) => (
                                 <SwiperSlide key={group.id}>
                                     <div className="row g-4 justify-content-center">
-                                        {group.projects.map((project) => (
-                                            <div className="col-lg-4 col-md-6" key={project.id}>
-                                                <AnimatedItem type="fadeUp" delay={project.id * 0.1}>
+                                        {group.projects.map((project, index) => (
+                                            <div className="col-lg-4 col-md-6" key={index}>
+                                                <AnimatedItem type="fadeUp" delay={index * 0.1}>
                                                     <CardItem project={project}/>
                                                 </AnimatedItem>
                                             </div>
