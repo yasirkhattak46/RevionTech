@@ -1,0 +1,243 @@
+@use "../../../../app/assets/sass/variables";
+@use "sass:color";
+
+.heroBanner {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg,
+          #{variables.$secondary} 0%,
+          #{variables.$primary-bg} 50%,
+          #{variables.$background} 100%
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  // Ensure floating elements don't affect layout
+  box-sizing: border-box;
+
+  @keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  // Background Elements Container
+  .bgElements {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  // AI Gradient Mesh
+  .aiGradientMesh {
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(circle at 20% 30%, #{color.adjust(variables.$primary, $alpha: -0.85)} 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, #{color.adjust(variables.$primary, $alpha: -0.85)} 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, #{color.adjust(variables.$primary, $lightness: -20%, $alpha: -0.9)} 0%, transparent 50%);
+    opacity: 0.6;
+  }
+
+  // Neural Network Nodes
+  .neuralNetwork {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .neuralNode {
+    position: absolute;
+    
+    .nodeCore {
+      width: 12px;
+      height: 12px;
+      background: #{variables.$primary};
+      border-radius: 50%;
+      box-shadow: 0 0 20px #{variables.$primary};
+    }
+    
+    .nodeRing {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 30px;
+      height: 30px;
+      border: 2px solid #{variables.$primary};
+      border-radius: 50%;
+      opacity: 0.3;
+      animation: ripple 2s ease-out infinite;
+    }
+  }
+
+  // Data Streams
+  .dataStream {
+    position: absolute;
+    width: 4px;
+    height: 40px;
+    background: linear-gradient(to bottom, transparent, #{variables.$primary}, transparent);
+    border-radius: 2px;
+  }
+
+  // Floating AI Icons
+  .floatingIcon {
+    position: absolute;
+    pointer-events: none;
+    z-index: 5;
+    // Ensure icons don't take up space
+    width: fit-content;
+    height: fit-content;
+    // Add some styling to make them blend with the theme
+    color: #{color.adjust(variables.$primary, $alpha: -0.6)};
+    filter: drop-shadow(0 0 8px #{color.adjust(variables.$primary, $alpha: -0.7)});
+  }
+
+  // Circuit Pattern
+  .circuitPattern {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .circuitSvg {
+    width: 100%;
+    height: 100%;
+  }
+
+  // Container
+  .container {
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
+    z-index: 20;
+    // Center content properly
+    margin: 0 auto;
+    text-align: center;
+    // Ensure container stays centered regardless of floating elements
+    left: 0;
+    right: 0;
+    // Prevent any interference from absolute positioned elements
+    isolation: isolate;
+  }
+
+  // Content
+  .content {
+    text-align: center;
+    color: variables.$text-light;
+  }
+
+  // Tech Badge
+  .techBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: #{color.adjust(variables.$primary, $alpha: -0.85)};
+    border: 1px solid #{color.adjust(variables.$primary, $alpha: -0.6)};
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(10px);
+    color: #{variables.$text-light};
+    box-shadow: 0 4px 15px #{color.adjust(variables.$primary, $alpha: -0.8)};
+
+    @media (max-width: 768px) {
+      font-size: 0.8rem;
+      padding: 8px 16px;
+    }
+  }
+
+  .title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 20px #{color.adjust(variables.$primary, $alpha: -0.7)};
+    color: #{variables.$text-light};
+
+    br {
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+
+  .subtitle {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #{color.adjust(variables.$text-light, $alpha: -0.15)};
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 0 1px 10px #{color.adjust(variables.$primary, $alpha: -0.8)};
+  }
+
+  // AI Technologies Pills
+  .techStack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+
+    @media (max-width: 768px) {
+      gap: 8px;
+    }
+  }
+
+  .techPill {
+    padding: 8px 18px;
+    background: #{color.adjust(variables.$primary, $alpha: -0.9)};
+    border: 1px solid #{color.adjust(variables.$primary, $alpha: -0.7)};
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #{color.adjust(variables.$text-light, $alpha: -0.15)};
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: #{color.adjust(variables.$primary, $alpha: -0.8)};
+      border-color: #{color.adjust(variables.$primary, $alpha: -0.5)};
+      color: #{variables.$text-light};
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px #{color.adjust(variables.$primary, $alpha: -0.8)};
+    }
+
+    @media (max-width: 768px) {
+      padding: 6px 14px;
+      font-size: 0.75rem;
+    }
+  }
+
+  // Responsive Design
+  @media (max-width: 768px) {
+    padding: 1rem;
+    min-height: 80vh;
+  }
+}
+
+@keyframes ripple {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 0.3;
+  }
+  100% {
+    width: 60px;
+    height: 60px;
+    opacity: 0;
+  }
+}

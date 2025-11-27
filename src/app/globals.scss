@@ -14,7 +14,9 @@
   --font-heading: var(--font-space);
   --font-body: var(--font-manrope);
 }
+
 html, body {
+  scroll-behavior: auto !important;
   overflow-x: hidden;
   max-width: 100%;
 }
@@ -25,5 +27,31 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading), sans-serif;
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $primary-bg;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $primary-bg;
+}
+
+/* Firefox Scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $primary-bg #ffffff;
 }
 

@@ -1,28 +1,218 @@
 @use '../../../app/assets/sass/variables';
 
-.hero-section {
-  background: linear-gradient(109.42deg, variables.$secondary 0%, variables.$primary 88.87%, variables.$secondary 175.91%);
+.hero-section {  background: linear-gradient(109.42deg, variables.$secondary 0%, variables.$primary 88.87%, variables.$secondary 175.91%);
   color: #fff;
   position: relative;
   overflow: hidden;
-  height: 80vh;
-  @media (max-width: 760px) {
-    height: 100vh;
-  }
+  min-height: 100vh;
+  padding: 170px 0 0 0;
 
   @media (max-width: 992px) {
-    text-align: center;
+    padding: 150px 0 0 0;
   }
-  @media (max-width: 769px) {
-    padding: 120px 0 0 0;
+
+  // Floating background elements
+  .floating-elements {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .float-circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.1;
+    background: rgba(255, 255, 255, 0.3);
+    animation: float 6s ease-in-out infinite;
+
+    &.circle-1 {
+      width: 300px;
+      height: 300px;
+      top: -100px;
+      left: -50px;
+      animation-delay: 0s;
+    }
+
+    &.circle-2 {
+      width: 200px;
+      height: 200px;
+      bottom: -50px;
+      right: 10%;
+      animation-delay: 2s;
+    }
+
+    &.circle-3 {
+      width: 150px;
+      height: 150px;
+      top: 40%;
+      right: 5%;
+      animation-delay: 4s;
+    }
+  }
+
+  // Service background icons
+  .service-background-icon {
+    position: absolute;
+    opacity: 0.05;
+    color: white;
+    z-index: 0;
+    animation: floatDelayed 8s ease-in-out infinite;
+    
+    @media (min-width: 1400px) {
+      opacity: 0.07;
+    }
+    
+    &.icon-web {
+      top: 15%;
+      left: 5%;
+      animation-delay: 1s;
+      font-size: 4rem;
+    }
+    
+    &.icon-ui {
+      top: 25%;
+      right: 10%;
+      animation-delay: 3s;
+      font-size: 3.5rem;
+    }
+    
+    &.icon-app {
+      bottom: 20%;
+      left: 8%;
+      animation-delay: 2s;
+      font-size: 4rem;
+    }
+    
+    &.icon-marketing {
+      bottom: 25%;
+      right: 15%;
+      animation-delay: 4s;
+      font-size: 3.5rem;
+    }
+    
+    &.icon-ai {
+      top: 40%;
+      left: 15%;
+      animation-delay: 0s;
+      font-size: 4rem;
+    }
+  }
+
+  .hero-image{
+    position: absolute;
+    bottom: 0;
+    right: 50px;
+    width: 800px;
+    z-index: 0;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    
+    &.image-loaded {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    @media (max-width: 1300px) {
+      width: 600px;
+    }
+    @media (max-width: 1000px) {
+      opacity: 0.5;
+      width: 350px;
+      left: 50%;
+      transform: translateX(-50%);
+      
+      &.image-loaded {
+        opacity: 0.5;
+        transform: translateX(-50%);
+      }
+    }
   }
 }
 
 .hero-title {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
   font-weight: 700;
-  font-size: clamp(2.5rem, 4vw + 1rem, 4.75rem);
+  line-height: 1.1;
+  margin-bottom: 24px;
+  color: #fff;
+  
+  .highlight {
+    color: variables.$primary;
+    position: relative;
+    display: inline-block;
+  }
+  
+  @media (max-width: 992px) {
+    text-align: center;
+  }
 }
 
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 20px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  backdrop-filter: blur(10px);
+  animation: fadeInDown 0.6s ease-out;
+
+  @media (max-width: 992px) {
+    justify-content: center;
+  }
+}
+
+.services-quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+
+  @media (max-width: 992px) {
+    justify-content: center;
+  }
+}
+
+.service-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  animation: fadeInUp 0.5s ease-out backwards;
+  z-index: 1;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: variables.$primary;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.banner-description {
+  font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+  line-height: 1.8;
+  margin-bottom: 36px;
+  color: rgba(255, 255, 255, 0.85);
+  @media (max-width: 992px) {
+    text-align: center;
+  }
+}
 
 .hero-divider {
   width: 100%;
@@ -30,18 +220,67 @@
   margin-top: 40px;
 }
 
+.hero-section .col-md-6 {
+  padding: 60px 40px 60px 60px;
 
-.hero-section .row {
-  display: flex;
-  flex-wrap: wrap;
+  @media (max-width: 992px) {
+    padding: 60px 30px;
+    text-align: center;
+  }
+
+  @media (max-width: 576px) {
+    padding: 50px 20px;
+  }
 }
 
 .hero-section .col-md-6.text-center {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  @media (min-width: 760px) {
-    height: 80vh;
-  }
+  padding: 40px 40px 0 40px;
 
+  @media (max-width: 992px) {
+    padding: 40px 20px 0 20px;
+  }
+}
+
+// Animations
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+@keyframes floatDelayed {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(3deg);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

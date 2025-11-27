@@ -1,0 +1,326 @@
+@use "./../../../app/assets/sass/variables";
+@use "sass:color";
+// QualityDesign.module.scss
+.qualityDesignSection {
+  background-color: variables.$background;
+  color: #ffffff;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+
+  // Improved Radiant Glow
+  .glowBg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    background:
+            radial-gradient(circle 600px at 50% 50%, rgba(20, 184, 166, 0.12), transparent 70%),
+            radial-gradient(circle 900px at 80% 20%, rgba(20, 184, 166, 0.05), transparent 60%);
+    filter: blur(80px);
+  }
+
+  // Subtle grid background
+  .bgGrid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+            linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 75px 75px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  // Content wrapper
+  .contentWrapper {
+    position: relative;
+    z-index: 1;
+  }
+
+  // Section heading
+  .sectionHeading {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    h2 {
+      font-size: clamp(2.5rem, 4vw + 1rem, 4rem);
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+
+      .highlight {
+        color: variables.$primary;
+      }
+    }
+
+    .subtitle {
+      font-size: clamp(1rem, 4vw + 0.5rem, 1.1rem);
+      line-height: 1.6;
+      color: variables.$text-light;
+      max-width: 800px;
+      margin: 0 auto 1rem;
+    }
+
+    .description {
+      font-size: clamp(1rem, 4vw + 0.5rem, 1.1rem);
+      color: variables.$text-light;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+  }
+
+  // Feature cards
+  .featureCards {
+    margin-top: 4rem;
+
+  }
+
+  // Grid container for lines
+  .gridContainer {
+    position: relative;
+    padding: 0;
+  }
+
+  // Horizontal Lines (3 lines connecting cards horizontally)
+  .horizontalLine {
+    position: absolute;
+    height: 2px;
+    background: variables.$primary;
+    z-index: 0;
+    transform-origin: left;
+    display: none;
+
+    @media (min-width: 992px) {
+      display: block;
+    }
+
+    // Dots at start and end
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: variables.$primary;
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.2);
+    }
+
+    &::before {
+      left: -5px;
+    }
+
+    &::after {
+      right: -5px;
+    }
+  }
+
+  // Line positions for each row
+  .line1 {
+    top: calc(33.5%);
+    left: 0;
+    width: 100%;
+  }
+
+  .line2 {
+    top: calc(66.5%);
+    left: 0;
+    width: 100%;
+  }
+
+
+
+  // Vertical Lines (3 lines connecting cards vertically)
+  .verticalLine {
+    position: absolute;
+    width: 2px;
+    background: variables.$primary;
+    z-index: 0;
+    transform-origin: top;
+    display: none;
+
+    @media (min-width: 992px) {
+      display: block;
+    }
+
+    // Dots at start and end
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: variables.$primary;
+      border-radius: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.2);
+    }
+
+    &::before {
+      top: -5px;
+    }
+
+    &::after {
+      bottom: -5px;
+    }
+  }
+
+  // Vertical line positions
+  .vLine1 {
+    top: 0;
+    left: 25%;
+    height: 100%;
+  }
+
+  .vLine3 {
+    top: 0;
+    left: 75%;
+    height: 100%;
+  }
+
+  .featureCard {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    padding: 2rem;
+    height: 100%;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+    &:hover {
+      box-shadow: 0 20px 40px rgba(20, 184, 166, 0.2);
+      transform: translateY(-8px);
+      border-color: rgba(20, 184, 166, 0.5);
+
+      .iconWrapper {
+        background: rgba(20, 184, 166, 0.2);
+        transform: scale(1.1) rotate(5deg);
+
+        svg {
+          color: variables.$primary-bg;
+        }
+      }
+
+      .cardNumber {
+        color: variables.$primary-bg;
+        transform: translateX(5px);
+      }
+
+      .cardTitle {
+        transform: translateX(3px);
+      }
+    }
+
+    .iconWrapper {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .cardNumber {
+      transition: all 0.3s ease;
+    }
+
+    .cardTitle {
+      transition: all 0.3s ease;
+    }
+
+    .iconWrapper {
+      width: 60px;
+      height: 60px;
+      background: rgba(20, 184, 166, 0.1);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+
+      svg {
+        color: variables.$primary;
+        font-size: 1.75rem;
+      }
+    }
+
+    .cardNumber {
+      font-size: 0.875rem;
+      color: variables.$primary;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .cardTitle {
+      font-size: clamp(1.1rem, 2vw, 1.35rem);
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: variables.$background;
+    }
+
+    .cardDescription {
+      font-size: clamp(0.875rem, 1.5vw, 0.95rem);
+      line-height: 1.7;
+      color: #64748b;
+      margin: 0;
+    }
+  }
+
+  // Responsive adjustments
+  @media (max-width: 991.98px) {
+    padding: 60px 0;
+
+    .sectionHeading {
+      margin-bottom: 2rem;
+    }
+
+    .featureCards {
+      margin-top: 2.5rem;
+    }
+
+    .featureCard {
+      padding: 1.75rem;
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    padding: 50px 0;
+
+    .featureCard {
+      padding: 1.5rem;
+
+      .iconWrapper {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 1rem;
+
+        svg {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    padding: 40px 0;
+
+    .sectionHeading {
+      margin-bottom: 1.5rem;
+
+      h2 {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .featureCards {
+      margin-top: 2rem;
+    }
+  }
+}

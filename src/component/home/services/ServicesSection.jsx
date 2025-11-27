@@ -11,21 +11,21 @@ const servicesData = [
         id: 1,
         title: "UI/UX & Graphic Design",
         desc: "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard.",
-        link: "/services/ui-ux",
+        link: "/services/ui-ux-design",
         image: "/images/home/services/Ui-UX-&-Graphic-Design.webp"
     },
     {
         id: 2,
         title: "Website Development",
         desc: "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard.",
-        link: "/services/web-dev",
+        link: "/services/web-development",
         image: "/images/home/services/Website-Development-services.webp"
     },
     {
         id: 3,
         title: "App Development",
         desc: "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard.",
-        link: "/services/app-dev",
+        link: "/services/app-development",
         image: "/images/home/services/Mobile-App-Development.webp"
     },
     {
@@ -40,6 +40,13 @@ const servicesData = [
         title: "Digital Marketing",
         desc: "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard.",
         link: "/services/digital-marketing",
+        image: "/images/home/services/Digital-Marketing.webp"
+    },
+    {
+        id: 6,
+        title: "E-Commerce Development",
+        desc: "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard.",
+        link: "/services/ecommerce-development",
         image: "/images/home/services/Digital-Marketing.webp"
     }
 ];

@@ -19,14 +19,11 @@ export default function ContactSection() {
         console.log("Form submitted:", formData);
     };
 
-    return (<section className="contact-section">
-        {/* Background Pattern */}
+    return (
+        <section className="contact-section">
         <div className="bg-pattern"></div>
-
-        {/* Glow Effects */}
         <div className="glow-bg top-right"></div>
         <div className="glow-bg bottom-left"></div>
-
         <div className="container position-relative z-2">
             <div className="row justify-content-center mb-5 text-center">
                 <div className="col-lg-8">
@@ -168,5 +165,6 @@ export default function ContactSection() {
                 </div>
             </div>
         </div>
-    </section>);
+    </section>
+    );
 }

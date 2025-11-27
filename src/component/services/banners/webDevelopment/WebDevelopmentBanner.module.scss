@@ -1,0 +1,292 @@
+@use "../../../../app/assets/sass/variables";
+@use "sass:color";
+
+.heroBanner {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg,
+          variables.$secondary 0%,
+          color.adjust(variables.$primary-bg, $lightness: -10%) 50%,
+          variables.$primary-bg 100%
+  );
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+
+  // Background Elements Container
+  .bgElements {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  // Grid Pattern (like code editor)
+  .gridPattern {
+    position: absolute;
+    inset: 0;
+    background-image: 
+      linear-gradient(color.adjust(variables.$primary, $alpha: -0.95) 1px, transparent 1px),
+      linear-gradient(90deg, color.adjust(variables.$primary, $alpha: -0.95) 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.3;
+  }
+
+  // Code Snippets Background
+  .codeSnippets {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    color: color.adjust(variables.$primary, $alpha: -0.3);
+  }
+
+  .codeBlock {
+    position: absolute;
+    left: 5%;
+    top: 15%;
+    padding: 20px;
+    background: color.adjust(variables.$primary-bg, $alpha: -0.85);
+    border: 1px solid color.adjust(variables.$primary, $alpha: -0.7);
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+
+    &.codeBlockRight {
+      left: auto;
+      right: 5%;
+      top: auto;
+      bottom: 15%;
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .codeLine {
+    margin: 5px 0;
+    opacity: 0.6;
+  }
+
+  // Floating Tech Icons
+  .floatingIcon {
+    position: absolute;
+    color: variables.$primary;
+    filter: drop-shadow(0 0 10px color.adjust(variables.$primary, $alpha: -0.5));
+    pointer-events: none;
+    z-index: 1;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  // Browser Window Mock
+  .browserWindow {
+    position: absolute;
+    right: 10%;
+    top: 30%;
+    width: 300px;
+    height: 200px;
+    background: color.adjust(variables.$primary-bg, $alpha: -0.7);
+    border: 2px solid color.adjust(variables.$primary, $alpha: -0.6);
+    border-radius: 12px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .browserHeader {
+    height: 35px;
+    background: color.adjust(variables.$primary-bg, $alpha: -0.5);
+    border-bottom: 1px solid color.adjust(variables.$primary, $alpha: -0.7);
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+  }
+
+  .browserDots {
+    display: flex;
+    gap: 8px;
+
+    span {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: color.adjust(variables.$primary, $alpha: -0.5);
+
+      &:nth-child(1) {
+        background: color.adjust(#ff5f56, $alpha: -0.3);
+      }
+      &:nth-child(2) {
+        background: color.adjust(#ffbd2e, $alpha: -0.3);
+      }
+      &:nth-child(3) {
+        background: color.adjust(#27c93f, $alpha: -0.3);
+      }
+    }
+  }
+
+  .browserBody {
+    padding: 20px;
+  }
+
+  .browserLine {
+    height: 8px;
+    background: color.adjust(variables.$primary, $alpha: -0.7);
+    border-radius: 4px;
+    margin-bottom: 12px;
+
+    &:nth-child(1) {
+      width: 80%;
+    }
+    &:nth-child(2) {
+      width: 60%;
+    }
+    &:nth-child(3) {
+      width: 70%;
+    }
+  }
+
+  // Animated Brackets
+  .bracket {
+    position: absolute;
+    font-size: 80px;
+    font-weight: bold;
+    color: variables.$primary;
+    font-family: 'Courier New', monospace;
+    text-shadow: 0 0 20px color.adjust(variables.$primary, $alpha: -0.5);
+    pointer-events: none;
+
+    @media (max-width: 768px) {
+      font-size: 50px;
+    }
+  }
+
+  // Container
+  .container {
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
+    z-index: 10;
+  }
+
+  // Content
+  .content {
+    text-align: center;
+    color: variables.$text-light;
+  }
+
+  // Tech Badge
+  .techBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: color.adjust(variables.$primary, $alpha: -0.8);
+    border: 1px solid color.adjust(variables.$primary, $alpha: -0.5);
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(10px);
+    color: variables.$text-light;
+    box-shadow: 0 4px 15px color.adjust(variables.$primary, $alpha: -0.7);
+
+    @media (max-width: 768px) {
+      font-size: 0.8rem;
+      padding: 8px 16px;
+    }
+  }
+
+  .title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 20px color.adjust(variables.$secondary, $alpha: -0.5);
+    color: variables.$text-light;
+
+    br {
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+
+  .subtitle {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: color.adjust(variables.$text-light, $lightness: -5%);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 0 1px 10px color.adjust(variables.$secondary, $alpha: -0.7);
+  }
+
+  // Tech Stack Pills
+  .techStack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+
+    @media (max-width: 768px) {
+      gap: 8px;
+    }
+  }
+
+  .techPill {
+    padding: 8px 18px;
+    background: color.adjust(variables.$primary-bg, $alpha: -0.5);
+    border: 1px solid color.adjust(variables.$primary, $alpha: -0.6);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: variables.$primary;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: color.adjust(variables.$primary, $alpha: -0.8);
+      border-color: variables.$primary;
+      color: variables.$text-light;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px color.adjust(variables.$primary, $alpha: -0.7);
+    }
+
+    @media (max-width: 768px) {
+      padding: 6px 14px;
+      font-size: 0.75rem;
+    }
+  }
+
+  // Responsive Design
+  @media (max-width: 768px) {
+    padding: 1rem;
+    min-height: 80vh;
+  }
+}
+
+// Subtle overlay
+.heroBanner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+                  circle at center,
+                  transparent 0%,
+                  color.adjust(variables.$secondary, $alpha: -0.8) 100%
+  );
+  pointer-events: none;
+}

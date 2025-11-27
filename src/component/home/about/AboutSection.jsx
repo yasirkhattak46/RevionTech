@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import AnimatedItem from "../../wrappers/AnimatedItem";
-import "./about.scss"
+import "./aboutSection.scss"
 
 const images = {
     main: "/images/home/about/About-RevionTech-mission.webp",

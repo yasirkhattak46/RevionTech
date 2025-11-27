@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 
-export default function AnimatedItem({
+export default function AnimatedItem({   className="",
                                          children,
                                          type = "fadeUp", // animation type: fadeUp, fadeLeft, fadeRight
                                          delay = 0,        // delay in seconds for stagger
@@ -34,6 +34,7 @@ export default function AnimatedItem({
             whileInView="visible"
             viewport={{ once }}
             variants={variants[type]}
+            className={className}
         >
             {children}
         </motion.div>
