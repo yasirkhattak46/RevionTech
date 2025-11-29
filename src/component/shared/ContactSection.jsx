@@ -29,7 +29,7 @@ export default function ContactSection() {
                 <div className="col-lg-8">
                     <AnimatedItem type="fadeUp">
                         <h2 className="section-title">
-                            Let's Start a <span className="highlight">Conversation</span>
+                            Let’s  <span className="highlight">Connect</span>
                         </h2>
                         <p className="section-desc">
                             Have an idea? Let's build something amazing together.

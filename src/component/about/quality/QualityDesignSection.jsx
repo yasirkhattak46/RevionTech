@@ -9,44 +9,44 @@ const QualityDesignSection = () => {
     const features = [
         {
             id: 1,
-            number: '#1',
-            title: 'Years Of Experience',
-            description: 'Reviontech has certified its position as a leading digital branding agency with more than decades of years of extensive experience. Reviontech professionals speak of knowledge, proficiency and expertise in the tasks. ',
+            number: '#1 Experienced Team',
+            title: 'Skilled People Behind Every Project',
+            description: 'A dedicated team with real world experience in design, development, and strategy to bring your ideas to life.',
             icon: FaClock
         },
         {
             id: 2,
-            number: '#2',
-            title: 'Full-Service Studio',
-            description: 'The highly skilled Reviontech where you can get the best and all in works. We providing you all kind of service ranging from our digital needs to anything and everything as applied to your business schemes.',
+            number: '#2 Quality Work',
+            title: 'High Standards in Every Detail',
+            description: 'From design to development, every step is crafted with quality to ensure smooth performance and lasting results.',
             icon: FaLayerGroup
         },
         {
             id: 3,
-            number: '#3',
-            title: 'Quality Work',
-            description: 'Quality work is our signature at Reviontech. We focus on exceeding our customer\'s expectations in every project we undertake. A team of well experienced and passionate, highly focus and quality work remains in every task.',
+            number: '#3 Creative Approach',
+            title: 'Ideas That Stand Out',
+            description: 'Fresh thinking and smart solutions that make your business look modern, unique, and professional.',
             icon: FaGem
         },
         {
             id: 4,
-            number: '#4',
-            title: 'Affordability',
-            description: 'We cost of quality digital services at Reviontech shouldn\'t break the bank. That is why we continue to provide affordable digital services without compromising on quality.',
+            number: '#4 Clear Communication',
+            title: 'Always In Touch',
+            description: 'Transparent updates and easy communication so you always know what’s happening with your project.',
             icon: FaDollarSign
         },
         {
             id: 5,
-            number: '#5',
-            title: 'Quick Turnaround Time',
-            description: 'Reviontech professionals are experienced enough process speedily solutions in the range of various services. Engaging these processes that have been developed thoroughly ensures speedy delivery regardless of the project.',
+            number: '#5 Trust & Reliability',
+            title: 'Delivering on Every Promise',
+            description: 'Accurate timelines, consistent progress, and results you can confidently rely on.',
             icon: FaBolt
         },
         {
             id: 6,
-            number: '#6',
-            title: 'Latest Technology',
-            description: 'With Reviontech professional services, explore the reach of the latest technology. We use of the cutting edge of innovation, constantly incorporating state-of-the-art technologies to our service provision to ensure superior solutions on the market.',
+            number: '#6 Ongoing Support',
+            title: 'Support That Never Stops',
+            description: 'After launch, we stay with you to maintain, improve, and grow your digital product.',
             icon: FaMicrochip
         }
     ];
@@ -64,14 +64,12 @@ const QualityDesignSection = () => {
                     <AnimatedItem type="fadeUp" delay={0}>
                         <div className={styles.sectionHeading}>
                             <h2>
-                                Digitally Focused <span className={styles.highlight}>Quality Design</span> Services
+                                Your <span className={styles.highlight}> Vision</span>  Our<span className={styles.highlight}> Expertise.</span>
                             </h2>
                             <p className={styles.subtitle}>
-                                Reviontech is Committed To Creating A Digital Presence That Has A Lasting Impact. We Strive To Ensure That Your Brand Resonates Strongly Across All Online Platforms.
-                            </p>
+                                At Revion Tech, every project is handled by an experienced team focused on delivering clean, creative, and high quality digital solutions that truly support your business growth.                            </p>
                             <p className={styles.description}>
-                                Here At Reviontech, We Can Make Your Brand Stand Out On Any And All Digital Platforms.
-                            </p>
+                                From planning to launch, everything is built with clarity, care, and dedication. Our goal is simple — make your digital journey easy, stress free, and successful.                            </p>
                         </div>
                     </AnimatedItem>
 
@@ -104,7 +102,7 @@ const QualityDesignSection = () => {
                                                 <div className={styles.iconWrapper}>
                                                     <feature.icon />
                                                 </div>
-                                                <span className={styles.cardNumber}>{feature.number} {feature.title}</span>
+                                                <span className={styles.cardNumber}>{feature.number}</span>
                                                 <h3 className={styles.cardTitle}>{feature.title}</h3>
                                                 <p className={styles.cardDescription}>{feature.description}</p>
                                             </div>

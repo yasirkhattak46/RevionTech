@@ -15,7 +15,7 @@ const FounderSection = () => {
                     <AnimatedItem type="fadeUp" delay={0}>
                         <div className={styles.sectionHeading}>
                             <h2>
-                                Meet <span className={styles.highlight}>Our Founder</span>
+                                The Mind Behind <span className={styles.highlight}>RevionTech</span>
                             </h2>
                         </div>
                     </AnimatedItem>
@@ -42,7 +42,7 @@ const FounderSection = () => {
 
                                     {/* Name Card */}
                                     <div className={styles.nameCard}>
-                                        <h3 className={styles.founderName}>Yasir Khattak</h3>
+                                        <h2 className={styles.founderName}>Yasir Khattak</h2>
                                         <p className={styles.founderRole}>Founder & CEO</p>
                                         <div className={styles.divider}></div>
                                         <p className={styles.founderTagline}>
@@ -60,10 +60,18 @@ const FounderSection = () => {
                                 <AnimatedItem type="fadeLeft" delay={0.3}>
                                     <div className={styles.bioSection}>
                                         <p className={styles.bioText}>
-                                            Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                                        </p>
+                                            Yasir Khattak is the driving force behind RevionTech — a full-stack
+                                            developer and digital strategist with over 10+ years of hands-on experience
+                                            in
+                                            modern web development, UI/UX, and digital growth solutions. His passion for
+                                            building meaningful products and solving real business problems has shaped
+                                            RevionTech into a reliable, quality-focused tech studio. </p>
                                         <p className={styles.bioText}>
-                                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                            From crafting pixel-perfect websites to leading high-impact development
+                                            teams, Yasir believes in one clear principle: <b>every project deserves
+                                            honesty, quality, and innovation.</b> His blend of technical expertise and
+                                            business understanding helps clients turn ideas into powerful digital
+                                            results.
                                         </p>
                                     </div>
                                 </AnimatedItem>
@@ -73,10 +81,17 @@ const FounderSection = () => {
                                     <div className={styles.philosophySection}>
                                         <h4 className={styles.sectionTitle}>Philosophy:</h4>
                                         <p className={styles.philosophyText}>
-                                            Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem passages.
+                                            At RevionTech, our philosophy is simple: quality over quantity, purpose over
+                                            trend.
                                         </p>
                                         <p className={styles.philosophyText}>
-                                            Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                            We believe every project deserves attention, creativity, and deep
+                                            understanding.
+                                        </p>
+                                        <p className={styles.philosophyText}>
+                                            By combining technical expertise with real-world thinking, we create
+                                            solutions that feel intuitive, perform beautifully, and help businesses move
+                                            forward with confidence.
                                         </p>
                                     </div>
                                 </AnimatedItem>

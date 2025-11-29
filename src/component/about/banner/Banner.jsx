@@ -1,10 +1,10 @@
- "use client"
+"use client"
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 import "./banner.scss"
- import {HiArrowNarrowRight} from "react-icons/hi";
+import {HiArrowNarrowRight} from "react-icons/hi";
 
 
 const AboutBanner = () => {
@@ -15,11 +15,11 @@ const AboutBanner = () => {
                     {/* Left side - Image Grid */}
                     <div className="col-lg-6 left-grid">
                         <div className="image-grid">
-                            <motion.div 
+                            <motion.div
                                 className="grid-item grid-item-1"
-                                initial={{ opacity: 0, y: 50 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.6, delay: 0.2 }}
+                                initial={{opacity: 0, y: 50}}
+                                animate={{opacity: 1, y: 0}}
+                                transition={{duration: 0.6, delay: 0.2}}
                             >
                                 <Image
                                     src="/images/about/Reavion-tech.webp"
@@ -28,11 +28,11 @@ const AboutBanner = () => {
                                     className="grid-image"
                                 />
                             </motion.div>
-                            <motion.div 
+                            <motion.div
                                 className="grid-item grid-item-2"
-                                initial={{ opacity: 0, y: 50 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.6, delay: 0.3 }}
+                                initial={{opacity: 0, y: 50}}
+                                animate={{opacity: 1, y: 0}}
+                                transition={{duration: 0.6, delay: 0.3}}
                             >
                                 <Image
                                     src="/images/about/team-work.webp"
@@ -41,11 +41,11 @@ const AboutBanner = () => {
                                     className="grid-image"
                                 />
                             </motion.div>
-                            <motion.div 
+                            <motion.div
                                 className="grid-item grid-item-3"
-                                initial={{ opacity: 0, y: 50 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.6, delay: 0.4 }}
+                                initial={{opacity: 0, y: 50}}
+                                animate={{opacity: 1, y: 0}}
+                                transition={{duration: 0.6, delay: 0.4}}
                             >
                                 <Image
                                     src="/images/about/Team-meeting.webp"
@@ -54,11 +54,11 @@ const AboutBanner = () => {
                                     className="grid-image"
                                 />
                             </motion.div>
-                            <motion.div 
+                            <motion.div
                                 className="grid-item grid-item-4"
-                                initial={{ opacity: 0, y: 50 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.6, delay: 0.5 }}
+                                initial={{opacity: 0, y: 50}}
+                                animate={{opacity: 1, y: 0}}
+                                transition={{duration: 0.6, delay: 0.5}}
                             >
                                 <Image
                                     src="/images/about/creative-work.webp"
@@ -72,21 +72,22 @@ const AboutBanner = () => {
 
                     {/* Right side - Content */}
                     <div className="col-lg-6 right-content">
-                        <motion.div 
+                        <motion.div
                             className="content-wrapper"
-                            initial={{ opacity: 0, x: 50 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.8, delay: 0.3 }}
+                            initial={{opacity: 0, x: 50}}
+                            animate={{opacity: 1, x: 0}}
+                            transition={{duration: 0.8, delay: 0.3}}
                         >
                             <span className="section-tag">About us</span>
                             <h1 className="banner-title">
-                                Masters Of <span className="highlight">Digital</span> And Design
+                                <span className="highlight">RevionTech</span> Where Creativity Meets Technology
                             </h1>
-                            <p className="banner-subtitle">Infusing Creativity into Your Digital Presences.</p>
+                            <p className="banner-subtitle">Smart solutions crafted to move businesses forward.</p>
                             <p className="banner-description">
-                                Reviontech works as your digital agent with a care of valuing client satisfaction. 
-                                Our expertise lies in various market niches, involving digital marketing, content creation, 
-                                logo design, branding, and web development.
+                                Revion Tech is a digital solutions company dedicated to creating modern websites, mobile
+                                apps, AI tools, and creative branding. With a focus on innovation and quality, our goal
+                                is to help businesses grow, improve their online presence, and build long lasting
+                                digital success.
                             </p>
                             <Link href={'#'} className="transparent-btn">
                                 <span className="btn-text"><span>Contact Us Now</span></span>
