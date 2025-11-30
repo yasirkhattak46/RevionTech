@@ -12,13 +12,33 @@ import "./featuredProject.scss";
 // Updated project data with featured flag
 const allProjects = [
     {
+        id: 1,
+        img: "/images/projects/featured/osprey-shipping.webp",
+        title: "Osprey Shipping",
+        category: "Web Development",
+        description: "Modern web application for Osprey Shipping",
+        tech: ["Next.js"],
+        link: "https://osprey-shipping.com/",
+        featured: true
+    },
+    {
+        id: 2,
+        img: "/images/projects/featured/Linus-International.webp",
+        title: "Linus International",
+        category: "Web Development",
+        description: "Parent Portfolio Website of Linus International",
+        tech: ["Wordpress", "Elementor"],
+        link: "https://linusinternational.com",
+        featured: true
+    },
+    {
         id: 3,
         img: "/images/projects/featured/Bitloc.ca.png",
         title: "Bitloc io",
         category: "Web Development",
         description: "Modern web application with real-time data processing",
         tech: ["React.js", "Node.js"],
-        link: "https://bitloc.ca",
+        link: "https://www.bitloc.io/",
         featured: true
     },
     {
@@ -28,31 +48,31 @@ const allProjects = [
         category: "API Integration",
         description: "Service comparison platform with automated data sync",
         tech: ["PHP Laravel", "Api Integrations"],
-        link: "https://cableinternetusa.com",
+        link: "https://www.cableinternetusa.com/",
         featured: true
     },
     {
-        id: 6,
+        id: 5,
         img: "/images/projects/featured/Farabius-Music-Academy.png",
         title: "Farabius Music Academy",
         category: "Web Development",
         description: "Interactive music education platform with video streaming",
         tech: ["PHP Laravel", "Api Integrations"],
-        link: "https://farabius.com",
+        link: "https://farabius.net/",
         featured: true
     },
     {
-        id: 7,
+        id: 6,
         img: "/images/projects/featured/M&S-Lab.png",
         title: "M&S Lab",
         category: "UI/UX Design",
         description: "Modern laboratory website with booking system",
         tech: ["Wordpress", "Elementor"],
-        link: "https://mslab.com",
+        link: "https://mslabtestlive.com/",
         featured: false
     },
     {
-        id: 8,
+        id: 7,
         img: "/images/projects/featured/Reme-Health-Care.png",
         title: "Reme Health Care",
         category: "Web Development",
@@ -62,7 +82,7 @@ const allProjects = [
         featured: true
     },
     {
-        id: 9,
+        id: 8,
         img: "/images/projects/featured/Wyndham-Wealth.png",
         title: "Wyndham Wealth",
         category: "Digital Marketing",
@@ -72,33 +92,33 @@ const allProjects = [
         featured: false
     },
     {
-        id: 1,
+        id: 9,
         img: "/images/projects/featured/AAT.png",
         title: "Angle Academy Uk",
         category: "Web Development",
         description: "Educational platform with course management system",
         tech: ["Wordpress", "Custom Plugin"],
-        link: "https://angleacademy.uk",
+        link: "https://angel-academy.co.uk/",
         featured: true
     },
     {
-        id: 2,
+        id: 10,
         img: "/images/projects/featured/Addapad.png",
         title: "Add A Pad",
         category: "Web Development",
         description: "Property listing platform with advanced search",
         tech: ["Wordpress", "Elementor"],
-        link: "https://addapad.com",
+        link: "https://add-a-pad.com",
         featured: false
     },
     {
-        id: 5,
+        id: 11,
         img: "/images/projects/featured/DD-Pool-Trading.png",
         title: "DD-Pool Trading",
         category: "E-Commerce",
         description: "Online trading platform with payment integration",
         tech: ["WordPress", "Elementor"],
-        link: "https://ddpooltrading.com",
+        link: "https://ddpoolstrading.ae/",
         featured: true
     },
 ];

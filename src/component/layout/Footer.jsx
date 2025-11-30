@@ -19,13 +19,11 @@ export default function Footer() {
                             <div className={'footer-services'}>
                                 <span>Services</span>
                                 <ul className={'m-0'}>
-                                    <li><Link href={'/portfolio'}>Portfolio</Link></li>
-                                    <li><Link href={'#'}>Website Design & Development</Link></li>
-                                    <li><Link href={'#'}>Ui/Ux & Graphic Design</Link></li>
-                                    <li><Link href={'#'}>Saas & Ai Solutions</Link></li>
-                                    <li><Link href={'#'}>App Development</Link></li>
-                                    <li><Link href={'#'}>Digital Marketing</Link></li>
-                                    <li><Link href={'#'}>Api Integrations</Link></li>
+                                    <li><Link href={'/services/web-development-services'}>Website Development</Link></li>
+                                    <li><Link href={'/services/ai-solutions-services'}>Saas & Ai Solutions</Link></li>
+                                    <li><Link href={'/services/app-development-services'}>App Development</Link></li>
+                                    <li><Link href={'/services/digital-marketing-services'}>Digital Marketing</Link></li>
+                                    <li><Link href={'/services/graphic-design-services'}>Graphic Design</Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -54,7 +52,7 @@ export default function Footer() {
                 </div>
             </div>
             <div className={'footer-bottom'}>
-                <p>All rights reserved &copy; {new Date().getFullYear()}  <Link href={'/'}> Reviontech</Link></p>
+                <p>All rights reserved &copy; {new Date().getFullYear()} <Link href={'/'}> Reviontech</Link></p>
                 <ul>
                     <li><Link href={'#'}>Privacy Policy</Link></li>
                     <li><Link href={'#'}>Terms & Conditions</Link></li>

@@ -87,7 +87,7 @@ export default function ContactSection() {
                                         </div>
                                         <div className="info-row">
                                             <Mail size={14} className="icon"/>
-                                            <span>info@reviontech.com</span>
+                                            <span>contact@reviontech.com</span>
                                         </div>
                                     </div>
                                 </motion.div>

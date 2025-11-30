@@ -64,7 +64,7 @@ const ContactInfo = () => {
             icon: Mail,
             title: 'EMAIL',
             info: 'info@reviontech.com',
-            link: 'mailto:info@reviontech.com'
+            link: 'mailto:contact@reviontech.com'
         }
     ];
 

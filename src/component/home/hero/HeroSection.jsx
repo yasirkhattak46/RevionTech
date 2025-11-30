@@ -3,8 +3,7 @@
 import Image from "next/image";
 import React, {useState, useEffect} from "react";
 import {HiArrowNarrowRight} from "react-icons/hi";
-import {PiContactlessPayment} from "react-icons/pi";
-import {Code2, Palette, Target, Smartphone, Brain} from "lucide-react";
+import {Code2, Palette, Target, Smartphone, Brain, SendHorizontal} from "lucide-react";
 import Link from "next/link";
 import "./hero.scss";
 import AnimatedItem from "../../wrappers/AnimatedItem";
@@ -54,7 +53,7 @@ export default function HeroSection() {
 
                         <AnimatedItem type="fadeLeft">
                             <h1 className="hero-title">
-                             Transforming Ideas into Powerful Digital Solutions
+                                Transforming Ideas into Powerful Digital Solutions
                             </h1>
                         </AnimatedItem>
 
@@ -85,13 +84,13 @@ export default function HeroSection() {
                         <AnimatedItem type="fadeUp">
                             <div
                                 className="hero-buttons mt-4 d-flex gap-3 justify-content-center justify-content-lg-start">
-                                <Link href={'#'} className="transparent-btn">
-                                    <span className="btn-text"><span>Get Insights</span></span>
+                                <Link href={'/portfolio'} className="primary-btn">
+                                    <span className="btn-text"><span>View Portfolio</span></span>
                                     <span className="btn-icon"><HiArrowNarrowRight/></span>
                                 </Link>
                                 <Link href={'/contact-us'} className="transparent-btn">
                                     <span className="btn-text"><span>Contact Now</span></span>
-                                    <span className="btn-icon"><PiContactlessPayment/></span>
+                                    <span className="btn-icon"><SendHorizontal/></span>
                                 </Link>
                             </div>
                         </AnimatedItem>
