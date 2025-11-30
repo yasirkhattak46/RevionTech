@@ -1,7 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { HiArrowNarrowDown } from "react-icons/hi";
+import Link from "next/link";
+import { HiArrowNarrowDown, HiArrowNarrowRight } from "react-icons/hi";
 import { motion } from "framer-motion";
 import AnimatedItem from "../../wrappers/AnimatedItem";
 import { FaEye } from "react-icons/fa";
@@ -269,6 +270,18 @@ export default function FeaturedProjectsSection({ isPortfolioPage = false }) {
                                 </AnimatedItem>
                             </div>
                         ))}
+                    </div>
+
+                    {/* CTA Button */}
+                    <div className="row mt-5">
+                        <div className="col-12 text-center">
+                            <AnimatedItem type="fadeUp" delay={0.2}>
+                                <Link href="/portfolio" className="primary-btn">
+                                    <span className="btn-text"><span>View All Projects</span></span>
+                                    <span className="btn-icon"><HiArrowNarrowRight /></span>
+                                </Link>
+                            </AnimatedItem>
+                        </div>
                     </div>
                 </div>
             </section>

@@ -64,32 +64,32 @@ export default function Header() {
 
                                 <ul className={`dropdown-menu ${servicesOpen ? 'open' : ''}`}>
                                     <li>
-                                        <Link href="/services/web-development" className="dropdown-item">
+                                        <Link href="/services/web-development-services" className="dropdown-item">
                                             <span className="service-icon">🌐</span>
                                             Web Development
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/services/app-development" className="dropdown-item">
+                                        <Link href="/services/app-development-services" className="dropdown-item">
                                             <span className="service-icon">📱</span>
                                             App Development
                                         </Link>
                                     </li>
 
                                     <li>
-                                        <Link href="/services/ui-ux-design" className="dropdown-item">
+                                        <Link href="/services/graphic-design-services" className="dropdown-item">
                                             <span className="service-icon">🎨</span>
-                                            UI/UX Design
+                                            Graphic Design
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/services/digital-marketing" className="dropdown-item">
+                                        <Link href="/services/digital-marketing-services" className="dropdown-item">
                                             <span className="service-icon">📈</span>
                                             Digital Marketing
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/services/ai-solutions" className="dropdown-item">
+                                        <Link href="/services/ai-solutions-services" className="dropdown-item">
                                             <span className="service-icon">🤖</span>
                                             AI Solutions
                                         </Link>
@@ -126,24 +126,24 @@ export default function Header() {
                     </div>
                     {servicesOpen && (
                         <div className={`mobile-dropdown-list ${servicesOpen ? 'open' : ''}`}>
-                            <Link href="/services/web-development" onClick={() => setMobileOpen(false)}>
+                            <Link href="/services/web-development-services" onClick={() => setMobileOpen(false)}>
                                 <span className="service-icon">🌐</span>
                                 Web Development
                             </Link>
-                            <Link href="/services/app-development" onClick={() => setMobileOpen(false)}>
+                            <Link href="/services/app-development-services" onClick={() => setMobileOpen(false)}>
                                 <span className="service-icon">📱</span>
                                 App Development
                             </Link>
 
-                            <Link href="/services/ui-ux-design" onClick={() => setMobileOpen(false)}>
+                            <Link href="/services/graphic-design-services" onClick={() => setMobileOpen(false)}>
                                 <span className="service-icon">🎨</span>
-                                UI/UX Design
+                               Graphic Design
                             </Link>
-                            <Link href="/services/digital-marketing" onClick={() => setMobileOpen(false)}>
+                            <Link href="/services/digital-marketing-services" onClick={() => setMobileOpen(false)}>
                                 <span className="service-icon">📈</span>
                                 Digital Marketing
                             </Link>
-                            <Link href="/services/ai-solutions" onClick={() => setMobileOpen(false)}>
+                            <Link href="/services/ai-solutions-services" onClick={() => setMobileOpen(false)}>
                                 <span className="service-icon">🤖</span>
                                 AI Solutions
                             </Link>

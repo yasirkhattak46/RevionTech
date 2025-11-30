@@ -20,8 +20,12 @@
   padding: 2rem;
 
   @keyframes gradientShift {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
   }
 
   // Background Elements Container
@@ -35,10 +39,9 @@
   .gradientMesh {
     position: absolute;
     inset: 0;
-    background:
-            radial-gradient(circle at 20% 30%, #{color.adjust(variables.$primary, $alpha: -0.85)} 0%, transparent 50%),
-            radial-gradient(circle at 80% 70%, #{color.adjust(variables.$primary, $lightness: -15%, $alpha: -0.85)} 0%, transparent 50%),
-            radial-gradient(circle at 50% 50%, #{color.adjust(variables.$primary, $lightness: -10%, $alpha: -0.9)} 0%, transparent 50%);
+    background: radial-gradient(circle at 20% 30%, #{color.adjust(variables.$primary, $alpha: -0.85)} 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, #{color.adjust(variables.$primary, $lightness: -15%, $alpha: -0.85)} 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, #{color.adjust(variables.$primary, $lightness: -10%, $alpha: -0.9)} 0%, transparent 50%);
     opacity: 0.7;
   }
 
@@ -52,28 +55,28 @@
   .chart {
     position: absolute;
     opacity: 0.2;
-    
+
     &.chart1 {
       top: 15%;
       left: 5%;
       width: 120px;
       height: 80px;
     }
-    
+
     &.chart2 {
       top: 25%;
       right: 10%;
       width: 100px;
       height: 70px;
     }
-    
+
     &.chart3 {
       bottom: 20%;
       left: 8%;
       width: 150px;
       height: 90px;
     }
-    
+
     &.chart4 {
       bottom: 25%;
       right: 15%;
@@ -134,10 +137,18 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    
-    &.red { background: #{color.adjust(#ef4444, $alpha: -0.3)}; }
-    &.yellow { background: #{color.adjust(#f59e0b, $alpha: -0.3)}; }
-    &.green { background: #{color.adjust(#10b981, $alpha: -0.3)}; }
+
+    &.red {
+      background: #{color.adjust(#ef4444, $alpha: -0.3)};
+    }
+
+    &.yellow {
+      background: #{color.adjust(#f59e0b, $alpha: -0.3)};
+    }
+
+    &.green {
+      background: #{color.adjust(#10b981, $alpha: -0.3)};
+    }
   }
 
   .dashboardBody {
@@ -154,7 +165,7 @@
     display: flex;
     align-items: center;
     padding: 0 10px;
-    
+
     &:nth-child(2) {
       width: 85%;
       height: 25px;
@@ -279,6 +290,10 @@
     text-shadow: 0 2px 20px #{color.adjust(variables.$primary, $alpha: -0.7)};
     color: variables.$text-light;
 
+    span {
+      color: variables.$background;
+    }
+
     br {
       @media (max-width: 768px) {
         display: none;
@@ -292,10 +307,10 @@
     line-height: 1.6;
     margin-bottom: 1.5rem;
     color: #{color.adjust(variables.$text-light, $alpha: -0.15)};
-    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
     text-shadow: 0 1px 10px #{color.adjust(variables.$primary, $alpha: -0.8)};
+
   }
 
   // Tech Stack Pills
@@ -337,11 +352,6 @@
     }
   }
 
-  // Responsive Design
-  @media (max-width: 768px) {
-    padding: 1rem;
-    min-height: 80vh;
-  }
 }
 
 // Darker overlay for better text readability

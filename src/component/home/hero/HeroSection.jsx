@@ -11,11 +11,11 @@ import AnimatedItem from "../../wrappers/AnimatedItem";
 
 export default function HeroSection() {
     const services = [
-        {icon: Code2, name: "Web Development", link: "/services/web-development"},
-        {icon: Palette, name: "Graphic Design", link: "/services/ui-ux-design"},
-        {icon: Smartphone, name: "App Development", link: "/services/app-development"},
-        {icon: Target, name: "Digital Marketing", link: "/services/digital-marketing"},
-        {icon: Brain, name: "AI Solutions", link: "/services/ai-solutions"},
+        {icon: Code2, name: "Web Development", link: "/services/web-development-services"},
+        {icon: Palette, name: "Graphic Design", link: "/services/graphic-design-services"},
+        {icon: Smartphone, name: "App Development", link: "/services/app-development-services"},
+        {icon: Target, name: "Digital Marketing", link: "/services/digital-marketing-services"},
+        {icon: Brain, name: "AI Solutions", link: "/services/ai-solutions-services"},
     ];
 
     const [imageLoaded, setImageLoaded] = useState(false);

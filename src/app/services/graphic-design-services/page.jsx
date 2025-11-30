@@ -1,27 +1,30 @@
 "use client";
+import UxUiDesignBanner from "../../../component/services/banners/graphic-design/GraphicDesignBanner";
 import WhyChooseUs from "../../../component/services/whyChoseUs/WhyChooseUs";
-import ServicesSection from "../../../component/home/services/ServicesSection";
+import SubServicesSection from "../../../component/services/subServices/SubServicesSection";
 import StatsSection from "../../../component/shared/statsSection/Stats";
 import ProcessWeFollowSection from "../../../component/home/process/ProcessWeFollowSection";
 import TestimonialsSection from "../../../component/home/testimonials/TestimonialsSection";
 import BrandSlider from "../../../component/shared/BrandSlider";
 import '../ServiceDetail.scss';
-import AiSolutionsBanner from "../../../component/services/banners/AiSolutions/AiSolutionsBanner";
-import { getWhyChooseUsData } from '../../../data/servicesData';
+import { getWhyChooseUsData, getSubServices } from '../../../data/servicesData';
 
-export default function AiSolutionsPage() {
-    const whyChooseUsData = getWhyChooseUsData('ai-solutions');
-    
+export default function UiUxDesignPage() {
+    const whyChooseUsData = getWhyChooseUsData('graphic-design');
+    const subServices = getSubServices('graphic-design');
     return (
         <>
-            <AiSolutionsBanner />
+            <UxUiDesignBanner />
             <WhyChooseUs 
                 title={whyChooseUsData.title}
                 subtitle={whyChooseUsData.subtitle}
                 features={whyChooseUsData.features}
             />
             <StatsSection />
-            <ServicesSection />
+            <SubServicesSection 
+                subServices={subServices}
+                serviceSlug="graphic-design"
+            />
             <ProcessWeFollowSection />
             <TestimonialsSection />
             <BrandSlider />

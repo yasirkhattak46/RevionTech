@@ -1,6 +1,7 @@
 "use client"
 import React, {useState} from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import {motion, AnimatePresence} from 'framer-motion';
 import {GoArrowUpRight} from "react-icons/go";
 import "./services.scss"
@@ -11,35 +12,35 @@ const servicesData = [
         id: 1,
         title: "Graphic Designing",
         desc: "We design creative branding, logos, and marketing visuals that strengthen your identity and help your business stand out with professional design.",
-        link: "/services/ui-ux-design",
+        link: "/services/graphic-design-services",
         image: "/images/home/services/Ui-UX-&-Graphic-Design.webp"
     },
     {
         id: 2,
         title: "Website Development",
         desc: "We build fast, modern, and responsive websites that deliver great user experience and support your business growth across all devices.",
-        link: "/services/web-development",
+        link: "/services/web-development-services",
         image: "/images/home/services/Website-Development-services.webp"
     },
     {
         id: 3,
         title: "App Development",
         desc: "We develop user friendly and scalable mobile apps for Android and iOS that turn your ideas into powerful digital products.",
-        link: "/services/app-development",
+        link: "/services/app-development-services",
         image: "/images/home/services/Mobile-App-Development.webp"
     },
     {
         id: 4,
         title: "Saas & AI Solutions",
         desc: "We create custom SaaS platforms and AI tools that automate tasks, improve efficiency, and help businesses make smarter decisions.",
-        link: "/services/ai-solutions",
+        link: "/services/ai-solutions-services",
         image: "/images/home/services/Saas-&-Ai-Solution.webp"
     },
     {
         id: 5,
         title: "Digital Marketing ",
         desc: "We create targeted digital marketing strategies including SEO, social media, and paid ads to boost visibility, attract customers, and grow your brand online.",
-        link: "/services/digital-marketing",
+        link: "/services/digital-marketing-services",
         image: "/images/home/services/Digital-Marketing.webp"
     }
 ];
@@ -54,12 +55,11 @@ const DigitalServices = () => {
                 <div className="row text-center section-header">
                     <div className="col-12">
                         <AnimatedItem type="fadeUp" delay={0.2}>
-                            <h2>Our Digital <span> Services</span></h2>
+                            <h2>Our Digital <span>Services</span></h2>
                         </AnimatedItem>
                         <AnimatedItem type="fadeUp" delay={0.5}>
                             <p>
-                                Reviontech not only builds digital marketing tools but also facilitates
-                                networking among local business owners.
+                                Reviontech not only builds digital marketing tools but also facilitates networking among local business owners.
                             </p>
                         </AnimatedItem>
                     </div>
@@ -69,15 +69,23 @@ const DigitalServices = () => {
                     <div className="col-lg-4 mb-4 mb-lg-0">
                         <div className="image-wrapper">
                             <AnimatePresence mode="wait">
-                                <motion.img
+                                <motion.div
                                     key={activeService.image}
-                                    src={activeService.image}
-                                    alt={activeService.title}
+                                    className="service-image-container"
                                     initial={{opacity: 0, scale: 1.05}}
                                     animate={{opacity: 1, scale: 1}}
                                     exit={{opacity: 0}}
                                     transition={{duration: 0.4}}
-                                />
+                                >
+                                    <Image
+                                        src={activeService.image}
+                                        alt={activeService.title}
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        className="service-image"
+                                        priority={false}
+                                    />
+                                </motion.div>
                             </AnimatePresence>
                         </div>
                     </div>

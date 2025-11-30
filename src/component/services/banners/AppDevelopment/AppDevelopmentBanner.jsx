@@ -1,27 +1,18 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 import Link from 'next/link';
-import { Smartphone, Tablet, Monitor, Download, Zap, AppWindow } from 'lucide-react';
+import {Smartphone, Tablet, Monitor, Download, Zap, AppWindow, MoveRight} from 'lucide-react';
 import styles from './AppDevelopmentBanner.module.scss';
 
-const AppDevelopmentBanner = ({ data }) => {
-    // Default data if not provided
-    const bannerData = data || {
-        title: "Custom Mobile App Development",
-        subtitle: "Native & Cross-Platform Apps for iOS & Android",
-        description: "Transform your business ideas into powerful mobile applications.",
-        ctaText: "Start Your Project",
-        ctaLink: "/contact-us"
-    };
-
+const AppDevelopmentBanner = () => {
     // App Development icons for floating animation
     const appIcons = [
-        { Icon: Smartphone, delay: 0, position: { left: '10%', top: '20%' } },
-        { Icon: Tablet, delay: 0.5, position: { right: '15%', top: '25%' } },
-        { Icon: Monitor, delay: 1, position: { left: '15%', bottom: '25%' } },
-        { Icon: Download, delay: 1.5, position: { right: '20%', bottom: '30%' } },
-        { Icon: AppWindow, delay: 2, position: { left: '25%', top: '40%' } },
-        { Icon: Zap, delay: 2.5, position: { right: '10%', top: '50%' } },
+        {Icon: Smartphone, delay: 0, position: {left: '10%', top: '20%'}},
+        {Icon: Tablet, delay: 0.5, position: {right: '15%', top: '25%'}},
+        {Icon: Monitor, delay: 1, position: {left: '15%', bottom: '25%'}},
+        {Icon: Download, delay: 1.5, position: {right: '20%', bottom: '30%'}},
+        {Icon: AppWindow, delay: 2, position: {left: '25%', top: '40%'}},
+        {Icon: Zap, delay: 2.5, position: {right: '10%', top: '50%'}},
     ];
 
     return (
@@ -29,11 +20,11 @@ const AppDevelopmentBanner = ({ data }) => {
             {/* App UI Elements */}
             <div className={styles.appElements}>
                 {/* Mobile Screens */}
-                <motion.div 
+                <motion.div
                     className={`${styles.appScreen} ${styles.screen1}`}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 0.2, scale: 1 }}
-                    transition={{ duration: 1, delay: 0.5 }}
+                    initial={{opacity: 0, scale: 0.8}}
+                    animate={{opacity: 0.2, scale: 1}}
+                    transition={{duration: 1, delay: 0.5}}
                 >
                     <div className={styles.appHeader}>
                         <div className={styles.statusBar}>
@@ -47,12 +38,12 @@ const AppDevelopmentBanner = ({ data }) => {
                         <div className={styles.contentBlock}></div>
                     </div>
                 </motion.div>
-                
-                <motion.div 
+
+                <motion.div
                     className={`${styles.appScreen} ${styles.screen2}`}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 0.2, scale: 1 }}
-                    transition={{ duration: 1, delay: 0.7 }}
+                    initial={{opacity: 0, scale: 0.8}}
+                    animate={{opacity: 0.2, scale: 1}}
+                    transition={{duration: 1, delay: 0.7}}
                 >
                     <div className={styles.appHeader}>
                         <div className={styles.statusBar}>
@@ -74,28 +65,28 @@ const AppDevelopmentBanner = ({ data }) => {
                     key={index}
                     className={styles.floatingIcon}
                     style={item.position}
-                    initial={{ opacity: 0, scale: 0 }}
-                    animate={{ 
+                    initial={{opacity: 0, scale: 0}}
+                    animate={{
                         opacity: [0.2, 0.4, 0.2],
                         scale: [1, 1.1, 1],
                         y: [0, -20, 0]
                     }}
                     transition={{
-                        opacity: { duration: 3, repeat: Infinity, delay: item.delay },
-                        scale: { duration: 3, repeat: Infinity, delay: item.delay },
-                        y: { duration: 4, repeat: Infinity, delay: item.delay }
+                        opacity: {duration: 3, repeat: Infinity, delay: item.delay},
+                        scale: {duration: 3, repeat: Infinity, delay: item.delay},
+                        y: {duration: 4, repeat: Infinity, delay: item.delay}
                     }}
                 >
-                    <item.Icon size={40} />
+                    <item.Icon size={40}/>
                 </motion.div>
             ))}
 
             {/* App Development Framework */}
-            <motion.div 
+            <motion.div
                 className={styles.appFramework}
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 0.2, y: 0 }}
-                transition={{ duration: 1, delay: 1 }}
+                initial={{opacity: 0, y: 50}}
+                animate={{opacity: 0.2, y: 0}}
+                transition={{duration: 1, delay: 1}}
             >
                 <div className={styles.frameworkHeader}>
                     App Architecture
@@ -109,8 +100,8 @@ const AppDevelopmentBanner = ({ data }) => {
 
             <div className={styles.bgElements}>
                 {/* Grid Pattern */}
-                <div className={styles.gridPattern} />
-                
+                <div className={styles.gridPattern}/>
+
                 {/* App Icons */}
                 <div className={styles.appIcons}>
                     <motion.div
@@ -125,7 +116,7 @@ const AppDevelopmentBanner = ({ data }) => {
                             ease: "easeInOut",
                         }}
                     >
-                        <Smartphone size={24} />
+                        <Smartphone size={24}/>
                     </motion.div>
                     <motion.div
                         className={`${styles.appIcon} ${styles.icon2}`}
@@ -140,7 +131,7 @@ const AppDevelopmentBanner = ({ data }) => {
                             delay: 1
                         }}
                     >
-                        <Tablet size={24} />
+                        <Tablet size={24}/>
                     </motion.div>
                 </div>
             </div>
@@ -149,45 +140,47 @@ const AppDevelopmentBanner = ({ data }) => {
             <div className={styles.container}>
                 <motion.div
                     className={styles.content}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    initial={{opacity: 0, y: 30}}
+                    animate={{opacity: 1, y: 0}}
+                    transition={{duration: 0.8, ease: "easeOut"}}
                 >
                     {/* App Development Badge */}
                     <motion.div
                         className={styles.techBadge}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.6, delay: 0.1 }}
+                        initial={{opacity: 0, scale: 0.8}}
+                        animate={{opacity: 1, scale: 1}}
+                        transition={{duration: 0.6, delay: 0.1}}
                     >
-                        <Smartphone size={20} />
+                        <Smartphone size={20}/>
                         <span>Mobile App Development</span>
                     </motion.div>
 
                     <motion.h1
                         className={styles.title}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
+                        initial={{opacity: 0, y: 20}}
+                        animate={{opacity: 1, y: 0}}
+                        transition={{duration: 0.8, delay: 0.2}}
                     >
-                        {bannerData.title}
+                        Mobile App Development Services for <span>Android</span> and <span>iOS</span>
                     </motion.h1>
 
                     <motion.p
                         className={styles.subtitle}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.4 }}
+                        initial={{opacity: 0, y: 20}}
+                        animate={{opacity: 1, y: 0}}
+                        transition={{duration: 0.8, delay: 0.4}}
                     >
-                        {bannerData.subtitle}
+                        Revion Tech delivers custom mobile app development services for Android and iOS. We create
+                        high-performing, scalable, and secure apps that enhance user engagement, boost conversions, and
+                        help businesses grow in the competitive mobile app market.
                     </motion.p>
 
                     {/* App Development Tech Stack Pills */}
                     <motion.div
                         className={styles.techStack}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.5 }}
+                        initial={{opacity: 0, y: 20}}
+                        animate={{opacity: 1, y: 0}}
+                        transition={{duration: 0.8, delay: 0.5}}
                     >
                         <span className={styles.techPill}>React Native</span>
                         <span className={styles.techPill}>Flutter</span>
@@ -196,13 +189,13 @@ const AppDevelopmentBanner = ({ data }) => {
                     </motion.div>
 
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.6 }}
+                        initial={{opacity: 0, y: 20}}
+                        animate={{opacity: 1, y: 0}}
+                        transition={{duration: 0.8, delay: 0.6}}
                     >
-                        <Link href={bannerData.ctaLink || '/contact-us'} className="transparent-btn">
-                            <span className="btn-text"><span>{bannerData.ctaText}</span></span>
-                            <span className="btn-icon"><Download size={20} /></span>
+                        <Link href={'/contact-us'} className="transparent-btn">
+                            <span className="btn-text"><span>Build Your App with Experts</span></span>
+                            <span className="btn-icon"><MoveRight size={20}/></span>
                         </Link>
                     </motion.div>
                 </motion.div>

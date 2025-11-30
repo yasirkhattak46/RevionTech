@@ -1,43 +1,52 @@
 @use "../../../app/assets/sass/variables";
 @use "sass:color";
 
-.heroBanner {
+.portfolioBanner {
   position: relative;
   min-height: 100vh;
   background: linear-gradient(135deg,
-          variables.$secondary 0%,
-          color.adjust(variables.$primary-bg, $lightness: -10%) 50%,
-          variables.$primary-bg 100%
+    variables.$secondary 0%,
+    color.adjust(variables.$primary-bg, $lightness: -10%) 50%,
+    variables.$primary-bg 100%
   );
   overflow: hidden;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 2rem;
+  padding: 120px 0 80px;
 
-  // Background Elements Container
-  .bgElements {
+  // Animated background shapes container
+  .bgShapes {
     position: absolute;
     inset: 0;
     pointer-events: none;
+    overflow: hidden;
   }
 
-  // Grid Pattern (like code editor)
-  .gridPattern {
+  // Gradient Orbs
+  .gradientOrb {
     position: absolute;
-    inset: 0;
-    background-image: 
-      linear-gradient(color.adjust(variables.$primary, $alpha: -0.95) 1px, transparent 1px),
-      linear-gradient(90deg, color.adjust(variables.$primary, $alpha: -0.95) 1px, transparent 1px);
-    background-size: 50px 50px;
-    opacity: 0.3;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(
+      circle,
+      color.adjust(variables.$primary, $alpha: -0.7) 0%,
+      transparent 70%
+    );
+    filter: blur(60px);
+    pointer-events: none;
+
+    @media (max-width: 768px) {
+      width: 250px;
+      height: 250px;
+    }
   }
 
-  // Floating Tech Icons
+  // Floating Portfolio Icons
   .floatingIcon {
     position: absolute;
     color: variables.$primary;
-    filter: drop-shadow(0 0 10px color.adjust(variables.$primary, $alpha: -0.5));
+    filter: drop-shadow(0 0 15px color.adjust(variables.$primary, $alpha: -0.6));
     pointer-events: none;
     z-index: 1;
 
@@ -46,101 +55,218 @@
     }
   }
 
-  // Animated Brackets
-  .bracket {
+  // Background grid pattern
+  &::before {
+    content: '';
     position: absolute;
-    font-size: 80px;
-    font-weight: bold;
-    color: variables.$primary;
-    font-family: 'Courier New', monospace;
-    text-shadow: 0 0 20px color.adjust(variables.$primary, $alpha: -0.5);
+    inset: 0;
+    background-image:
+      linear-gradient(to right, color.adjust(variables.$primary, $alpha: -0.95) 1px, transparent 1px),
+      linear-gradient(to bottom, color.adjust(variables.$primary, $alpha: -0.95) 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.2;
     pointer-events: none;
-
-    @media (max-width: 768px) {
-      font-size: 50px;
-    }
-  }
-
-  // Container
-  .container {
-    position: relative;
-    max-width: 1200px;
-    width: 100%;
-    z-index: 10;
   }
 
   // Content
   .content {
-    text-align: center;
-    color: variables.$text-light;
+    position: relative;
+    z-index: 2;
   }
 
-  // Tech Badge
-  .techBadge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 20px;
-    background: color.adjust(variables.$primary, $alpha: -0.8);
-    border: 1px solid color.adjust(variables.$primary, $alpha: -0.5);
-    border-radius: 30px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    margin-bottom: 1.5rem;
-    backdrop-filter: blur(10px);
-    color: variables.$text-light;
-    box-shadow: 0 4px 15px color.adjust(variables.$primary, $alpha: -0.7);
-
-    @media (max-width: 768px) {
-      font-size: 0.8rem;
-      padding: 8px 16px;
-    }
+  .sectionTag {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    color: variables.$primary;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
   }
 
   .title {
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-size: clamp(2.5rem, 4vw + 1rem, 4rem);
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: 1.5rem;
-    letter-spacing: -0.02em;
-    text-shadow: 0 2px 20px color.adjust(variables.$secondary, $alpha: -0.5);
-    color: variables.$text-light;
+    margin-bottom: 20px;
+    color: #ffffff;
 
-    br {
-      @media (max-width: 768px) {
-        display: none;
-      }
+    .highlight {
+      color: variables.$primary;
+      position: relative;
+      display: inline-block;
     }
   }
 
   .subtitle {
-    font-size: clamp(1rem, 2vw, 1.25rem);
-    font-weight: 400;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: variables.$text-light;
+  }
+
+  .description {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 32px;
     color: color.adjust(variables.$text-light, $lightness: -5%);
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    text-shadow: 0 1px 10px color.adjust(variables.$secondary, $alpha: -0.7);
   }
 
-  // Responsive Design
-  @media (max-width: 768px) {
-    padding: 1rem;
-    min-height: 80vh;
-  }
-}
+  // Image Showcase Container
+  .imageShowcase {
+    position: relative;
+    height: 500px;
 
-// Subtle overlay
-.heroBanner::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-                  circle at center,
-                  transparent 0%,
-                  color.adjust(variables.$secondary, $alpha: -0.8) 100%
-  );
-  pointer-events: none;
+    @media (max-width: 991px) {
+      height: 400px;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 576px) {
+      height: 350px;
+    }
+  }
+
+  // Main Featured Image
+  .mainImage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px color.adjust(variables.$secondary, $alpha: -0.5);
+    border: 3px solid color.adjust(variables.$primary, $alpha: -0.7);
+    transition: all 0.4s ease;
+
+    &:hover {
+      box-shadow: 0 30px 60px color.adjust(variables.$secondary, $alpha: -0.3);
+      border-color: variables.$primary;
+    }
+  }
+
+  .showcaseImage {
+    object-fit: cover;
+    transition: transform 0.5s ease;
+
+    .mainImage:hover & {
+      transform: scale(1.05);
+    }
+  }
+
+  .imageOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(
+      to top,
+      color.adjust(variables.$secondary, $alpha: -0.1) 0%,
+      transparent 100%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    .mainImage:hover & {
+      opacity: 1;
+    }
+  }
+
+  .projectLabel {
+    display: inline-block;
+    padding: 8px 16px;
+    background: variables.$primary;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px color.adjust(variables.$primary, $alpha: -0.5);
+  }
+
+  // Floating Cards
+  .floatingCard {
+    position: absolute;
+    width: 180px;
+    height: 120px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px color.adjust(variables.$secondary, $alpha: -0.4);
+    border: 2px solid color.adjust(variables.$primary, $alpha: -0.8);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 45px color.adjust(variables.$secondary, $alpha: -0.2);
+      border-color: variables.$primary;
+    }
+
+    @media (max-width: 991px) {
+      width: 150px;
+      height: 100px;
+    }
+
+    @media (max-width: 576px) {
+      width: 120px;
+      height: 80px;
+    }
+  }
+
+  .card1 {
+    top: -30px;
+    left: -40px;
+
+    @media (max-width: 991px) {
+      top: -20px;
+      left: -30px;
+    }
+
+    @media (max-width: 576px) {
+      top: -15px;
+      left: -20px;
+    }
+  }
+
+  .card2 {
+    bottom: -30px;
+    right: -40px;
+
+    @media (max-width: 991px) {
+      bottom: -20px;
+      right: -30px;
+    }
+
+    @media (max-width: 576px) {
+      bottom: -15px;
+      right: -20px;
+    }
+  }
+
+  .cardImage {
+    object-fit: cover;
+    transition: transform 0.3s ease;
+
+    .floatingCard:hover & {
+      transform: scale(1.1);
+    }
+  }
+
+  @media (max-width: 991px) {
+    .content {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    padding: 100px 0 60px;
+    min-height: auto;
+
+    .title {
+      font-size: 2rem;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+    }
+  }
 }

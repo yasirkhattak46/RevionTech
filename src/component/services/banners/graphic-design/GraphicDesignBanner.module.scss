@@ -228,7 +228,9 @@
     letter-spacing: -0.02em;
     text-shadow: 0 2px 20px color.adjust(variables.$secondary, $alpha: -0.5);
     color: variables.$text-light;
-
+  span{
+    color: variables.$primary;
+  }
     br {
       @media (max-width: 768px) {
         display: none;
@@ -242,7 +244,6 @@
     line-height: 1.6;
     margin-bottom: 1.5rem;
     color: color.adjust(variables.$text-light, $lightness: -5%);
-    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
     text-shadow: 0 1px 10px color.adjust(variables.$secondary, $alpha: -0.7);
@@ -285,12 +286,6 @@
       padding: 6px 14px;
       font-size: 0.75rem;
     }
-  }
-
-  // Responsive Design
-  @media (max-width: 768px) {
-    padding: 1rem;
-    min-height: 80vh;
   }
 }
 
