@@ -1,6 +1,7 @@
 import React from 'react';
 import {motion} from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import {Smartphone, Tablet, Monitor, Download, Zap, AppWindow, MoveRight} from 'lucide-react';
 import styles from './AppDevelopmentBanner.module.scss';
 
@@ -17,6 +18,28 @@ const AppDevelopmentBanner = () => {
 
     return (
         <section className={styles.heroBanner}>
+            {/* Floating App Development Icons */}
+            {appIcons.map((item, index) => (
+                <motion.div
+                    key={index}
+                    className={styles.floatingIcon}
+                    style={item.position}
+                    initial={{opacity: 0, scale: 0}}
+                    animate={{
+                        opacity: [0.1, 0.2, 0.1],
+                        scale: [1, 1.1, 1],
+                        y: [0, -20, 0]
+                    }}
+                    transition={{
+                        opacity: {duration: 3, repeat: Infinity, delay: item.delay},
+                        scale: {duration: 3, repeat: Infinity, delay: item.delay},
+                        y: {duration: 4, repeat: Infinity, delay: item.delay}
+                    }}
+                >
+                    <item.Icon size={40}/>
+                </motion.div>
+            ))}
+
             {/* App UI Elements */}
             <div className={styles.appElements}>
                 {/* Mobile Screens */}
@@ -138,67 +161,119 @@ const AppDevelopmentBanner = () => {
 
             {/* Content */}
             <div className={styles.container}>
-                <motion.div
-                    className={styles.content}
-                    initial={{opacity: 0, y: 30}}
-                    animate={{opacity: 1, y: 0}}
-                    transition={{duration: 0.8, ease: "easeOut"}}
-                >
-                    {/* App Development Badge */}
+                <div className={styles.contentWrapper}>
+                    {/* Left Content */}
                     <motion.div
-                        className={styles.techBadge}
-                        initial={{opacity: 0, scale: 0.8}}
-                        animate={{opacity: 1, scale: 1}}
-                        transition={{duration: 0.6, delay: 0.1}}
+                        className={styles.content}
+                        initial={{opacity: 0, y: 30}}
+                        animate={{opacity: 1, y: 0}}
+                        transition={{duration: 0.8, ease: "easeOut"}}
                     >
-                        <Smartphone size={20}/>
-                        <span>Mobile App Development</span>
+                        {/* App Development Badge */}
+                        <motion.div
+                            className={styles.techBadge}
+                            initial={{opacity: 0, scale: 0.8}}
+                            animate={{opacity: 1, scale: 1}}
+                            transition={{duration: 0.6, delay: 0.1}}
+                        >
+                            <Smartphone size={20}/>
+                            <span>Mobile App Development</span>
+                        </motion.div>
+
+                        <motion.h1
+                            className={styles.title}
+                            initial={{opacity: 0, y: 20}}
+                            animate={{opacity: 1, y: 0}}
+                            transition={{duration: 0.8, delay: 0.2}}
+                        >
+                            Mobile App Development Services for <span>Android</span> and <span>iOS</span>
+                        </motion.h1>
+
+                        <motion.p
+                            className={styles.subtitle}
+                            initial={{opacity: 0, y: 20}}
+                            animate={{opacity: 1, y: 0}}
+                            transition={{duration: 0.8, delay: 0.4}}
+                        >
+                            Revion Tech delivers custom mobile app development services for Android and iOS. We create
+                            high-performing, scalable, and secure apps that enhance user engagement, boost conversions, and
+                            help businesses grow in the competitive mobile app market.
+                        </motion.p>
+
+                        {/* App Development Tech Stack Pills */}
+                        <motion.div
+                            className={styles.techStack}
+                            initial={{opacity: 0, y: 20}}
+                            animate={{opacity: 1, y: 0}}
+                            transition={{duration: 0.8, delay: 0.5}}
+                        >
+                            <span className={styles.techPill}>React Native</span>
+                            <span className={styles.techPill}>Flutter</span>
+                            <span className={styles.techPill}>Swift</span>
+                            <span className={styles.techPill}>Kotlin</span>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{opacity: 0, y: 20}}
+                            animate={{opacity: 1, y: 0}}
+                            transition={{duration: 0.8, delay: 0.6}}
+                        >
+                            <Link href={'/contact-us'} className="transparent-btn">
+                                <span className="btn-text"><span>Build Your App with Experts</span></span>
+                                <span className="btn-icon"><MoveRight size={20}/></span>
+                            </Link>
+                        </motion.div>
                     </motion.div>
 
-                    <motion.h1
-                        className={styles.title}
-                        initial={{opacity: 0, y: 20}}
-                        animate={{opacity: 1, y: 0}}
-                        transition={{duration: 0.8, delay: 0.2}}
+                    {/* Right Image */}
+                    <motion.div 
+                        className={styles.imageSection}
+                        initial={{opacity: 0, x: 50}}
+                        animate={{opacity: 1, x: 0}}
+                        transition={{duration: 0.8, delay: 0.3}}
                     >
-                        Mobile App Development Services for <span>Android</span> and <span>iOS</span>
-                    </motion.h1>
-
-                    <motion.p
-                        className={styles.subtitle}
-                        initial={{opacity: 0, y: 20}}
-                        animate={{opacity: 1, y: 0}}
-                        transition={{duration: 0.8, delay: 0.4}}
-                    >
-                        Revion Tech delivers custom mobile app development services for Android and iOS. We create
-                        high-performing, scalable, and secure apps that enhance user engagement, boost conversions, and
-                        help businesses grow in the competitive mobile app market.
-                    </motion.p>
-
-                    {/* App Development Tech Stack Pills */}
-                    <motion.div
-                        className={styles.techStack}
-                        initial={{opacity: 0, y: 20}}
-                        animate={{opacity: 1, y: 0}}
-                        transition={{duration: 0.8, delay: 0.5}}
-                    >
-                        <span className={styles.techPill}>React Native</span>
-                        <span className={styles.techPill}>Flutter</span>
-                        <span className={styles.techPill}>Swift</span>
-                        <span className={styles.techPill}>Kotlin</span>
+                        <div className={styles.imageWrapper}>
+                            <Image
+                                src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop"
+                                alt="Mobile App Development"
+                                fill
+                                className={styles.bannerImage}
+                                sizes="(max-width: 991px) 100vw, 50vw"
+                                priority
+                            />
+                            <div className={styles.imageOverlay}></div>
+                            
+                            {/* Floating Cards */}
+                            <motion.div 
+                                className={styles.floatingCard} 
+                                style={{top: '15%', left: '10%'}}
+                                initial={{opacity: 0, y: 20}}
+                                animate={{opacity: 1, y: 0}}
+                                transition={{duration: 0.6, delay: 0.8}}
+                            >
+                                <div className={styles.cardIcon}><Smartphone size={24}/></div>
+                                <div className={styles.cardContent}>
+                                    <h4>200+</h4>
+                                    <p>Apps Delivered</p>
+                                </div>
+                            </motion.div>
+                            
+                            <motion.div 
+                                className={styles.floatingCard} 
+                                style={{bottom: '20%', right: '10%'}}
+                                initial={{opacity: 0, y: 20}}
+                                animate={{opacity: 1, y: 0}}
+                                transition={{duration: 0.6, delay: 1}}
+                            >
+                                <div className={styles.cardIcon}><Zap size={24}/></div>
+                                <div className={styles.cardContent}>
+                                    <h4>Fast</h4>
+                                    <p>Performance</p>
+                                </div>
+                            </motion.div>
+                        </div>
                     </motion.div>
-
-                    <motion.div
-                        initial={{opacity: 0, y: 20}}
-                        animate={{opacity: 1, y: 0}}
-                        transition={{duration: 0.8, delay: 0.6}}
-                    >
-                        <Link href={'/contact-us'} className="transparent-btn">
-                            <span className="btn-text"><span>Build Your App with Experts</span></span>
-                            <span className="btn-icon"><MoveRight size={20}/></span>
-                        </Link>
-                    </motion.div>
-                </motion.div>
+                </div>
             </div>
         </section>
     );
