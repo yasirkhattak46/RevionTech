@@ -1,11 +1,12 @@
 "use client"
 
-import React, {useState} from 'react';
+import React from 'react';
 import {motion} from 'framer-motion';
 import {useInView} from 'react-intersection-observer';
-import {Phone, MapPin, Mail, SendHorizontal} from 'lucide-react';
+import {Phone, MapPin, Mail} from 'lucide-react';
 import "./contactInfo.scss";
 import AnimatedItem from "../wrappers/AnimatedItem";
+import ContactForm from "../shared/ContactForm";
 
 
 const cardVariants = {
@@ -28,24 +29,6 @@ const ContactInfo = () => {
         threshold: 0.05,
     });
 
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        phone: "",
-        subject: "",
-        message: ""
-    });
-
-    const handleChange = (e) => {
-        setFormData({...formData, [e.target.name]: e.target.value});
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log("Form submitted:", formData);
-        // Add your form submission logic here
-    };
-
     const contactItems = [
         {
             icon: Phone,
@@ -58,12 +41,12 @@ const ContactInfo = () => {
             title: 'LOCATION',
             info: '54th Street "I" Block F',
             subInfo: 'Islamabad, Pakistan',
-            link: '#'
+            link: 'https://maps.google.com/?q=Islamabad,Pakistan'
         },
         {
             icon: Mail,
             title: 'EMAIL',
-            info: 'info@reviontech.com',
+            info: 'contact@reviontech.com',
             link: 'mailto:contact@reviontech.com'
         }
     ];
@@ -116,69 +99,7 @@ const ContactInfo = () => {
 
                     <div className="col-lg-6 form-column">
                         <AnimatedItem type="fadeLeft">
-                            <div className="form-box">
-                                <h3>Send us a Message</h3>
-                                <form onSubmit={handleSubmit}>
-                                    <div className="row g-3">
-                                        <div className="col-md-6">
-                                            <div className="form-group">
-                                                <input
-                                                    type="text"
-                                                    name="name"
-                                                    className="form-control"
-                                                    placeholder="Your Name"
-                                                    value={formData.name}
-                                                    onChange={handleChange}
-                                                    required
-                                                />
-                                            </div>
-                                        </div>
-                                        <div className="col-md-6">
-                                            <div className="form-group">
-                                                <input
-                                                    type="email"
-                                                    name="email"
-                                                    className="form-control"
-                                                    placeholder="Your Email"
-                                                    value={formData.email}
-                                                    onChange={handleChange}
-                                                    required
-                                                />
-                                            </div>
-                                        </div>
-                                        <div className="col-12">
-                                            <div className="form-group">
-                                                <input
-                                                    type="text"
-                                                    name="subject"
-                                                    className="form-control"
-                                                    placeholder="Subject"
-                                                    value={formData.subject}
-                                                    onChange={handleChange}
-                                                />
-                                            </div>
-                                        </div>
-                                        <div className="col-12">
-                                            <div className="form-group">
-                        <textarea
-                            name="message"
-                            className="form-control"
-                            rows="5"
-                            placeholder="Tell us about your project..."
-                            value={formData.message}
-                            onChange={handleChange}
-                            required
-                        ></textarea>
-                                            </div>
-                                        </div>
-                                        <div className="col-12">
-                                            <button type="submit" className="transparent-btn">
-                                                <span className="btn-text"><span>Send Message</span></span>
-                                                <span className="btn-icon"><SendHorizontal/></span></button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
+                            <ContactForm />
                         </AnimatedItem>
                     </div>
                 </div>

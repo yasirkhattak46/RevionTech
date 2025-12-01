@@ -27,7 +27,7 @@ const servicesData = [
         title: "App Development",
         desc: "We develop user friendly and scalable mobile apps for Android and iOS that turn your ideas into powerful digital products.",
         link: "/services/app-development-services",
-        image: "/images/home/services/Mobile-App-Development.webp"
+        image: "/images/home/services/Mobile-App-Development-Services.webp"
     },
     {
         id: 4,

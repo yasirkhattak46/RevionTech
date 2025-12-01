@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import {HiArrowNarrowRight} from "react-icons/hi";
 import {FiPhone, FiMail, FiFacebook, FiInstagram, FiLinkedin} from "react-icons/fi";
+import {Code2, Palette, Target, Smartphone, Brain, SendHorizontal} from "lucide-react";
 
 export default function Header() {
     const [scrolled, setScrolled] = useState(false);
@@ -65,33 +66,33 @@ export default function Header() {
                                 <ul className={`dropdown-menu ${servicesOpen ? 'open' : ''}`}>
                                     <li>
                                         <Link href="/services/web-development-services" className="dropdown-item">
-                                            <span className="service-icon">🌐</span>
+                                            <span className="service-icon"><Code2/></span>
                                             Web Development
                                         </Link>
                                     </li>
                                     <li>
                                         <Link href="/services/app-development-services" className="dropdown-item">
-                                            <span className="service-icon">📱</span>
+                                            <span className="service-icon"><Smartphone/></span>
                                             App Development
                                         </Link>
                                     </li>
 
                                     <li>
                                         <Link href="/services/graphic-design-services" className="dropdown-item">
-                                            <span className="service-icon">🎨</span>
+                                            <span className="service-icon"><Palette/></span>
                                             Graphic Design
                                         </Link>
                                     </li>
                                     <li>
                                         <Link href="/services/digital-marketing-services" className="dropdown-item">
-                                            <span className="service-icon">📈</span>
+                                            <span className="service-icon"><Target/></span>
                                             Digital Marketing
                                         </Link>
                                     </li>
                                     <li>
                                         <Link href="/services/ai-solutions-services" className="dropdown-item">
-                                            <span className="service-icon">🤖</span>
-                                            AI Solutions
+                                            <span className="service-icon"><Brain/></span>
+                                            Saas & AI Solutions
                                         </Link>
                                     </li>
                                 </ul>

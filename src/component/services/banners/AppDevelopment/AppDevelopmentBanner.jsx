@@ -234,43 +234,13 @@ const AppDevelopmentBanner = () => {
                     >
                         <div className={styles.imageWrapper}>
                             <Image
-                                src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop"
-                                alt="Mobile App Development"
+                                src="/images/home/services/Mobile-App-Development.webp"
+                                alt="Mobile App Development Services"
                                 fill
                                 className={styles.bannerImage}
                                 sizes="(max-width: 991px) 100vw, 50vw"
                                 priority
                             />
-                            <div className={styles.imageOverlay}></div>
-                            
-                            {/* Floating Cards */}
-                            <motion.div 
-                                className={styles.floatingCard} 
-                                style={{top: '15%', left: '10%'}}
-                                initial={{opacity: 0, y: 20}}
-                                animate={{opacity: 1, y: 0}}
-                                transition={{duration: 0.6, delay: 0.8}}
-                            >
-                                <div className={styles.cardIcon}><Smartphone size={24}/></div>
-                                <div className={styles.cardContent}>
-                                    <h4>200+</h4>
-                                    <p>Apps Delivered</p>
-                                </div>
-                            </motion.div>
-                            
-                            <motion.div 
-                                className={styles.floatingCard} 
-                                style={{bottom: '20%', right: '10%'}}
-                                initial={{opacity: 0, y: 20}}
-                                animate={{opacity: 1, y: 0}}
-                                transition={{duration: 0.6, delay: 1}}
-                            >
-                                <div className={styles.cardIcon}><Zap size={24}/></div>
-                                <div className={styles.cardContent}>
-                                    <h4>Fast</h4>
-                                    <p>Performance</p>
-                                </div>
-                            </motion.div>
                         </div>
                     </motion.div>
                 </div>

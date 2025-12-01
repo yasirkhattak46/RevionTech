@@ -17,7 +17,7 @@ const SubServicesSection = ({ subServices}) => {
                         </AnimatedItem>
                         <AnimatedItem type="fadeUp" delay={0.5}>
                             <p>
-                                Comprehensive solutions tailored to meet your specific business needs and drive measurable results.
+                                {subServices?.description}
                             </p>
                         </AnimatedItem>
                     </div>
@@ -43,7 +43,7 @@ const SubServicesSection = ({ subServices}) => {
                                             sizes="(max-width: 768px) 100vw, 50vw"
                                             className="service-image"
                                         />
-                                        <div className="image-overlay"></div>
+                                        {/*<div className="image-overlay"></div>*/}
                                     </div>
                                 </div>
 

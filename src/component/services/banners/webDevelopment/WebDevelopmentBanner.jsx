@@ -121,46 +121,12 @@ const WebsiteDevelopmentBanner = () => {
                     >
                         <div className={styles.imageWrapper}>
                             <Image
-                                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop"
-                                alt="Web Development"
+                                src="/images/services/website-development/Website-development-services.webp"
+                                alt="Website Development Services"
                                 fill
                                 className={styles.bannerImage}
                                 priority
                             />
-                            <div className={styles.imageOverlay}></div>
-                            
-                            {/* Floating Stats/Cards on Image */}
-                            <motion.div
-                                className={styles.floatingCard}
-                                style={{top: '15%', left: '10%'}}
-                                initial={{opacity: 0, y: 20}}
-                                animate={{opacity: 1, y: 0}}
-                                transition={{duration: 0.8, delay: 0.8}}
-                            >
-                                <div className={styles.cardIcon}>
-                                    <Globe size={24}/>
-                                </div>
-                                <div className={styles.cardContent}>
-                                    <h4>100+</h4>
-                                    <p>Projects Delivered</p>
-                                </div>
-                            </motion.div>
-
-                            <motion.div
-                                className={styles.floatingCard}
-                                style={{bottom: '20%', right: '10%'}}
-                                initial={{opacity: 0, y: 20}}
-                                animate={{opacity: 1, y: 0}}
-                                transition={{duration: 0.8, delay: 1}}
-                            >
-                                <div className={styles.cardIcon}>
-                                    <Zap size={24}/>
-                                </div>
-                                <div className={styles.cardContent}>
-                                    <h4>Fast</h4>
-                                    <p>Performance</p>
-                                </div>
-                            </motion.div>
                         </div>
                     </motion.div>
                 </div>

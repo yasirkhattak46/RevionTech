@@ -1,24 +1,13 @@
 "use client";
-import React, {useState} from "react";
+import React from "react";
 import Image from "next/image";
 import {motion} from "framer-motion";
-import {MapPin, Phone, Mail, SendHorizontal} from "lucide-react";
+import {MapPin, Phone, Mail} from "lucide-react";
 import AnimatedItem from "../wrappers/AnimatedItem";
+import ContactForm from "./ContactForm";
 
 
 export default function ContactSection() {
-    const [formData, setFormData] = useState({
-        name: "", email: "", subject: "", message: ""
-    });
-
-    const handleChange = (e) => {
-        setFormData({...formData, [e.target.name]: e.target.value});
-    };
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log("Form submitted:", formData);
-    };
-
     return (
         <section className="contact-section">
         <div className="bg-pattern"></div>
@@ -98,69 +87,7 @@ export default function ContactSection() {
 
                 <div className="col-lg-6 form-column">
                     <AnimatedItem type="fadeLeft">
-                        <div className="form-box">
-                            <h3>Send us a Message</h3>
-                            <form onSubmit={handleSubmit}>
-                                <div className="row g-3">
-                                    <div className="col-md-6">
-                                        <div className="form-group">
-                                            <input
-                                                type="text"
-                                                name="name"
-                                                className="form-control"
-                                                placeholder="Your Name"
-                                                value={formData.name}
-                                                onChange={handleChange}
-                                                required
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className="col-md-6">
-                                        <div className="form-group">
-                                            <input
-                                                type="email"
-                                                name="email"
-                                                className="form-control"
-                                                placeholder="Your Email"
-                                                value={formData.email}
-                                                onChange={handleChange}
-                                                required
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className="col-12">
-                                        <div className="form-group">
-                                            <input
-                                                type="text"
-                                                name="subject"
-                                                className="form-control"
-                                                placeholder="Subject"
-                                                value={formData.subject}
-                                                onChange={handleChange}
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className="col-12">
-                                        <div className="form-group">
-                        <textarea
-                            name="message"
-                            className="form-control"
-                            rows="5"
-                            placeholder="Tell us about your project..."
-                            value={formData.message}
-                            onChange={handleChange}
-                            required
-                        ></textarea>
-                                        </div>
-                                    </div>
-                                    <div className="col-12">
-                                        <button type="submit" className="transparent-btn">
-                                            <span className="btn-text"><span>Send Message</span></span>
-                                            <span className="btn-icon"><SendHorizontal/></span></button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+                        <ContactForm />
                     </AnimatedItem>
                 </div>
             </div>

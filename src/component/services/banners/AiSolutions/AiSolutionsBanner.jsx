@@ -67,7 +67,7 @@ const AiSolutionsBanner = ({data}) => {
                             transition={{duration: 0.6, delay: 0.1}}
                         >
                             <Brain size={20}/>
-                            <span>AI & SaaS Solutions</span>
+                            <span>AI & SaaS Services</span>
                         </motion.div>
 
                         <motion.h1
@@ -76,7 +76,7 @@ const AiSolutionsBanner = ({data}) => {
                             animate={{opacity: 1, y: 0}}
                             transition={{duration: 0.8, delay: 0.2}}
                         >
-                            Custom <span>AI and SaaS</span> Solutions for Modern Businesses
+                            Custom <span>AI and SaaS</span> Services for Modern Businesses
                         </motion.h1>
 
                         <motion.p
@@ -85,7 +85,7 @@ const AiSolutionsBanner = ({data}) => {
                             animate={{opacity: 1, y: 0}}
                             transition={{duration: 0.8, delay: 0.4}}
                         >
-                            Revion Tech delivers custom AI and SaaS solutions that automate business processes, enhance
+                            Revion Tech delivers custom AI and SaaS Services that automate business processes, enhance
                             decision making, and improve scalability. From intelligent automation, machine learning,
                             predictive analytics, to cloud-based SaaS platforms, we create smart, reliable, and innovative
                             digital tools that help businesses grow efficiently and stay ahead in a competitive market.
@@ -125,43 +125,14 @@ const AiSolutionsBanner = ({data}) => {
                     >
                         <div className={styles.imageWrapper}>
                             <Image
-                                src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop"
+                                src="/images/home/services/Saas-&-Ai-Solution.webp"
                                 alt="AI Solutions"
                                 fill
                                 className={styles.bannerImage}
                                 sizes="(max-width: 991px) 100vw, 50vw"
                                 priority
                             />
-                            <div className={styles.imageOverlay}></div>
-                            
-                            {/* Floating Cards */}
-                            <motion.div 
-                                className={styles.floatingCard} 
-                                style={{top: '15%', left: '10%'}}
-                                initial={{opacity: 0, y: 20}}
-                                animate={{opacity: 1, y: 0}}
-                                transition={{duration: 0.6, delay: 0.8}}
-                            >
-                                <div className={styles.cardIcon}><Brain size={24}/></div>
-                                <div className={styles.cardContent}>
-                                    <h4>AI</h4>
-                                    <p>Powered Solutions</p>
-                                </div>
-                            </motion.div>
-                            
-                            <motion.div 
-                                className={styles.floatingCard} 
-                                style={{bottom: '20%', right: '10%'}}
-                                initial={{opacity: 0, y: 20}}
-                                animate={{opacity: 1, y: 0}}
-                                transition={{duration: 0.6, delay: 1}}
-                            >
-                                <div className={styles.cardIcon}><Zap size={24}/></div>
-                                <div className={styles.cardContent}>
-                                    <h4>Smart</h4>
-                                    <p>Automation</p>
-                                </div>
-                            </motion.div>
+
                         </div>
                     </motion.div>
                 </div>
