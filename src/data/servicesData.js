@@ -10,32 +10,32 @@ export const servicesWhyChooseUsData = {
         subtitle: "Get reliable, fast, and high-performing website development services designed to grow your business online. Our expert team creates responsive, modern, and user-friendly websites that drive engagement, improve conversions, and help your brand succeed in the digital world.",
         features: [
             {
-                icon: CodeXml,
+                icon: 'CodeXml',
                 title: 'Modern & Clean Development',
                 description: "We build fast, scalable, and modern websites using the latest technologies."
             },
             {
-                icon: BrushIcon,
+                icon: 'BrushIcon',
                 title: 'Custom UI/UX Design',
                 description: "Unique, user-friendly designs tailored to your brand and business goals."
             },
             {
-                icon: Zap,
+                icon: 'Zap',
                 title: 'High Performance & Speed',
                 description: "Optimized websites that load fast and deliver smooth user experiences."
             },
             {
-                icon: ShieldCheck,
+                icon: 'ShieldCheck',
                 title: 'Strong Security & Protection',
                 description: "Every website is built with advanced security measures for long-term safety."
             },
             {
-                icon: TabletSmartphone,
+                icon: 'TabletSmartphone',
                 title: '100% Responsive',
                 description: "Fully responsive layouts that look perfect on mobile, tablet, and desktop."
             },
             {
-                icon: Headset,
+                icon: 'Headset',
                 title: 'Dedicated Support & Maintenance',
                 description: "Reliable ongoing support to keep your website updated and performing well."
             }
@@ -46,32 +46,32 @@ export const servicesWhyChooseUsData = {
         subtitle: "Get powerful, secure, and high-performing mobile app development services that help your business grow. From concept to launch, every app is crafted with smooth performance, modern design, and a user-first approach.",
         features: [
             {
-                icon: SmartphoneIcon,
+                icon: 'SmartphoneIcon',
                 title: 'Custom App Development',
                 description: "Tailored mobile applications built to match your business vision and goals."
             },
             {
-                icon: LayoutTemplate,
+                icon: 'LayoutTemplate',
                 title: 'Intuitive UI/UX Design',
                 description: "Clean, user-friendly designs crafted for seamless navigation and engagement."
             },
             {
-                icon: Gauge,
+                icon: 'Gauge',
                 title: 'High Performance Apps',
                 description: "Fast, reliable, and optimized apps built for smooth performance on all devices."
             },
             {
-                icon: ShieldCheck,
+                icon: 'ShieldCheck',
                 title: 'Secure & Scalable',
                 description: "Advanced security and scalable architecture designed to grow with your business."
             },
             {
-                icon: AppWindow,
+                icon: 'AppWindow',
                 title: 'Cross-Platform Support',
                 description: "Apps built for iOS and Android with consistent performance and design."
             },
             {
-                icon: Headset,
+                icon: 'Headset',
                 title: 'Ongoing Support & Updates',
                 description: "Continuous improvement, maintenance, and new feature updates whenever needed."
             }
@@ -82,32 +82,32 @@ export const servicesWhyChooseUsData = {
         subtitle: "Grow your brand with powerful digital marketing strategies designed to boost visibility, attract quality leads, and increase conversions. We deliver data-driven campaigns that maximize ROI and help your business stay ahead in a competitive online landscape.",
         features: [
             {
-                icon: TrendingUp,
+                icon: 'TrendingUp',
                 title: 'Result Driven Strategies',
                 description: "We create data-backed marketing strategies built to increase traffic, leads, and sales."
             },
             {
-                icon: PieChart,
+                icon: 'PieChart',
                 title: 'Advanced Analytics',
                 description: "Track performance with clear insights that help improve campaigns continuously."
             },
             {
-                icon: Megaphone,
+                icon: 'Megaphone',
                 title: 'Brand Visibility Boost',
                 description: "Enhance your online presence with SEO, social media, and targeted advertising."
             },
             {
-                icon: Target,
+                icon: 'Target',
                 title: 'Precise Audience Targeting',
                 description: "Reach the right audience at the right time for higher conversions and engagement."
             },
             {
-                icon: Sparkles,
+                icon: 'Sparkles',
                 title: 'Creative Content Marketing',
                 description: "Engaging content crafted to attract, educate, and convert your ideal customers."
             },
             {
-                icon: Headphones,
+                icon: 'Headphones',
                 title: 'Dedicated Support',
                 description: "Full assistance throughout your campaigns to ensure consistent growth and success."
             }
@@ -118,32 +118,32 @@ export const servicesWhyChooseUsData = {
         subtitle: "Get creative, impactful, and professional graphic design services that elevate your brand identity. From logos to marketing assets, every design is crafted with precision to engage your audience and strengthen your visual presence.",
         features: [
             {
-                icon: Palette,
+                icon: 'Palette',
                 title: 'Creative & Modern Designs',
                 description: "Fresh, unique, and visually appealing designs tailored to your brand."
             },
             {
-                icon: PenTool,
+                icon: 'PenTool',
                 title: 'Brand-Focused Approach',
                 description: "Every design aligns with your brand story for consistent visual identity."
             },
             {
-                icon: LayoutGrid,
+                icon: 'LayoutGrid',
                 title: 'High-Quality Deliverables',
                 description: "Print-ready and web-optimized files delivered in premium quality formats."
             },
             {
-                icon: Lightbulb,
+                icon: 'Lightbulb',
                 title: 'Concept to Completion',
                 description: "From brainstorming to final design, everything is crafted with detail."
             },
             {
-                icon: Layers,
+                icon: 'Layers',
                 title: 'Versatile Design Solutions',
                 description: "Logos, social media, brochures, banners, ads, and complete branding kits."
             },
             {
-                icon: Headset,
+                icon: 'Headset',
                 title: 'Responsive Communication',
                 description: "Smooth workflow with quick updates, revisions, and dedicated support."
             }
@@ -154,32 +154,32 @@ export const servicesWhyChooseUsData = {
         subtitle: "Harness the power of artificial intelligence to transform your business operations, automate processes, and gain competitive advantages in your industry.",
         features: [
             {
-                icon: Brain,
+                icon: 'Brain',
                 title: 'AI Expertise',
                 description: 'Our team of AI specialists brings deep expertise in machine learning, natural language processing, and computer vision to solve complex business challenges.'
             },
             {
-                icon: LightbulbIcon,
+                icon: 'LightbulbIcon',
                 title: 'Innovative Solutions',
                 description: 'We develop cutting-edge AI solutions that leverage the latest advancements in artificial intelligence to deliver tangible business value.'
             },
             {
-                icon: Zap,
+                icon: 'Zap',
                 title: 'Rapid Implementation',
                 description: 'Our agile approach enables quick deployment of AI solutions, allowing you to start realizing benefits faster.'
             },
             {
-                icon: Code,
+                icon: 'Code',
                 title: 'Custom AI Models',
                 description: 'We build custom AI models tailored to your specific business needs and data, ensuring optimal performance and accuracy.'
             },
             {
-                icon: Users,
+                icon: 'Users',
                 title: 'Ethical AI Practices',
                 description: 'We implement responsible AI practices that ensure fairness, transparency, and compliance with industry regulations.'
             },
             {
-                icon: ShieldCheck,
+                icon: 'ShieldCheck',
                 title: 'Secure & Private',
                 description: 'We prioritize data security and privacy in all our AI solutions, implementing robust measures to protect your sensitive information.'
             }

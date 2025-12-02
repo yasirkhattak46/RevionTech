@@ -1,6 +1,21 @@
+"use client";
 import React from 'react';
 import { motion } from 'framer-motion';
+import {
+    CodeXml, BrushIcon, ShieldCheck, TabletSmartphone, Headset, SmartphoneIcon, 
+    LayoutTemplate, Gauge, AppWindow, Users, Zap, Code, Palette, LightbulbIcon, 
+    TrendingUp, Brain, Layers, Megaphone, PenTool, PieChart, Target, Sparkles, 
+    Headphones, LayoutGrid, Lightbulb
+} from 'lucide-react';
 import styles from './WhyChooseUs.module.scss';
+
+// Icon mapping object
+const iconMap = {
+    CodeXml, BrushIcon, ShieldCheck, TabletSmartphone, Headset, SmartphoneIcon,
+    LayoutTemplate, Gauge, AppWindow, Users, Zap, Code, Palette, LightbulbIcon,
+    TrendingUp, Brain, Layers, Megaphone, PenTool, PieChart, Target, Sparkles,
+    Headphones, LayoutGrid, Lightbulb
+};
 
 const WhyChooseUs = ({ title, subtitle, features }) => {
 
@@ -53,7 +68,11 @@ const WhyChooseUs = ({ title, subtitle, features }) => {
                     viewport={{ once: true, amount: 0.2 }}
                 >
                     {features && features.map((feature, index) => {
-                        const IconComponent = feature.icon;
+                        // Get the icon component from the string name
+                        const IconComponent = typeof feature.icon === 'string' 
+                            ? iconMap[feature.icon] 
+                            : feature.icon;
+                        
                         return (
                             <motion.div
                                 key={index}

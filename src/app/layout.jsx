@@ -1,10 +1,10 @@
-"use client";
 import "aos/dist/aos.css";
 import "./globals.scss"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from "../component/layout/Header";
 import Footer from "../component/layout/Footer";
 import SmoothScroll from "../component/UI/SmoothScroll";
+import BreadcrumbSchema from "../component/shared/BreadcrumbSchema";
 import { Space_Grotesk, Manrope } from "next/font/google";
 
 const spaceGrotesk = Space_Grotesk({
@@ -19,6 +19,84 @@ const manrope = Manrope({
     weight: ["400", "500", "600", "700"],
 });
 
+// Viewport Configuration
+export const viewport = {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+    themeColor: '#6366f1',
+};
+
+// SEO Metadata
+export const metadata = {
+    metadataBase: new URL('https://www.reviontech.com'),
+    title: {
+        default: 'RevionTech | Web & App Development, AI Solutions & Digital Marketing',
+        template: '%s | RevionTech'
+    },
+    description: 'RevionTech provides cutting-edge web development, app development, AI solutions, graphic design, and digital marketing services. Transform your business with innovative technology solutions.',
+    keywords: ['web development', 'app development', 'AI solutions', 'digital marketing', 'graphic design', 'software development', 'RevionTech', 'tech solutions'],
+    authors: [{ name: 'RevionTech' }],
+    creator: 'RevionTech',
+    publisher: 'RevionTech',
+    formatDetection: {
+        email: false,
+        address: false,
+        telephone: false,
+    },
+    icons: {
+        icon: [
+            { url: '/favicon.ico', sizes: 'any' },
+            { url: '/images/icons/icon-192x192.png', sizes: '192x192', type: 'image/png' },
+            { url: '/images/icons/icon-512x512.png', sizes: '512x512', type: 'image/png' },
+        ],
+        apple: [
+            { url: '/images/icons/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+        ],
+        other: [
+            { rel: 'mask-icon', url: '/images/icons/safari-pinned-tab.svg', color: '#6366f1' },
+        ],
+    },
+    manifest: '/manifest.webmanifest',
+    openGraph: {
+        type: 'website',
+        locale: 'en_US',
+        url: 'https://www.reviontech.com',
+        siteName: 'RevionTech',
+        title: 'RevionTech | Web & App Development, AI Solutions & Digital Marketing',
+        description: 'RevionTech provides cutting-edge web development, app development, AI solutions, graphic design, and digital marketing services.',
+        images: [
+            {
+                url: '/images/og-image.jpg',
+                width: 1200,
+                height: 630,
+                alt: 'RevionTech - Technology Solutions',
+            },
+        ],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'RevionTech | Web & App Development, AI Solutions & Digital Marketing',
+        description: 'Transform your business with innovative technology solutions from RevionTech.',
+        images: ['/images/og-image.jpg'],
+        creator: '@reviontech',
+        site: '@reviontech',
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
+        },
+    },
+    verification: {
+        google: 'your-google-verification-code', // Add your Google Search Console verification code
+    },
+};
 
 export default function RootLayout({children}) {
 
@@ -26,6 +104,7 @@ export default function RootLayout({children}) {
     return (
         <html lang="en">
         <body className={`${spaceGrotesk.variable} ${manrope.variable}`}>
+        <BreadcrumbSchema />
         <SmoothScroll />
         <Header/>
         <main>{children}</main>

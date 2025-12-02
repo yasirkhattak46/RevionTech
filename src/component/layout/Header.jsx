@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import {HiArrowNarrowRight} from "react-icons/hi";
 import {FiPhone, FiMail, FiFacebook, FiInstagram, FiLinkedin} from "react-icons/fi";
-import {Code2, Palette, Target, Smartphone, Brain, SendHorizontal} from "lucide-react";
+import {Code2, Palette, Target, Smartphone, Brain} from "lucide-react";
 
 export default function Header() {
     const [scrolled, setScrolled] = useState(false);
@@ -159,9 +159,9 @@ export default function Header() {
                     <a href="mailto:contact@reviontech.com"><FiMail/> Contact@Reviontech.com</a>
 
                     <div className="social-links">
-                        <a href="#"><FiFacebook/></a>
-                        <a href="#"><FiInstagram/></a>
-                        <a href="#"><FiLinkedin/></a>
+                        <a target={'_blank'} rel="noopener noreferrer" href="https://www.facebook.com/reviontech"><FiFacebook/></a>
+                        <a target={'_blank'} rel="noopener noreferrer" href="https://www.instagram.com/revion_tech"><FiInstagram/></a>
+                        <a target={'_blank'} rel="noopener noreferrer" href="https://www.linkedin.com/company/reviontech"><FiLinkedin/></a>
                     </div>
                 </div>
             </div>

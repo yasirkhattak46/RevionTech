@@ -41,10 +41,10 @@ export default function Footer() {
                                         Contact@Reviontech.com</a>
                                 </div>
                                 <div className="footer-social-links">
-                                    <a target={'_blank'} href="#"><FiFacebook/></a>
-                                    <a target={'_blank'} href="#"><FiInstagram/></a>
-                                    <a target={'_blank'} href="#"><FiLinkedin/></a>
-                                    <a target={'_blank'} href="https://wa.me/+923305858969"><FaWhatsapp/></a>
+                                    <a target={'_blank'} rel="noopener noreferrer" href="https://www.facebook.com/reviontech"><FiFacebook/></a>
+                                    <a target={'_blank'} rel="noopener noreferrer" href="https://www.instagram.com/revion_tech"><FiInstagram/></a>
+                                    <a target={'_blank'} rel="noopener noreferrer" href="https://www.linkedin.com/company/reviontech"><FiLinkedin/></a>
+                                    <a target={'_blank'} rel="noopener noreferrer" href="https://wa.me/+923305858969"><FaWhatsapp/></a>
                                 </div>
                             </div>
                         </div>

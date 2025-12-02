@@ -339,9 +339,9 @@ export async function POST(request) {
                         <div class="social-section">
                             <div class="social-title">Connect With Us</div>
                             <div class="social-links">
-                                <a href="#">Facebook</a>
-                                <a href="#">LinkedIn</a>
-                                <a href="#">Instagram</a>
+                                <a target={'_blank'} rel="noopener noreferrer" href="https://www.facebook.com/reviontech">Facebook</a>
+                                <a target={'_blank'} rel="noopener noreferrer" href="https://www.linkedin.com/company/reviontech">LinkedIn</a>
+                                <a target={'_blank'} rel="noopener noreferrer" href="https://www.instagram.com/revion_tech">Instagram</a>
                                 <a href="https://wa.me/923305858969">WhatsApp</a>
                             </div>
                         </div>
