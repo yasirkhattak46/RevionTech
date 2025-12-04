@@ -10,10 +10,6 @@
 @use '../app/assets/sass/header' as *;
 
 
-:root {
-  --font-heading: var(--font-space);
-  --font-body: var(--font-manrope);
-}
 
 html, body {
   scroll-behavior: auto !important;
@@ -22,11 +18,11 @@ html, body {
 }
 
 body {
-  font-family: var(--font-body), sans-serif;
+  font-family: $font-body, sans-serif !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading), sans-serif;
+  font-family: $font-heading, sans-serif !important;
 }
 
 /* Custom Scrollbar Styles */

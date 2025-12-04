@@ -5,10 +5,10 @@ $secondary: #0C1E21;
 $background: #0C1E21;
 $text-dark: #0C1E21;
 $text-muted: #3f4247;
-$text-light : #e3e7ed;
-// Fonts
-$font-sans: 'Inter', sans-serif;
-$font-heading: 'Poppins', sans-serif;
+$text-light: #e3e7ed;
+
+$font-heading: var(--font-space);
+$font-body: var(--font-manrope);
 
 // Spacing
 $space-xs: 0.25rem;
