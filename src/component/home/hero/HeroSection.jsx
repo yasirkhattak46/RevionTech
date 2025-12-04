@@ -17,7 +17,18 @@ export default function HeroSection() {
         {icon: Brain, name: "AI Solutions", link: "/services/ai-solutions-services"},
     ];
 
+    const serviceTitles = [
+        "Professional Website Development Services",
+        "Mobile App Development Services",
+        "AI & SaaS Solutions for Business Growth",
+        "Creative Graphic Design & Branding Services",
+        "Result-Driven Digital Marketing Strategies"
+    ];
+
     const [imageLoaded, setImageLoaded] = useState(false);
+    const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
+    const [displayedText, setDisplayedText] = useState('Professional Website Development Services');
+    const [isDeleting, setIsDeleting] = useState(false);
 
     useEffect(() => {
         // Set image as loaded after a short delay to ensure smooth animation
@@ -27,6 +38,38 @@ export default function HeroSection() {
 
         return () => clearTimeout(timer);
     }, []);
+
+    // Typing animation effect
+    useEffect(() => {
+        const currentTitle = serviceTitles[currentTitleIndex];
+
+        const typingSpeed = isDeleting ? 30 : 80;
+        const pauseEnd = 2000; // Pause at end of typing
+
+        if (!isDeleting && displayedText === currentTitle) {
+            // Finished typing, wait then start deleting
+            const timer = setTimeout(() => setIsDeleting(true), pauseEnd);
+            return () => clearTimeout(timer);
+        }
+
+        if (isDeleting && displayedText === '') {
+            // Finished deleting, move to next title
+            setIsDeleting(false);
+            setCurrentTitleIndex((prev) => (prev + 1) % serviceTitles.length);
+            return;
+        }
+
+        // Type or delete one character
+        const timer = setTimeout(() => {
+            if (!isDeleting) {
+                setDisplayedText(currentTitle.substring(0, displayedText.length + 1));
+            } else {
+                setDisplayedText(currentTitle.substring(0, displayedText.length - 1));
+            }
+        }, typingSpeed);
+
+        return () => clearTimeout(timer);
+    }, [displayedText, isDeleting, currentTitleIndex, serviceTitles]);
 
     return (
         <section className="hero-section">
@@ -53,7 +96,8 @@ export default function HeroSection() {
 
                         <AnimatedItem type="fadeLeft">
                             <h1 className="hero-title">
-                                Transforming Ideas into Powerful Digital Solutions
+                                {displayedText}
+                                <span className="typing-cursor">|</span>
                             </h1>
                         </AnimatedItem>
 

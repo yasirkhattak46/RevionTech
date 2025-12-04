@@ -5,7 +5,7 @@ export default function StructuredData() {
         name: 'RevionTech',
         url: 'https://www.reviontech.com',
         logo: 'https://www.reviontech.com/images/RevionTech-Logo.webp',
-        description: 'RevionTech provides cutting-edge website development services, app development services, AI solutions, graphic design services, and digital marketing services.',
+        description: 'RevionTech provides professional Website Development Services, Mobile App Development, AI & SaaS solutions, Graphic Design, and Digital Marketing. Empowering businesses with high-performing, modern, and scalable digital solutions.',
         contactPoint: {
             '@type': 'ContactPoint',
             telephone: '+92-330-5858969',

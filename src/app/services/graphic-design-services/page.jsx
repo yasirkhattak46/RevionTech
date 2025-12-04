@@ -7,27 +7,53 @@ import TestimonialsSection from "../../../component/home/testimonials/Testimonia
 import BrandSlider from "../../../component/shared/BrandSlider";
 import '../ServiceDetail.scss';
 import { getWhyChooseUsData, getSubServices } from '../../../data/servicesData';
+import ServiceSchema from "../../../component/shared/ServiceSchema";
 
 export const metadata = {
-    title: 'Graphic Design Services - UI/UX Design & Branding',
-    description: 'Professional graphic design services including UI/UX design, branding, logo design, and visual identity. Create stunning designs that engage your audience and elevate your brand.',
-    keywords: ['graphic design', 'UI UX design', 'branding services', 'logo design', 'visual identity', 'user interface design', 'user experience design'],
+    title: 'Graphic Design Services | UI/UX Design, Branding & Creative Visual Design',
+    description:
+        'RevionTech offers professional Graphic Design Services including UI/UX design, branding, logo creation, marketing materials, and complete visual identity design. Elevate your brand with stunning, user-focused and modern creative designs.',
+    keywords: [
+        'graphic design services',
+        'ui ux design',
+        'branding and identity design',
+        'logo design services',
+        'visual identity design',
+        'creative design agency',
+        'user interface design',
+        'user experience design',
+        'brand design company'
+    ],
     alternates: {
         canonical: 'https://www.reviontech.com/services/graphic-design-services',
     },
     openGraph: {
-        title: 'Graphic Design Services - RevionTech',
-        description: 'Beautiful, user-centered designs that make your brand stand out.',
+        title: 'Graphic Design Services | RevionTech',
+        description:
+            'Transform your brand with professional graphic design, UI/UX design, and creative visual identity solutions from RevionTech.',
         url: 'https://www.reviontech.com/services/graphic-design-services',
         type: 'website',
     },
 };
 
+
 export default function UiUxDesignPage() {
     const whyChooseUsData = getWhyChooseUsData('graphic-design');
     const subServices = getSubServices('graphic-design');
+    const serviceSchemaData = {
+        name: 'Graphic Design Services',
+        description: 'RevionTech offers professional Graphic Design Services including UI/UX design, branding, logo creation, marketing materials, and complete visual identity design. Elevate your brand with stunning, user-focused and modern creative designs.',
+        url: 'https://www.reviontech.com/services/graphic-design-services',
+        serviceType: 'Graphic Design',
+        subServices: subServices?.services?.map(service => ({
+            name: service.title,
+            description: service.description
+        })) || []
+    };
+
     return (
         <>
+            <ServiceSchema serviceData={serviceSchemaData} />
             <UxUiDesignBanner />
             <WhyChooseUs 
                 title={whyChooseUsData.title}

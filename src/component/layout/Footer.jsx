@@ -12,7 +12,7 @@ export default function Footer() {
                 <div className="content container">
                     <div className={'row w-100'}>
                         <div className={'col-12 col-lg-4'}>
-                            <Image width={300} height={100} src={'/images/RevionTech-Logo.webp'}
+                            <Image loading={"eager"} width={300} height={100} src={'/images/RevionTech-Logo.webp'}
                                    alt={'RevionTech Logo'}/>
                         </div>
                         <div className={'col-12 col-lg-4'}>

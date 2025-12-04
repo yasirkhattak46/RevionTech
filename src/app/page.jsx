@@ -11,19 +11,34 @@ import FeaturedProjectsSection from "../component/shared/featureProject/Featured
 import StructuredData from "../component/shared/StructuredData";
 
 export const metadata = {
-    title: 'Home - Expert Web & App Development, AI Solutions & Digital Marketing',
-    description: 'RevionTech is a leading technology solutions provider offering web development, mobile app development, AI & SaaS solutions, graphic design, and digital marketing services. Transform your business with innovative technology.',
-    keywords: ['web development company', 'mobile app development', 'AI solutions', 'SaaS development', 'digital marketing agency', 'graphic design services', 'software development', 'technology solutions'],
+    title: 'RevionTech | Professional Website Development Services, App Development, AI Solutions & Digital Marketing',
+    description:
+        'RevionTech provides professional Website Development Services, Mobile App Development, AI & SaaS solutions, Graphic Design, and Digital Marketing. Empowering businesses with high-performing, modern, and scalable digital solutions.',
+    keywords: [
+        'website development services',
+        'professional website development',
+        'custom web development',
+        'mobile app development',
+        'AI solutions',
+        'SaaS development',
+        'digital marketing services',
+        'graphic design services',
+        'IT solutions company',
+        'software development agency'
+    ],
     alternates: {
         canonical: 'https://www.reviontech.com',
     },
     openGraph: {
-        title: 'RevionTech - Expert Web & App Development, AI Solutions & Digital Marketing',
-        description: 'Transform your business with cutting-edge technology solutions. We specialize in web development, app development, AI solutions, and digital marketing.',
+        title:
+            'RevionTech | Professional Website Development Services, App Development, AI Solutions & Digital Marketing',
+        description:
+            'RevionTech delivers innovative Website Development, App Development, AI solutions, SaaS platforms, and Digital Marketing to help businesses grow and scale.',
         url: 'https://www.reviontech.com',
         type: 'website',
     },
 };
+
 
 export default function Home() {
     return (

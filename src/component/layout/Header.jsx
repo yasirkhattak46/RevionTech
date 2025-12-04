@@ -30,7 +30,7 @@ export default function Header() {
 
                     {/* LOGO */}
                     <Link href="/" className="navbar-brand fw-bold header-logo">
-                        <Image
+                        <Image loading={"eager"}
                             src="/images/RevionTech-Logo.webp"
                             alt="RevionTech"
                             fill
@@ -128,24 +128,24 @@ export default function Header() {
                     {servicesOpen && (
                         <div className={`mobile-dropdown-list ${servicesOpen ? 'open' : ''}`}>
                             <Link href="/services/web-development-services" onClick={() => setMobileOpen(false)}>
-                                <span className="service-icon">🌐</span>
+                                <span className="service-icon"><Code2/></span>
                                 Web Development
                             </Link>
                             <Link href="/services/app-development-services" onClick={() => setMobileOpen(false)}>
-                                <span className="service-icon">📱</span>
+                                <span className="service-icon"><Smartphone/></span>
                                 App Development
                             </Link>
 
                             <Link href="/services/graphic-design-services" onClick={() => setMobileOpen(false)}>
-                                <span className="service-icon">🎨</span>
+                                <span className="service-icon"><Palette/></span>
                                Graphic Design
                             </Link>
                             <Link href="/services/digital-marketing-services" onClick={() => setMobileOpen(false)}>
-                                <span className="service-icon">📈</span>
+                                <span className="service-icon"><Target/></span>
                                 Digital Marketing
                             </Link>
                             <Link href="/services/ai-solutions-services" onClick={() => setMobileOpen(false)}>
-                                <span className="service-icon">🤖</span>
+                                <span className="service-icon"><Brain/></span>
                                 AI Solutions
                             </Link>
                         </div>

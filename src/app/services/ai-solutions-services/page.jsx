@@ -7,17 +7,32 @@ import BrandSlider from "../../../component/shared/BrandSlider";
 import '../ServiceDetail.scss';
 import AiSolutionsBanner from "../../../component/services/banners/AiSolutions/AiSolutionsBanner";
 import { getWhyChooseUsData, getSubServices } from '../../../data/servicesData';
+import ServiceSchema from "../../../component/shared/ServiceSchema";
 
 export const metadata = {
-    title: 'AI Solutions & SaaS Development Services',
-    description: 'Cutting-edge AI solutions and SaaS development services. Machine learning, AI integration, custom SaaS platforms, and intelligent automation solutions to transform your business.',
-    keywords: ['AI solutions', 'SaaS development', 'machine learning', 'AI integration', 'artificial intelligence', 'cloud-based software', 'automation solutions'],
+    title: 'AI Solutions & SaaS Development Services | Intelligent Automation & Cloud Software',
+    description:
+        'RevionTech delivers advanced AI Solutions and custom SaaS Development Services, including machine learning models, AI integration, automation systems, cloud-based platforms, and intelligent software tailored to scale your business.',
+    keywords: [
+        'AI Services',
+        'AI development company',
+        'SaaS development services',
+        'custom SaaS platforms',
+        'machine learning solutions',
+        'AI integration services',
+        'cloud-based software',
+        'intelligent automation',
+        'AI-powered applications',
+        'artificial intelligence company'
+    ],
     alternates: {
         canonical: 'https://www.reviontech.com/services/ai-solutions-services',
     },
     openGraph: {
-        title: 'AI Solutions & SaaS Development - RevionTech',
-        description: 'Harness the power of AI and cloud-based SaaS solutions for your business.',
+        title:
+            'AI Solutions & SaaS Development Services | RevionTech',
+        description:
+            'Transform your business with intelligent AI solutions and scalable SaaS development. Build automation systems, AI-driven applications, and cloud-based platforms with RevionTech.',
         url: 'https://www.reviontech.com/services/ai-solutions-services',
         type: 'website',
     },
@@ -26,9 +41,20 @@ export const metadata = {
 export default function AiSolutionsPage() {
     const whyChooseUsData = getWhyChooseUsData('ai-solutions');
     const subServices = getSubServices('ai-solutions');
-    
+    const serviceSchemaData = {
+        name: 'AI Solutions & SaaS Development Services',
+        description:
+            'RevionTech delivers advanced AI Solutions and custom SaaS Development Services, including machine learning models, AI integration, automation systems, cloud-based platforms, and intelligent software tailored to scale your business.',
+        url: 'https://www.reviontech.com/services/ai-solutions-services',
+        serviceType: 'AI Solutions & SaaS Development',
+        subServices: subServices?.services?.map(service => ({
+            name: service.title,
+            description: service.description
+        })) || []
+    };
     return (
         <>
+            <ServiceSchema serviceData={serviceSchemaData} />
             <AiSolutionsBanner />
             <WhyChooseUs 
                 title={whyChooseUsData.title}

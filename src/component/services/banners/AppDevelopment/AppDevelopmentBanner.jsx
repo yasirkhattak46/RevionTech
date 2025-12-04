@@ -235,7 +235,7 @@ const AppDevelopmentBanner = () => {
                     >
                         <div className={styles.imageWrapper}>
                             <Image
-                                src="/images/home/services/Mobile-App-Development.webp"
+                                src="/images/home/services/Mobile-App-Development-Services.webp"
                                 alt="Mobile App Development Services"
                                 fill
                                 className={styles.bannerImage}

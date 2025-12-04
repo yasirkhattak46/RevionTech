@@ -132,11 +132,19 @@
 }
 
 .hero-title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2.25rem, 5vw, 4rem);
   font-weight: 700;
   line-height: 1.1;
   margin-bottom: 24px;
   color: #fff;
+  min-height: 3.4em;
+  
+  .typing-cursor {
+    color: variables.$primary;
+    animation: blink 0.8s infinite;
+    margin-left: 2px;
+    font-weight: 400;
+  }
   
   .highlight {
     color: variables.$primary;
@@ -146,6 +154,15 @@
   
   @media (max-width: 992px) {
     text-align: center;
+  }
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
   }
 }
 

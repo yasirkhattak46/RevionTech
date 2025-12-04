@@ -6,7 +6,7 @@ export default function manifest() {
         start_url: '/',
         display: 'standalone',
         background_color: '#ffffff',
-        theme_color: '#6366f1',
+        theme_color: '#1E8A8A',
         orientation: 'portrait-primary',
         icons: [
             {
@@ -15,13 +15,13 @@ export default function manifest() {
                 type: 'image/x-icon',
             },
             {
-                src: '/images/icons/icon-192x192.png',
+                src: '/images/icons/192X192.jpg',
                 sizes: '192x192',
                 type: 'image/png',
                 purpose: 'maskable any',
             },
             {
-                src: '/images/icons/icon-512x512.png',
+                src: '/images/icons/512X512.jpg',
                 sizes: '512x512',
                 type: 'image/png',
                 purpose: 'maskable any',
