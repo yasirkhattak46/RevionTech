@@ -13,7 +13,7 @@ import "./featuredProject.scss";
 const allProjects = [
     {
         id: 1,
-        img: "/images/projects/featured/osprey-shipping.webp",
+        img: "/images/projects/featured/Osprey-Shipping.webp",
         title: "Osprey Shipping",
         category: "Web Development",
         description: "Modern web application for Osprey Shipping",

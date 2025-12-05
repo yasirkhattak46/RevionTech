@@ -103,6 +103,20 @@ export default function RootLayout({children}) {
 
     return (
         <html lang="en">
+        <head>
+            {/* Google tag (gtag.js) */}
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-1X7ET8B6NV"></script>
+            <script
+                dangerouslySetInnerHTML={{
+                    __html: `
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', 'G-1X7ET8B6NV');
+                    `,
+                }}
+            />
+        </head>
         <body className={`${poppins.variable} ${inter.variable}`}>
         <BreadcrumbSchema />
         <SmoothScroll />
