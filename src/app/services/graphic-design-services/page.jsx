@@ -25,13 +25,13 @@ export const metadata = {
         'brand design company'
     ],
     alternates: {
-        canonical: 'https://www.reviontech.com/services/graphic-design-services',
+        canonical: 'https://reviontech.com/services/graphic-design-services',
     },
     openGraph: {
         title: 'Graphic Design Services | RevionTech',
         description:
             'Transform your brand with professional graphic design, UI/UX design, and creative visual identity solutions from RevionTech.',
-        url: 'https://www.reviontech.com/services/graphic-design-services',
+        url: 'https://reviontech.com/services/graphic-design-services',
         type: 'website',
     },
 };
@@ -43,7 +43,7 @@ export default function UiUxDesignPage() {
     const serviceSchemaData = {
         name: 'Graphic Design Services',
         description: 'RevionTech offers professional Graphic Design Services including UI/UX design, branding, logo creation, marketing materials, and complete visual identity design. Elevate your brand with stunning, user-focused and modern creative designs.',
-        url: 'https://www.reviontech.com/services/graphic-design-services',
+        url: 'https://reviontech.com/services/graphic-design-services',
         serviceType: 'Graphic Design',
         subServices: subServices?.services?.map(service => ({
             name: service.title,

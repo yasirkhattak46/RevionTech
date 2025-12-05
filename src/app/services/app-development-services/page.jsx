@@ -24,13 +24,13 @@ export const metadata = {
         'mobile application development company'
     ],
     alternates: {
-        canonical: 'https://www.reviontech.com/services/app-development-services',
+        canonical: 'https://reviontech.com/services/app-development-services',
     },
     openGraph: {
         title: 'Mobile App Development Services - RevionTech',
         description:
             'Build fast, secure, and scalable iOS & Android mobile apps with RevionTech. Expert native and cross-platform app development solutions.',
-        url: 'https://www.reviontech.com/services/app-development-services',
+        url: 'https://reviontech.com/services/app-development-services',
         type: 'website',
     },
 };
@@ -42,7 +42,7 @@ export default function AppDevelopmentPage() {
     const serviceSchemaData = {
         name: 'Mobile App Development Services',
         description: 'Professional mobile app development services for iOS and Android. We build high-performance native and cross-platform mobile apps using React Native, Flutter, and modern technologies to help businesses scale.',
-        url: 'https://www.reviontech.com/services/app-development-services',
+        url: 'https://reviontech.com/services/app-development-services',
         serviceType: 'Mobile App Development',
         subServices: subServices?.services?.map(service => ({
             name: service.title,

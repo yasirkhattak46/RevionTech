@@ -26,13 +26,13 @@ export const metadata = {
         'Wordpress Development Services',
     ],
     alternates: {
-        canonical: 'https://www.reviontech.com/services/web-development-services',
+        canonical: 'https://reviontech.com/services/web-development-services',
     },
     openGraph: {
         title: 'Website Development Services | RevionTech',
         description:
             'Build high-performance websites and scalable web applications with RevionTech’s expert Website Development Services.',
-        url: 'https://www.reviontech.com/services/web-development-services',
+        url: 'https://reviontech.com/services/web-development-services',
         type: 'website',
     },
 };
@@ -45,7 +45,7 @@ export default function WebDevelopmentPage() {
     const serviceSchemaData = {
         name: 'Web Development Services',
         description: 'Professional Website Development Services including custom websites, scalable web applications, e-commerce platforms, CMS development, responsive design, and modern frameworks like React and Next.js.',
-        url: 'https://www.reviontech.com/services/web-development-services',
+        url: 'https://reviontech.com/services/web-development-services',
         serviceType: 'Website Development',
         subServices: subServices?.services?.map(service => ({
             name: service.title,

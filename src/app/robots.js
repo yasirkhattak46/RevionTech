@@ -7,7 +7,7 @@ export default function robots() {
                 disallow: ['/api/', '/private/'],
             },
         ],
-        sitemap: 'https://www.reviontech.com/sitemap.xml',
+        sitemap: 'https://reviontech.com/sitemap.xml',
     };
 }
 

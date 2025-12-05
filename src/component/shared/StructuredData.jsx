@@ -3,8 +3,8 @@ export default function StructuredData() {
         '@context': 'https://schema.org',
         '@type': 'Organization',
         name: 'RevionTech',
-        url: 'https://www.reviontech.com',
-        logo: 'https://www.reviontech.com/images/RevionTech-Logo.webp',
+        url: 'https://reviontech.com',
+        logo: 'https://reviontech.com/images/RevionTech-Logo.webp',
         description: 'RevionTech provides professional Website Development Services, Mobile App Development, AI & SaaS solutions, Graphic Design, and Digital Marketing. Empowering businesses with high-performing, modern, and scalable digital solutions.',
         contactPoint: {
             '@type': 'ContactPoint',
@@ -29,9 +29,9 @@ export default function StructuredData() {
         '@context': 'https://schema.org',
         '@type': 'ProfessionalService',
         name: 'RevionTech',
-        image: 'https://www.reviontech.com/images/RevionTech-Logo.webp',
-        '@id': 'https://www.reviontech.com',
-        url: 'https://www.reviontech.com',
+        image: 'https://reviontech.com/images/RevionTech-Logo.webp',
+        '@id': 'https://reviontech.com',
+        url: 'https://reviontech.com',
         telephone: '+92-330-5858969',
         email: 'contact@reviontech.com',
         priceRange: '$$',
@@ -62,10 +62,10 @@ export default function StructuredData() {
         '@context': 'https://schema.org',
         '@type': 'WebSite',
         name: 'RevionTech',
-        url: 'https://www.reviontech.com',
+        url: 'https://reviontech.com',
         potentialAction: {
             '@type': 'SearchAction',
-            target: 'https://www.reviontech.com/search?q={search_term_string}',
+            target: 'https://reviontech.com/search?q={search_term_string}',
             'query-input': 'required name=search_term_string'
         }
     };

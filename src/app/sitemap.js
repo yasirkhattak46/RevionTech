@@ -1,5 +1,5 @@
 export default function sitemap() {
-    const baseUrl = 'https://www.reviontech.com';
+    const baseUrl = 'https://reviontech.com';
     const currentDate = new Date().toISOString();
 
     return [

@@ -29,7 +29,7 @@ export const viewport = {
 
 // SEO Metadata
 export const metadata = {
-    metadataBase: new URL('https://www.reviontech.com'),
+    metadataBase: new URL('https://reviontech.com'),
     title: {
         default: 'RevionTech | Web & App Development, AI Solutions & Digital Marketing',
         template: '%s | RevionTech'
@@ -61,7 +61,7 @@ export const metadata = {
     openGraph: {
         type: 'website',
         locale: 'en_US',
-        url: 'https://www.reviontech.com',
+        url: 'https://reviontech.com',
         siteName: 'RevionTech',
         title: 'RevionTech | Web & App Development, AI Solutions & Digital Marketing',
         description: 'RevionTech provides cutting-edge web development, app development, AI solutions, graphic design, and digital marketing services.',

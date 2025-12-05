@@ -12,12 +12,12 @@ export const metadata = {
     description: 'Explore RevionTech comprehensive technology services including custom web development, mobile app development, AI solutions, graphic design, and digital marketing. Transform your business with our expert solutions.',
     keywords: ['technology services', 'web development services', 'app development', 'AI solutions', 'digital marketing', 'graphic design', 'IT consulting'],
     alternates: {
-        canonical: 'https://www.reviontech.com/services',
+        canonical: 'https://reviontech.com/services',
     },
     openGraph: {
         title: 'RevionTech Services - Complete Technology Solutions',
         description: 'Discover our full range of technology services to accelerate your business growth.',
-        url: 'https://www.reviontech.com/services',
+        url: 'https://reviontech.com/services',
         type: 'website',
     },
 };

@@ -27,14 +27,14 @@ export const metadata = {
         'software development agency'
     ],
     alternates: {
-        canonical: 'https://www.reviontech.com',
+        canonical: 'https://reviontech.com',
     },
     openGraph: {
         title:
             'RevionTech | Professional Website Development Services, App Development, AI Solutions & Digital Marketing',
         description:
             'RevionTech delivers innovative Website Development, App Development, AI solutions, SaaS platforms, and Digital Marketing to help businesses grow and scale.',
-        url: 'https://www.reviontech.com',
+        url: 'https://reviontech.com',
         type: 'website',
     },
 };

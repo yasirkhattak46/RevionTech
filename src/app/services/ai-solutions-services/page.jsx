@@ -26,14 +26,14 @@ export const metadata = {
         'artificial intelligence company'
     ],
     alternates: {
-        canonical: 'https://www.reviontech.com/services/ai-solutions-services',
+        canonical: 'https://reviontech.com/services/ai-solutions-services',
     },
     openGraph: {
         title:
             'AI Solutions & SaaS Development Services | RevionTech',
         description:
             'Transform your business with intelligent AI solutions and scalable SaaS development. Build automation systems, AI-driven applications, and cloud-based platforms with RevionTech.',
-        url: 'https://www.reviontech.com/services/ai-solutions-services',
+        url: 'https://reviontech.com/services/ai-solutions-services',
         type: 'website',
     },
 };
@@ -45,7 +45,7 @@ export default function AiSolutionsPage() {
         name: 'AI Solutions & SaaS Development Services',
         description:
             'RevionTech delivers advanced AI Solutions and custom SaaS Development Services, including machine learning models, AI integration, automation systems, cloud-based platforms, and intelligent software tailored to scale your business.',
-        url: 'https://www.reviontech.com/services/ai-solutions-services',
+        url: 'https://reviontech.com/services/ai-solutions-services',
         serviceType: 'AI Solutions & SaaS Development',
         subServices: subServices?.services?.map(service => ({
             name: service.title,

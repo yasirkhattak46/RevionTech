@@ -20,14 +20,14 @@ export const metadata = {
         'software development team'
     ],
     alternates: {
-        canonical: 'https://www.reviontech.com/about-us',
+        canonical: 'https://reviontech.com/about-us',
     },
     openGraph: {
         title:
             'About RevionTech | Leading Website Development Services, App Development & AI Solutions Company',
         description:
             'Learn about RevionTech’s mission, vision, and expert team delivering Website Development, App Development, AI Solutions, and Digital Marketing for businesses worldwide.',
-        url: 'https://www.reviontech.com/about-us',
+        url: 'https://reviontech.com/about-us',
         type: 'website',
     },
 };
