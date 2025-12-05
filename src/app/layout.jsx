@@ -5,17 +5,17 @@ import Header from "../component/layout/Header";
 import Footer from "../component/layout/Footer";
 import SmoothScroll from "../component/UI/SmoothScroll";
 import BreadcrumbSchema from "../component/shared/BreadcrumbSchema";
-import { Space_Grotesk, Manrope } from "next/font/google";
+import {Poppins,Inter } from "next/font/google";
 
-const spaceGrotesk = Space_Grotesk({
+
+const poppins = Poppins({
     subsets: ["latin"],
-    variable: "--font-space",
-    weight: ["300", "400", "500", "600", "700"],
+    variable: "--font-poppins",
+    weight: ["400", "500", "600", "700"],
 });
-
-const manrope = Manrope({
+const inter = Inter({
     subsets: ["latin"],
-    variable: "--font-manrope",
+    variable: "--font-inter",
     weight: ["400", "500", "600", "700"],
 });
 
@@ -103,7 +103,7 @@ export default function RootLayout({children}) {
 
     return (
         <html lang="en">
-        <body className={`${spaceGrotesk.variable} ${manrope.variable}`}>
+        <body className={`${poppins.variable} ${inter.variable}`}>
         <BreadcrumbSchema />
         <SmoothScroll />
         <Header/>

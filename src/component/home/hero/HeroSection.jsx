@@ -87,7 +87,7 @@ export default function HeroSection() {
 
             <div className="container">
                 <div className="row align-items-center">
-                    <div className="col-lg-6">
+                    <div className="col-lg-7">
                         <AnimatedItem type="fadeLeft" className="w-100 hero-badge-container">
                             <div className="hero-badge">
                                 <span>🚀 Your Digital Success Partner</span>

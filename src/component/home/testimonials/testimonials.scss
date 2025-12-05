@@ -35,7 +35,6 @@
 
 
   .section-title {
-    font-family: var(--font-heading), serif;
     font-size: clamp(2.5rem, 4vw + 0.5rem, 4rem);;
     font-weight: 700;
     .highlight {
@@ -91,7 +90,6 @@
 
       .guest-rating-label {
         display: block;
-        font-family: var(--font-body), serif;
         font-size: 0.85rem;
         color: variables.$primary;
         text-transform: uppercase;
@@ -101,7 +99,6 @@
       }
 
       .review-title {
-        font-family: var(--font-heading), serif;
         font-size: 2rem;
         font-weight: 700;
         color: variables.$secondary;
@@ -122,7 +119,6 @@
       }
 
       .review-text {
-        font-family: var(--font-body), serif;
         color: variables.$text-muted;
         font-size: 1rem;
         line-height: 1.7;
@@ -151,7 +147,6 @@
 
         .user-info {
           .name {
-            font-family: var(--font-heading), serif;
             font-size: 1.1rem;
             font-weight: 700;
             color: variables.$primary;
@@ -159,7 +154,6 @@
           }
 
           .role {
-            font-family: var(--font-body), serif;
             font-size: 0.9rem;
             color: variables.$secondary;
             font-weight: 600;

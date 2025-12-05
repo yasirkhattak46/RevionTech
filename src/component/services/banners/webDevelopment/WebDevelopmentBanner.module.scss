@@ -42,7 +42,6 @@
     position: absolute;
     inset: 0;
     pointer-events: none;
-    font-family: 'Courier New', monospace;
     font-size: 14px;
     color: color.adjust(variables.$primary, $alpha: -0.3);
   }
@@ -163,7 +162,6 @@
     font-size: 80px;
     font-weight: bold;
     color: variables.$primary;
-    font-family: 'Courier New', monospace;
     text-shadow: 0 0 20px color.adjust(variables.$primary, $alpha: -0.5);
     pointer-events: none;
 

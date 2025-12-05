@@ -14,15 +14,19 @@ export default function Footer() {
                         <div className={'col-12 col-lg-4'}>
                             <Image loading={"eager"} width={300} height={100} src={'/images/RevionTech-Logo.webp'}
                                    alt={'RevionTech Logo'}/>
+                            <p className={'text-light px-lg-2'}>RevionTech is a digital solutions agency offering web development, app development,
+                                digital marketing, and AI-driven services.</p>
                         </div>
                         <div className={'col-12 col-lg-4'}>
                             <div className={'footer-services'}>
                                 <span>Services</span>
                                 <ul className={'m-0'}>
-                                    <li><Link href={'/services/web-development-services'}>Website Development</Link></li>
+                                    <li><Link href={'/services/web-development-services'}>Website Development</Link>
+                                    </li>
                                     <li><Link href={'/services/ai-solutions-services'}>Saas & Ai Solutions</Link></li>
                                     <li><Link href={'/services/app-development-services'}>App Development</Link></li>
-                                    <li><Link href={'/services/digital-marketing-services'}>Digital Marketing</Link></li>
+                                    <li><Link href={'/services/digital-marketing-services'}>Digital Marketing</Link>
+                                    </li>
                                     <li><Link href={'/services/graphic-design-services'}>Graphic Design</Link></li>
                                 </ul>
                             </div>
@@ -41,10 +45,14 @@ export default function Footer() {
                                         Contact@Reviontech.com</a>
                                 </div>
                                 <div className="footer-social-links">
-                                    <a target={'_blank'} rel="noopener noreferrer" href="https://www.facebook.com/reviontech"><FiFacebook/></a>
-                                    <a target={'_blank'} rel="noopener noreferrer" href="https://www.instagram.com/revion_tech"><FiInstagram/></a>
-                                    <a target={'_blank'} rel="noopener noreferrer" href="https://www.linkedin.com/company/reviontech"><FiLinkedin/></a>
-                                    <a target={'_blank'} rel="noopener noreferrer" href="https://wa.me/+923305858969"><FaWhatsapp/></a>
+                                    <a target={'_blank'} rel="noopener noreferrer"
+                                       href="https://www.facebook.com/reviontech"><FiFacebook/></a>
+                                    <a target={'_blank'} rel="noopener noreferrer"
+                                       href="https://www.instagram.com/revion_tech"><FiInstagram/></a>
+                                    <a target={'_blank'} rel="noopener noreferrer"
+                                       href="https://www.linkedin.com/company/reviontech"><FiLinkedin/></a>
+                                    <a target={'_blank'} rel="noopener noreferrer"
+                                       href="https://wa.me/+923305858969"><FaWhatsapp/></a>
                                 </div>
                             </div>
                         </div>
