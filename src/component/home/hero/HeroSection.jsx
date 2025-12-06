@@ -97,7 +97,7 @@ export default function HeroSection() {
                         <AnimatedItem type="fadeLeft">
                             <h1 className="hero-title">
                                 {displayedText}
-                                <span className="typing-cursor">|</span>
+                                {/*<span className="typing-cursor">|</span>*/}
                             </h1>
                         </AnimatedItem>
 

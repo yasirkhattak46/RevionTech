@@ -1,12 +1,9 @@
 "use client"
 
 import React from 'react';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import "./banner.scss"
-import {MdOutlineCallEnd} from "react-icons/md";
-import {FaEye} from "react-icons/fa";
 
 const titleVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -53,16 +50,16 @@ const ContactBanner = () => {
                                 initial="hidden"
                                 animate={inView ? "visible" : "hidden"}
                                 variants={buttonVariants}>
-                         <div className={'d-flex gap-3 justify-content-center align-items-center'}>
-                             <Link href={'#'} className="transparent-btn" style={{backgroundColor: '#1E8A8A'}}>
-                                 <span className="btn-text"><span>Get Fre Consultation</span></span>
-                                 <span className="btn-icon"><MdOutlineCallEnd /></span>
-                             </Link>
-                             <Link href={'#'} className="transparent-btn">
-                                 <span className="btn-text"><span>View Our Portfolio</span></span>
-                                 <span className="btn-icon"><FaEye  /></span>
-                             </Link>
-                         </div>
+                         {/*<div className={'d-flex gap-3 justify-content-center align-items-center'}>*/}
+                         {/*    <Link href={'#'} className="transparent-btn" style={{backgroundColor: '#1E8A8A'}}>*/}
+                         {/*        <span className="btn-text"><span>Get Fre Consultation</span></span>*/}
+                         {/*        <span className="btn-icon"><MdOutlineCallEnd /></span>*/}
+                         {/*    </Link>*/}
+                         {/*    <Link href={'#'} className="transparent-btn">*/}
+                         {/*        <span className="btn-text"><span>View Our Portfolio</span></span>*/}
+                         {/*        <span className="btn-icon"><FaEye  /></span>*/}
+                         {/*    </Link>*/}
+                         {/*</div>*/}
                             </motion.div>
                         </div>
                     </div>
