@@ -102,7 +102,7 @@ const HeroBanner = () => {
                             animate={{opacity: 1, y: 0}}
                             transition={{duration: 0.8, delay: 0.6}}
                         >
-                            <Link href={'/contact-us'} className="transparent-btn">
+                            <Link href={'/contact-us'} className="primary-btn">
                                 <span className="btn-text"><span>Bring Your Brand to Life</span></span>
                                 <span className="btn-icon"><Sparkles size={20}/></span>
                             </Link>

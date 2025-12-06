@@ -137,7 +137,7 @@ const DigitalMarketingBanner = () => {
                             animate={{opacity: 1, y: 0}}
                             transition={{duration: 0.8, delay: 0.6}}
                         >
-                            <Link href={'/contact-us'} className="transparent-btn">
+                            <Link href={'/contact-us'} className="primary-btn">
                                 <span className="btn-text"><span>Grow Your Business Online</span></span>
                                 <span className="btn-icon"><Target size={20}/></span>
                             </Link>

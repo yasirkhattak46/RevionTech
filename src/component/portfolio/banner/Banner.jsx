@@ -121,8 +121,8 @@ const PortfolioBanner = () => {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: 0.9 }}
                             >
-                                <Link href="#projects" className="primary-btn">
-                                    <span className="btn-text"><span>Explore Projects</span></span>
+                                <Link href="/contact-us" className="primary-btn">
+                                    <span className="btn-text"><span>Start Your Project Today</span></span>
                                     <span className="btn-icon"><ArrowDown size={20} /></span>
                                 </Link>
                             </motion.div>

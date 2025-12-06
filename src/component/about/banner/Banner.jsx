@@ -89,7 +89,7 @@ const AboutBanner = () => {
                                 is to help businesses grow, improve their online presence, and build long lasting
                                 digital success.
                             </p>
-                            <Link href={'#'} className="transparent-btn">
+                            <Link href={'#'} className="primary-btn">
                                 <span className="btn-text"><span>Contact Us Now</span></span>
                                 <span className="btn-icon"><HiArrowNarrowRight/></span>
                             </Link>

@@ -106,7 +106,7 @@ const WebsiteDevelopmentBanner = () => {
                             animate={{opacity: 1, y: 0}}
                             transition={{duration: 0.8, delay: 0.6}}
                         >
-                            <Link href={'/contact-us'} className="transparent-btn">
+                            <Link href={'/contact-us'} className="primary-btn">
                                 <span className="btn-text"><span>Start Your Project Today</span></span>
                                 <span className="btn-icon"><MoveRight size={20}/></span>
                             </Link>
