@@ -39,7 +39,7 @@ export default function AboutUs() {
             <AboutBanner/>
             <TechnologiesSlider/>
             <QualityDesignSection/>
-            <FounderSection/>
+            {/*<FounderSection/>*/}
             <ContactSection/>
         </>
 

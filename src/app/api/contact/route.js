@@ -321,7 +321,7 @@ export async function POST(request) {
                         <div class="divider"></div>
                         
                         <div class="cta-container">
-                            <a href="https://reviontech.com/services" class="cta-button">
+                            <a href="https://reviontech.com" class="cta-button">
                                 View Our Services
                             </a>
                         </div>
