@@ -3,10 +3,13 @@ import React from "react";
 import {FiFacebook, FiInstagram, FiLinkedin, FiMail, FiPhone} from "react-icons/fi";
 import {FaWhatsapp} from "react-icons/fa";
 import Link from "next/link";
+import WhatsAppFloat from "../shared/WhatsAppFloat";
 
 export default function Footer() {
     return (
-        <div className="footer">
+        <>
+            <WhatsAppFloat />
+            <div className="footer">
             <div className="grid-overlay"/>
             <div className={'footer-content'}>
                 <div className="content container">
@@ -66,7 +69,8 @@ export default function Footer() {
                     <li><Link href={'#'}>Terms & Conditions</Link></li>
                 </ul>
             </div>
-        </div>
+            </div>
+        </>
     );
 }
 

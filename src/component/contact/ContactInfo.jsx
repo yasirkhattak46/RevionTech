@@ -39,7 +39,7 @@ const ContactInfo = () => {
         {
             icon: MapPin,
             title: 'LOCATION',
-            info: '54th Street "I" Block F',
+            info: 'Jinnah Ave, Block G G-7',
             subInfo: 'Islamabad, Pakistan',
             link: 'https://maps.google.com/?q=Islamabad,Pakistan'
         },

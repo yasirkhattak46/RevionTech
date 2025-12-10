@@ -10,10 +10,11 @@ import '../ServiceDetail.scss';
 import { getWhyChooseUsData, getSubServices } from '../../../data/servicesData';
 
 export const metadata = {
-    title: 'Website Development Services | Custom Websites, Web Applications & E-commerce',
+    title: 'Professional Website Development Services',
     description:
         'RevionTech offers professional Website Development Services including custom websites, web applications, e-commerce development, CMS solutions, and modern frameworks like React and Next.js. Build fast, secure, and SEO-optimized websites tailored to your business.',
     keywords: [
+        'Professional website development services',
         'website development services',
         'custom website development',
         'web application development',

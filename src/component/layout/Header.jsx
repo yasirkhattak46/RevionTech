@@ -104,10 +104,10 @@ export default function Header() {
                         </ul>
 
                         {/* BUTTON */}
-                        <button className="transparent-btn">
+                        <Link href={"/contact-us"} className="transparent-btn">
                             <span className="btn-text"><span>Free Consultation</span></span>
                             <span className="btn-icon"><HiArrowNarrowRight/></span>
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </nav>

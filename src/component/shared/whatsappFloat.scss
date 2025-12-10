@@ -1,0 +1,85 @@
+@use '../../app/assets/sass/variables';
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    z-index: 9999;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+        background: linear-gradient(135deg, #128C7E, #25D366);
+    }
+    
+    &:active {
+        transform: scale(0.95);
+    }
+    
+    .whatsapp-icon {
+        animation: pulse 2s infinite;
+    }
+    
+    // Responsive adjustments
+    @media (max-width: 768px) {
+        width: 55px;
+        height: 55px;
+        font-size: 1.75rem;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    @media (max-width: 480px) {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+// Pulse animation
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+// Add a subtle bounce animation on load
+.whatsapp-float {
+    animation: bounceIn 0.6s ease-out;
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
