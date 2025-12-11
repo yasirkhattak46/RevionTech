@@ -21,10 +21,24 @@ jobs:
         run: npm ci
 
       - name: Build Next.js
+        env:
+          EMAIL_USER: ${{ secrets.EMAIL_USER }}
+          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          GOOGLE_SHEETS_WEBHOOK_URL: ${{ secrets.GOOGLE_SHEETS_WEBHOOK_URL }}
         run: npm run build
 
+      - name: Create .env file
+        run: |
+          echo "EMAIL_USER=${{ secrets.EMAIL_USER }}" > .env.production
+          echo "EMAIL_PASSWORD=${{ secrets.EMAIL_PASSWORD }}" >> .env.production
+          echo "SMTP_HOST=${{ secrets.SMTP_HOST }}" >> .env.production
+          echo "SMTP_PORT=${{ secrets.SMTP_PORT }}" >> .env.production
+          echo "GOOGLE_SHEETS_WEBHOOK_URL=${{ secrets.GOOGLE_SHEETS_WEBHOOK_URL }}" >> .env.production
+
       - name: Create build artifact
-        run: tar -czf build.tar.gz .next
+        run: tar -czf build.tar.gz .next .env.production package.json package-lock.json
 
       - name: Upload build to server
         uses: appleboy/scp-action@v0.1.7
