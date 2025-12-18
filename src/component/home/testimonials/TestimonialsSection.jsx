@@ -13,12 +13,12 @@ import "swiper/css/pagination";
 const testimonials = [
     {
         id: 1,
-        name: "Mitchel",
-        role: "Co-Founder, Youk",
-        avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1887&auto=format&fit=crop",
+        name: "Ireen Jung",
+        role: "Founder, The-Kaddy",
+        avatar: "/images/testimonials/ireen.jpg",
         rating: 5,
         reviewTitle: "User Review Feedback",
-        review: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        review: "I’ve been using RevionTech services for almost two years, and I’m very happy with his work. He’s always, friendly, reliable, and consistently delivers excellent results. I highly recommend him to anyone."
     },
     {
         id: 2,

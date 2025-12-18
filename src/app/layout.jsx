@@ -47,11 +47,11 @@ export const metadata = {
     icons: {
         icon: [
             { url: '/favicon.ico', sizes: 'any' },
-            { url: '/images/icons/icon-192x192.png', sizes: '192x192', type: 'image/png' },
-            { url: '/images/icons/icon-512x512.png', sizes: '512x512', type: 'image/png' },
+            { url: '/images/icons/192x192.png', sizes: '192x192', type: 'image/png' },
+            { url: '/images/icons/512x512.png', sizes: '512x512', type: 'image/png' },
         ],
         apple: [
-            { url: '/images/icons/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+            { url: '/images/icons/192x192.png', sizes: '180x180', type: 'image/png' },
         ],
         other: [
             { rel: 'mask-icon', url: '/images/icons/safari-pinned-tab.svg', color: '#6366f1' },
@@ -67,7 +67,7 @@ export const metadata = {
         description: 'RevionTech provides cutting-edge web development, app development, AI solutions, graphic design, and digital marketing services.',
         images: [
             {
-                url: '/images/og-image.jpg',
+                url: '/images/OgImages/RevionTech.png',
                 width: 1200,
                 height: 630,
                 alt: 'RevionTech - Technology Solutions',
@@ -78,7 +78,7 @@ export const metadata = {
         card: 'summary_large_image',
         title: 'RevionTech | Web & App Development, AI Solutions & Digital Marketing',
         description: 'Transform your business with innovative technology solutions from RevionTech.',
-        images: ['/images/og-image.jpg'],
+        images: ['/images/OgImages/RevionTech.png'],
         creator: '@reviontech',
         site: '@reviontech',
     },
