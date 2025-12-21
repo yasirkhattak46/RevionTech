@@ -16,9 +16,7 @@ const SubServicesSection = ({ subServices}) => {
                             <h2>{subServices?.title}<span> Services</span> </h2>
                         </AnimatedItem>
                         <AnimatedItem type="fadeUp" delay={0.5}>
-                            <p>
-                                {subServices?.description}
-                            </p>
+                            <p dangerouslySetInnerHTML={{ __html: subServices?.description }} />
                         </AnimatedItem>
                     </div>
                 </div>
@@ -50,7 +48,7 @@ const SubServicesSection = ({ subServices}) => {
                                 {/* Content Section */}
                                 <div className="service-content">
                                     <h3 className="service-title">{service.title}</h3>
-                                    <p className="service-description">{service.description}</p>
+                                    <p className="service-description" dangerouslySetInnerHTML={{ __html: service.description }} />
 
                                     {service.features && service.features.length > 0 && (
                                         <div className="features-list">

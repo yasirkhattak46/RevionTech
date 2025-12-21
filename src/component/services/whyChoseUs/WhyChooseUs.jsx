@@ -55,9 +55,9 @@ const WhyChooseUs = ({ title, subtitle, features }) => {
                     <h2 className={styles.title}>
                         {title || 'Why Choose Us'}
                     </h2>
-                    <p className={styles.subtitle}>
-                        {subtitle || 'Partner with a team that combines technical expertise with creative innovation to deliver exceptional digital solutions that drive business growth and exceed expectations.'}
-                    </p>
+                    <p className={styles.subtitle} dangerouslySetInnerHTML={{ 
+                        __html: subtitle || 'Partner with a team that combines technical expertise with creative innovation to deliver exceptional digital solutions that drive business growth and exceed expectations.' 
+                    }} />
                 </motion.div>
 
                 <motion.div
@@ -88,7 +88,7 @@ const WhyChooseUs = ({ title, subtitle, features }) => {
                                         <IconComponent className={styles.icon} />
                                     </motion.div>
                                     <h3 className={styles.featureTitle}>{feature.title}</h3>
-                                    <p className={styles.featureDescription}>{feature.description}</p>
+                                    <p className={styles.featureDescription} dangerouslySetInnerHTML={{ __html: feature.description }} />
                                 </motion.div>
                             </div>
                         );
