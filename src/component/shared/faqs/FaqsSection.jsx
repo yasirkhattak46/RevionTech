@@ -96,7 +96,7 @@ export default function FaqsSection({ faqs, title, subtitle }) {
                                         </button>
                                         <div className={`faq-answer ${openIndex === index ? "open" : ""}`}>
                                             <div className="answer-content">
-                                                <p>{faq.answer}</p>
+                                                <p dangerouslySetInnerHTML={{ __html: faq.answer }} />
                                             </div>
                                         </div>
                                     </div>
