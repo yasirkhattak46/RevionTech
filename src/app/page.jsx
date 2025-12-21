@@ -6,6 +6,7 @@ import AboutSection from "../component/home/about/AboutSection";
 import ProcessWeFollowSection from "../component/home/process/ProcessWeFollowSection";
 import WhyChooseUsSection from "../component/home/whyChoseUse/WhyChooseUsSection";
 import TestimonialsSection from "../component/home/testimonials/TestimonialsSection";
+import FaqsSection from "../component/shared/faqs/FaqsSection";
 import ContactSection from "../component/shared/ContactSection";
 import FeaturedProjectsSection from "../component/shared/featureProject/FeaturedProjectsSection";
 import StructuredData from "../component/shared/StructuredData";
@@ -53,6 +54,7 @@ export default function Home() {
             <FeaturedProjectsSection/>
             <BrandSlider/>
             <TestimonialsSection/>
+            <FaqsSection/>
             <ContactSection/>
         </>
 

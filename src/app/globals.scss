@@ -25,6 +25,49 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $font-heading, sans-serif !important;
 }
 
+/* Container Max Width */
+.container {
+  max-width: 1600px !important;
+}
+
+@media (max-width: 1700px) {
+  .container {
+    max-width: 1400px !important;
+  }
+}
+
+@media (max-width: 1500px) {
+  .container {
+    max-width: 1200px !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 720px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 540px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 100% !important;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
 /* Custom Scrollbar Styles */
 ::-webkit-scrollbar {
   width: 8px;

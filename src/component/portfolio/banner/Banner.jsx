@@ -146,7 +146,7 @@ const PortfolioBanner = () => {
                                 whileHover={{ scale: 1.02 }}
                             >
                                 <Image
-                                    src="/images/projects/featured/Bitloc.ca.png"
+                                    src="/images/projects/featured/Osprey-Shipping.webp"
                                     alt="Featured project"
                                     fill
                                     className={styles.showcaseImage}

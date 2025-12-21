@@ -44,7 +44,7 @@ const WhyChooseUs = ({ title, subtitle, features }) => {
 
     return (
         <section className={styles.whyChooseUs}>
-            <div className={styles.container}>
+            <div className="container">
                 <motion.div
                     className={styles.header}
                     initial={{ opacity: 0, y: 20 }}
@@ -61,7 +61,7 @@ const WhyChooseUs = ({ title, subtitle, features }) => {
                 </motion.div>
 
                 <motion.div
-                    className={styles.featuresGrid}
+                    className="row"
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
@@ -74,22 +74,23 @@ const WhyChooseUs = ({ title, subtitle, features }) => {
                             : feature.icon;
                         
                         return (
-                            <motion.div
-                                key={index}
-                                className={styles.featureCard}
-                                variants={itemVariants}
-                                whileHover={{ y: -10, transition: { duration: 0.3 } }}
-                            >
+                            <div key={index} className="col-lg-4 col-md-6 mb-4">
                                 <motion.div
-                                    className={styles.iconWrapper}
-                                    whileHover={{ scale: 1.1, rotate: 5 }}
-                                    transition={{ duration: 0.3 }}
+                                    className={styles.featureCard}
+                                    variants={itemVariants}
+                                    whileHover={{ y: -10, transition: { duration: 0.3 } }}
                                 >
-                                    <IconComponent className={styles.icon} />
+                                    <motion.div
+                                        className={styles.iconWrapper}
+                                        whileHover={{ scale: 1.1, rotate: 5 }}
+                                        transition={{ duration: 0.3 }}
+                                    >
+                                        <IconComponent className={styles.icon} />
+                                    </motion.div>
+                                    <h3 className={styles.featureTitle}>{feature.title}</h3>
+                                    <p className={styles.featureDescription}>{feature.description}</p>
                                 </motion.div>
-                                <h3 className={styles.featureTitle}>{feature.title}</h3>
-                                <p className={styles.featureDescription}>{feature.description}</p>
-                            </motion.div>
+                            </div>
                         );
                     })}
                 </motion.div>

@@ -17,26 +17,26 @@ const testimonials = [
         role: "Founder, The-Kaddy",
         avatar: "/images/testimonials/ireen.jpg",
         rating: 5,
-        reviewTitle: "User Review Feedback",
+        reviewTitle: "Outstanding Website Development Partner",
         review: "I’ve been using RevionTech services for almost two years, and I’m very happy with his work. He’s always, friendly, reliable, and consistently delivers excellent results. I highly recommend him to anyone."
     },
     {
         id: 2,
-        name: "David Chen",
-        role: "CTO, TechFlow",
-        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop",
+        name: "farabius",
+        role: "CEO, Farabius Music Academy",
+        avatar: "/images/testimonials/farabius.webp",
         rating: 5,
-        reviewTitle: "Exceptional Delivery",
-        review: "The team at RevionTech went above and beyond our expectations. Their attention to detail in the UI/UX phase really set the foundation for a successful product launch. Highly recommended for complex projects."
+        reviewTitle: "Reliable, Creative, and Results-Driven Team",
+        review: "RevionTech delivered exactly what they promised—and more. Our website is fast, modern, and perfectly aligned with our brand. The team was responsive, transparent, and extremely professional throughout the project. We’ve already seen improved engagement and inquiries after launch. Highly recommended for anyone serious about their online presence."
     },
     {
         id: 3,
-        name: "David Chen",
-        role: "CTO, TechFlow",
-        avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1887&auto=format&fit=crop",
+        name: "Adam Levit",
+        role: "Founder, 53 Design & GC Solar",
+        avatar: "/images/testimonials/adam-Levit.webp",
         rating: 5,
-        reviewTitle: "Exceptional Delivery",
-        review: "The team at RevionTech went above and beyond our expectations. Their attention to detail in the UI/UX phase really set the foundation for a successful product launch. Highly recommended for complex projects."
+        reviewTitle: "Great Experience from Start to Finish",
+        review: "he team at RevionTech is highly skilled and easy to work with. They understood our vision and brought it to life with a powerful website that reflects our brand perfectly. We are extremely satisfied with the results and would definitely work with them again."
     },
     {
         id: 4,
@@ -44,8 +44,8 @@ const testimonials = [
         role: "CTO, TechFlow",
         avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop",
         rating: 5,
-        reviewTitle: "Exceptional Delivery",
-        review: "The team at RevionTech went above and beyond our expectations. Their attention to detail in the UI/UX phase really set the foundation for a successful product launch. Highly recommended for complex projects."
+        reviewTitle: "Perfect Choice for Startups & Businesses",
+        review: "As a startup, we needed a tech partner who could guide us—not just build a website. RevionTech did exactly that. They understood our vision, suggested improvements, and delivered a scalable solution that supports our growth. Exceptional service and great value for money."
     }
 ];
 

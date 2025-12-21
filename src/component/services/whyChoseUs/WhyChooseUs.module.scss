@@ -40,17 +40,19 @@
     pointer-events: none;
   }
 
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
-  }
+  //.container {
+  //  max-width: 1200px;
+  //  margin: 0 auto;
+  //  position: relative;
+  //  z-index: 1;
+  //}
 
   // Header Section
   .header {
     text-align: center;
     margin-bottom: 4rem;
+    position: relative;
+    z-index: 1;
   }
 
   .title {
@@ -89,18 +91,18 @@
     line-height: 1.7;
   }
 
-  // Features Grid
-  .featuresGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-
-    @media (max-width: 768px) {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
-  }
+  // Features Grid - Removed, now using Bootstrap row/col
+  //.featuresGrid {
+  //  display: grid;
+  //  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  //  gap: 2rem;
+  //  margin-top: 3rem;
+  //
+  //  @media (max-width: 768px) {
+  //    grid-template-columns: 1fr;
+  //    gap: 1.5rem;
+  //  }
+  //}
 
   // Feature Card
   .featureCard {
@@ -114,6 +116,7 @@
     position: relative;
     overflow: hidden;
     cursor: default;
+    height: 100%;
 
     // Hover gradient effect
     &::before {
