@@ -57,7 +57,7 @@ export const metadata = {
             { rel: 'mask-icon', url: '/images/icons/safari-pinned-tab.svg', color: '#6366f1' },
         ],
     },
-    manifest: '/manifest.webmanifest',
+    manifest: '/manifest.json',
     openGraph: {
         type: 'website',
         locale: 'en_US',
