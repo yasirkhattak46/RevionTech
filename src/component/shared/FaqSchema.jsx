@@ -11,7 +11,7 @@ export default function FaqSchema({ faqs }) {
             "name": faq.question,
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": faq.answer
+                "text": faq.answer.replace(/<[^>]*>/g, '') // Strip HTML tags for schema
             }
         }))
     };

@@ -56,7 +56,13 @@ export default function FaqsSection({ faqs, title, subtitle }) {
                     <div className="col-lg-8">
                         <AnimatedItem type="fadeUp">
                             <h2 className="section-title">
-                                {title || (
+                                {title ? (
+                                    typeof title === 'string' ? (
+                                        <span dangerouslySetInnerHTML={{ __html: title }} />
+                                    ) : (
+                                        title
+                                    )
+                                ) : (
                                     <>
                                         Frequently Asked <br />
                                         <span className="highlight">Questions</span>
