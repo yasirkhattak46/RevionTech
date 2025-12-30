@@ -5,7 +5,7 @@ import {
     CodeXml, BrushIcon, ShieldCheck, TabletSmartphone, Headset, SmartphoneIcon, 
     LayoutTemplate, Gauge, AppWindow, Users, Zap, Code, Palette, LightbulbIcon, 
     TrendingUp, Brain, Layers, Megaphone, PenTool, PieChart, Target, Sparkles, 
-    Headphones, LayoutGrid, Lightbulb
+    Headphones, LayoutGrid, Lightbulb, Building2, Globe, Award
 } from 'lucide-react';
 import styles from './WhyChooseUs.module.scss';
 
@@ -14,7 +14,7 @@ const iconMap = {
     CodeXml, BrushIcon, ShieldCheck, TabletSmartphone, Headset, SmartphoneIcon,
     LayoutTemplate, Gauge, AppWindow, Users, Zap, Code, Palette, LightbulbIcon,
     TrendingUp, Brain, Layers, Megaphone, PenTool, PieChart, Target, Sparkles,
-    Headphones, LayoutGrid, Lightbulb
+    Headphones, LayoutGrid, Lightbulb, Building2, Globe, Award
 };
 
 const WhyChooseUs = ({ title, subtitle, features }) => {

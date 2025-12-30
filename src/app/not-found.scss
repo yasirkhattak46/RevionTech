@@ -1,0 +1,289 @@
+@use './assets/sass/variables';
+
+.not-found-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, variables.$background 0%, darken(variables.$background, 5%) 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 8rem 1rem;
+}
+
+.not-found-container {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.error-content {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+// 404 Number Animation
+.error-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  font-size: clamp(5rem, 15vw, 10rem);
+  font-weight: 900;
+  line-height: 1;
+
+  span {
+    display: inline-block;
+    animation: bounce 2s ease-in-out infinite;
+    color: variables.$primary;
+    text-shadow: 0 0 20px rgba(variables.$primary, 0.5);
+
+    &.four:first-child {
+      animation-delay: 0s;
+    }
+
+    &.zero {
+      animation-delay: 0.2s;
+      color: #ffffff;
+    }
+
+    &.four:last-child {
+      animation-delay: 0.4s;
+    }
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.error-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.error-message {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: variables.$text-light;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Action Buttons
+.error-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+
+  .btn-primary,
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.75rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+
+    .btn-icon {
+      font-size: 1.25rem;
+    }
+  }
+
+  .btn-primary {
+    background: variables.$primary;
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(variables.$primary, 0.3);
+
+    &:hover {
+      background: darken(variables.$primary, 8%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(variables.$primary, 0.4);
+    }
+  }
+
+  .btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: translateY(-2px);
+    }
+  }
+}
+
+// Quick Links
+.quick-links {
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  p {
+    font-size: 1rem;
+    color: variables.$text-light;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+
+  .links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.75rem;
+    max-width: 600px;
+    margin: 0 auto;
+
+    a {
+      padding: 0.75rem 1rem;
+      background: rgba(variables.$primary, 0.1);
+      border: 1px solid rgba(variables.$primary, 0.3);
+      border-radius: 8px;
+      color: variables.$primary;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: rgba(variables.$primary, 0.2);
+        border-color: variables.$primary;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(variables.$primary, 0.2);
+      }
+    }
+  }
+}
+
+// Background Decoration
+.background-decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.1;
+    animation: float 20s ease-in-out infinite;
+  }
+
+  .circle-1 {
+    width: 400px;
+    height: 400px;
+    background: variables.$primary;
+    top: -200px;
+    left: -200px;
+    animation-delay: 0s;
+  }
+
+  .circle-2 {
+    width: 300px;
+    height: 300px;
+    background: variables.$primary;
+    bottom: -150px;
+    right: -150px;
+    animation-delay: 5s;
+  }
+
+  .circle-3 {
+    width: 200px;
+    height: 200px;
+    background: #ffffff;
+    top: 50%;
+    right: -100px;
+    animation-delay: 10s;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -30px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .error-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .error-number {
+    gap: 0.5rem;
+  }
+
+  .error-actions {
+    flex-direction: column;
+    width: 100%;
+
+    .btn-primary,
+    .btn-secondary {
+      width: 100%;
+      max-width: 300px;
+      justify-content: center;
+    }
+  }
+
+  .quick-links .links-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .background-decoration {
+    .circle-1 {
+      width: 250px;
+      height: 250px;
+    }
+
+    .circle-2 {
+      width: 200px;
+      height: 200px;
+    }
+
+    .circle-3 {
+      width: 150px;
+      height: 150px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .quick-links .links-grid {
+    grid-template-columns: 1fr;
+  }
+}
